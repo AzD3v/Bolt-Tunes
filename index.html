@@ -7,19 +7,63 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-	<!-- Folha de estilos da homepage -->
-	<link rel="stylesheet" href="css/homepage.css">
+	<!-- Folhas de estilo -->
+	<link rel="stylesheet" href="css/homepage.css" type="text/css">
+
+	<!-- Bootstrap CDN -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<!-- Playfair font-family -->
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+
+	<!-- Ionic icons CDN -->
+	<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 
 	<!-- Título da página -->
-	<title>Bolt Tunes | Homepage</title>
+	<title>Bolt Tunes | Bem-vindo</title>
 
 </head>
 <body>
 
-	<!-- Navbar da homepage -->
+	<!-- Navbar -->
+	<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+		<div class="container-fluid">
+			<a href="" class="navbar-brand"><img src="img/logo.png" alt="Logótipo da página"></a>
+		</div>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+					<input class="form-control mr-sm-2" type="search" placeholder="Faça a sua pesquisa personalizada..." aria-label="Search">
+    			<button class="btn my-2 my-sm-0" type="submit">Pesquisar</button>
+			</div>
+	</nav>
+	<!-- Fim da navbar -->
 
+	<!-- Slider da homepage -->
+	<div id="slides" class="carousel-slide" data-ride="carousel">
+	<div class="carousel-inner">
+		<div class="carousel-item active">
+			<img src="img/slider/slide-1.jpg" alt="Primeira imagem do slider">
+			<div class="carousel-caption">
+				<h1 class="display-2">Um estrondo musical!</h1>
+				<h3>Todos os teus artistas, álbuns e os seus maiores sucessos num só local</h3>
+				<button class="btn btn-outline-light btn-lg">Não percas tempo!</button>
+			</div>
+		</div>
+		<div class="carousel-item">
+			<img src="img/slider/slide-2.jpg" alt="Segunda imagem do slider">
+		</div>
+		<div class="carousel-item">
+			<img src="img/slider/slide-3.jpg" alt="Terceira imagem do slider">
+		</div>
+		<ul class="carousel-indicators">
+			<li data-target="#slides" data-slide-to="0" class="active"></li>
+			<li data-target="#slides" data-slide-to="1"></li>
+			<li data-target="#slides" data-slide-to="2"></li>
+		</ul>
 
-
+	</div>
 
 </body>
 </html>
