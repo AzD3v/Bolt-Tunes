@@ -10,8 +10,10 @@
 	<!-- Folhas de estilo -->
 	<link rel="stylesheet" href="css/homepage.css" type="text/css">
 
-	<!-- Bootstrap CDN -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<!-- Bootstrap CDN's -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 	<!-- Playfair font-family -->
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
@@ -25,7 +27,7 @@
 </head>
 <body>
 
-	<!-- Navbar -->
+	<!-- NAVBAR -->
 	<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
 		<div class="container-fluid">
 			<a href="" class="navbar-brand"><img src="img/logo.png" alt="Logótipo da página"></a>
@@ -38,32 +40,89 @@
     			<button class="btn my-2 my-sm-0" type="submit">Pesquisar</button>
 			</div>
 	</nav>
-	<!-- Fim da navbar -->
+	<!-- FIM DA NAVBAR -->
 
-	<!-- Slider da homepage -->
-	<div id="slides" class="carousel-slide" data-ride="carousel">
-	<div class="carousel-inner">
-		<div class="carousel-item active">
-			<img src="img/slider/slide-1.jpg" alt="Primeira imagem do slider">
-			<div class="carousel-caption">
-				<h1 class="display-2">Um estrondo musical!</h1>
-				<h3>Todos os teus artistas, álbuns e os seus maiores sucessos num só local</h3>
-				<button class="btn btn-outline-light btn-lg">Não percas tempo!</button>
+	<!-- SLIDER DA HOMEPAGE -->
+	<div id="slides" class="carousel slide" data-ride="carousel">
+
+		<div class="carousel-inner">
+
+			<!-- Primeiro slider -->
+			<div class="carousel-item active">
+
+				<img src="img/slider/slide1.jpg" alt="Primeira imagem do slider">
+
+				<!-- Descrição do slider -->
+				<div class="carousel-caption">
+					<h1 class="display-2">Um estrondo musical!</h1>
+					<hr class="light divider">
+					<h3>Todos os teus artistas, álbuns e os seus maiores sucessos num só local</h3>
+				</div>
 			</div>
+
+			<!-- Segundo slider -->
+			<div class="carousel-item">
+				<img src="img/slider/slide2.jpg" alt="Segunda imagem do slider">
+			</div>
+
+			<!-- Terceiro slider -->
+			<div class="carousel-item">
+				<img src="img/slider/slide3.jpg" alt="Terceira imagem do slider">
+			</div>
+
 		</div>
-		<div class="carousel-item">
-			<img src="img/slider/slide-2.jpg" alt="Segunda imagem do slider">
-		</div>
-		<div class="carousel-item">
-			<img src="img/slider/slide-3.jpg" alt="Terceira imagem do slider">
-		</div>
+
+		<!-- Controladores do slider -->
 		<ul class="carousel-indicators">
 			<li data-target="#slides" data-slide-to="0" class="active"></li>
 			<li data-target="#slides" data-slide-to="1"></li>
 			<li data-target="#slides" data-slide-to="2"></li>
 		</ul>
 
-	</div>
+ </div>
+ <!-- FIM DO SLIDER DA HOMEPAGE -->
+
+ <!-- CENTRO DA HOMEPAGE -->
+
+<div id="center-page">
+
+	 <!-- Menu lateral da homepage -->
+	 <i class="ion-navicon-round toogle-menu"></i>
+
+	 <div class="sidebar-menu">
+		 <i class="ion-close-circled"></i>
+			<h3 class="text-center boxed-item">Escolhe o teu ritmo!</h3>
+
+			<ul class="menu-navigation">
+				<a href="#"><li class="navigation-item"><i class="ion-ipod"></i>Playlists</li></a>
+				<a href="#"><li class="navigation-item"><i class="ion-headphone"></i>Lista de favoritos</li></a>
+			</ul>
+
+	 </div>
+	 <!-- Fim do menu lateral da homepage -->
+
+</div>
+
+
+	<!-- FOOTER DA HOMEPAGE -->
+	<footer>
+		<div class="container-fluid padding">
+
+				<div class="container-footer">
+					<!-- Logótipo do footer -->
+					<img src="img/footer_logo.png" alt="Logótipo do footer">
+
+					<!-- Copyright -->
+					<p class="copyright">&#169; 2018 BoltTunes</p>
+				</div>
+
+			</div>
+		</div>
+	</footer>
+	<!-- FIM DO FOOTER DA HOMEPAGE -->
 
 </body>
+
+<!-- Ficheiros JavaScript -->
+<script src="js/homepage.js"></script>
 </html>

@@ -1,98 +1,131 @@
 /* GERAL */
 html, body {
-	height: 100%;
-	width: 100%;
-	font-family: 'Playfair', sans-serif;
-	color: #222;
+  height: 100%;
+  width: 100%;
+  font-family: 'Playfair', sans-serif;
+  color: #222;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
 }
 
 /* HOMEPAGE */
 
 /* NAVBAR */
 .navbar {
-	height: 150px;
-	padding: .8rem;
+  height: 150px;
+  padding: .8rem;
 }
 
-/* Logótipo */
+/* Logótipo da navbar */
 .navbar img {
-	height: 80px;
+  height: 80px;
 }
 
 a.navbar-brand {
-	margin: 30px;
+  margin: 30px;
 }
 
 /* Barra de pesquisa */
 .form-control.mr-sm-2 {
-	width: 350px;
-	background-color: #acacac;
-	border-radius: 20px;
+  width: 350px;
+  background-color: #acacac;
+  border-radius: 20px;
 }
 
 .form-control.mr-sm-2::placeholder {
-	color: #fff;
+  color: #fff;
 }
 
 .form-control.mr-sm-2:focus {
-	background-color: #acacac;
-	color: #fff;
+  background-color: #acacac;
+  color: #fff;
 }
 
 /* Botão de pesquisa */
-.navbar-collapse > button {
-	background-color: rgb(172, 39, 98);
-	color: #fff;
-	border-radius: 20px;
-	margin-right: 30px;
-	transition-duration: 0.5s;
+.navbar-collapse>button {
+  background-color: rgb(172, 39, 98);
+  color: #fff;
+  border-radius: 20px;
+  margin-right: 30px;
+  transition-duration: 0.5s;
   transition-timing-function: linear;
 }
-.navbar-collapse > button:hover {
-	background-color: #ed1a1a;
+
+.navbar-collapse>button:hover {
+  background-color: #ed1a1a;
 }
 
 /* SLIDER */
+
+/* Imagem do slider */
 .carousel-inner img {
-	width: 100%;
-	height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
+/* Descrição do slider */
 .carousel-caption {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	color: #ed1a1a!important;
+  position: absolute;
+  top: 10%;
+  transform: translateY(-50%);
+  transform: translateX(-10%);
 }
 
 .carousel-caption h1 {
-	font-size: 405%;
-	text-transform: uppercase;
-	font-weight: bold;
-	margin-bottom: 20px;
+  font-size: 400%;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-start;
+  color: #fff;
+  margin: 30px;
 }
 
 .carousel-caption h1:hover {
-	transition-duration: 0.5s;
+  transition-duration: 0.5s;
   transition-timing-function: linear;
-	color: #8C2B72;
+}
+
+.carousel-caption hr.divider {
+  height: 1px;
+  background: #fff;
+  background-image: linear-gradient(to right, #e3e3e3, #fff, #e3e3e3);
+  border: 1px solid #fff;
+  margin: 3px;
 }
 
 .carousel-caption h3 {
-	font-size: 180%;
-	font-weight: 500;
-	padding-bottom: 1rem;
-	font-weight: bold;
-	margin-bottom: 20px;
+  font-size: 170%;
+  font-weight: 500;
+  padding-bottom: 1rem;
+  font-weight: bold;
+  margin: 30px;
+  color: #fff;
 }
 
 .carousel-caption h3:hover {
-	transition-duration: 0.5s;
+  transition-duration: 0.5s;
   transition-timing-function: linear;
-	color: #8C2B72;
 }
 
-button.btn.btn-outline-light.btn-lg {
+/* Controladores do slider */
+.carousel-indicators {
+  cursor: pointer;
+}
+
+/* Firefox slider bug fix */
+.carousel-item {
+  transition: -webkit-transform 0.5s ease;
+  tranisiton: transform: 0.5 ease;
+  transition: transform 0.5 ease, -webkit-transform 0.5s ease;
+  -webkist-backface-visibility: visible;
+  backface-visibility: visible;
+}
+
+/* Botão do slider */
+
+/* button.btn.btn-outline-light.btn-lg {
 	background-color: #ed1a1a;
 	border: 1px solid #ED1A3B;
 	transition-duration: 0.5s;
@@ -105,5 +138,149 @@ button.btn.btn-outline-light.btn-lg:hover {
 	background-color: #8C2B72;
 	border: 1px solid #8C2B72;
 	color: #fff;
+} */
+
+/* CENTRO DA HOMEPAGE */
+
+#center-page {
+	height: 90%;
+	background-color: #F8F9FA;
 }
 
+/* Menu lateral da homepage (toogler) */
+i.ion-navicon-round.toogle-menu {
+	font-size: 2.2em;
+	position: absolute;
+}
+
+.toogle-menu {
+	padding: 15px 20px 10px 15px;
+	margin-top: 20px;
+	color: #fff;
+	cursor: pointer;
+	background-color: #BABBBB;
+	z-index: 100000;
+	opacity: 0;
+}
+
+.sidebar-menu {
+	width: 350px;
+	margin-left: 0;
+	overflow: hidden;
+	height: 100vh;
+	max-height: 100vh;
+	background-color: rgba(172, 172, 172, 0.9);
+	opacity: 0.9;
+	transition: all 0.3s ease-in-out;
+}
+
+.sidebar-menu h3 {
+	margin: 25px;
+	padding: 10px 10px;
+	font-weight: 350;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 25px;
+	border: 2px solid #fff;
+	box-sizing: border-box;
+}
+
+.ion-close-circled {
+	font-size: 1.5em;
+	left: 90%;
+	top: 10px;
+	opacity: 0.7;
+	cursor: pointer;
+	position: relative;
+	color: #fff;
+	transition: all 0.3s ease-in-out;
+}
+
+.ion-close-circled:hover {
+	opacity: 1;
+}
+
+/* Navegação do menu lateral */
+.menu-navigation {
+	margin: 20px 0;
+	display: block;
+	width: 250px;
+	margin-right: 15px;
+	display: flex;
+	flex-direction: column;
+}
+
+.menu-navigation a:hover {
+	text-decoration: none;
+}
+
+.navigation-item {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 15px;
+	font-size: 18px;
+	font-weight: 400;
+	box-sizing: border-box;
+	border-bottom: 2px solid #fff;
+	padding: 12px 0;
+	text-transform: uppercase;
+	justify-content: flex-start;
+	list-style-type: none;
+	color: #fff;
+	transition: all 0.3s ease-in-out;
+	cursor: pointer;
+}
+
+i.ion-ipod, i.ion-headphone {
+	display: flex;
+	margin-right: 10px;
+	color: #fff;
+	font-size: 25px;
+}
+
+/* Fazer aparecer menu lateral */
+.opacity-one {
+	opacity: 1;
+	transition: all 0.3s ease-in-out;
+}
+
+
+/* Esconder menu lateral */
+.hide-menu {
+	margin-left: -350px;
+}
+
+
+
+
+/* FOOTER */
+footer {
+	position: absolute;
+	width: 100%;
+  height: 120px;
+  background-color: #b80025;
+}
+
+footer .container-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Logótipo do footer */
+footer img {
+  height: 23px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* Copyright */
+footer .copyright {
+  font-size: 17px;
+  display: flex;
+  justify-content: flex-end;
+  color: #fff;
+}
+
+footer p, footer img {
+  margin: 45px;
+}
