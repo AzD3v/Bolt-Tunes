@@ -53,46 +53,72 @@ a.navbar-brand {
 }
 
 /* SLIDER */
+
+/* Imagem do slider */
 .carousel-inner img {
 	width: 100%;
 	height: 100%;
 }
 
+/* Descrição do slider */
 .carousel-caption {
 	position: absolute;
-	top: 50%;
+	top: 10%;
 	transform: translateY(-50%);
-	color: #ed1a1a!important;
+	transform: translateX(-10%);
 }
 
 .carousel-caption h1 {
-	font-size: 405%;
+	font-size: 400%;
 	text-transform: uppercase;
 	font-weight: bold;
-	margin-bottom: 20px;
+	display: flex;
+	justify-content: flex-start;
+	color: #fff;
+	margin: 30px;
 }
 
 .carousel-caption h1:hover {
 	transition-duration: 0.5s;
   transition-timing-function: linear;
-	color: #8C2B72;
+}
+
+.carousel-caption hr.divider {
+	height: 1px;
+	background: #fff;
+	background-image: linear-gradient(to right, #e3e3e3, #fff, #e3e3e3);
+	border: 1px solid #fff;
+	margin: 3px;
 }
 
 .carousel-caption h3 {
-	font-size: 180%;
+	font-size: 170%;
 	font-weight: 500;
 	padding-bottom: 1rem;
 	font-weight: bold;
-	margin-bottom: 20px;
+	margin: 30px;
+	color: #fff;
 }
 
 .carousel-caption h3:hover {
 	transition-duration: 0.5s;
   transition-timing-function: linear;
-	color: #8C2B72;
 }
 
-button.btn.btn-outline-light.btn-lg {
+/* Controladores do slider */
+
+
+/* Firefox slider bug fix */
+.carousel-item {
+	transition: -webkit-transform 0.5s ease;
+	tranisiton: transform: 0.5 ease;
+	transition: transform 0.5 ease, -webkit-transform 0.5s ease;
+	-webkist-backface-visibility: visible;
+	backface-visibility: visible;
+}
+
+/* Botão do slider */
+/* button.btn.btn-outline-light.btn-lg {
 	background-color: #ed1a1a;
 	border: 1px solid #ED1A3B;
 	transition-duration: 0.5s;
@@ -105,5 +131,33 @@ button.btn.btn-outline-light.btn-lg:hover {
 	background-color: #8C2B72;
 	border: 1px solid #8C2B72;
 	color: #fff;
+} */
+
+/* FOOTER */
+footer {
+	height: 120px;
+	background-color: #b80025;
 }
 
+footer .container-footer {
+	display: flex;
+	justify-content: space-between;
+}
+
+footer p, footer img {
+	margin: 45px;
+}
+
+footer img {
+	height: 23px;
+	display: flex;
+	justify-content: flex-start;
+}
+
+/* Copyright */
+footer .copyright {
+	font-size: 17px;
+	display: flex;
+	justify-content: flex-end;
+	color: #fff;
+}
