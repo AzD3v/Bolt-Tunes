@@ -1,49 +1,24 @@
 /* GERAL */
-html, body {
-  height: 100%;
-  width: 100%;
-  font-family: 'Playfair', sans-serif;
-  color: #222;
-	margin: 0;
-	padding: 0;
-	text-decoration: none;
-}
+html, body {height: 100%; width: 100%; font-family: 'Playfair', sans-serif; color: #222; margin: 0; padding: 0; text-decoration: none;}
 
 /* HOMEPAGE */
 
 /* NAVBAR */
-.navbar {
-  height: 150px;
-  padding: .8rem;
-}
+.navbar {height: 150px;padding: .8rem;}
 
 /* Logótipo da navbar */
-.navbar img {
-  height: 80px;
-}
-
-a.navbar-brand {
-  margin: 30px;
-}
+.navbar img {height: 80px;}
+a.navbar-brand {margin: 30px;}
 
 /* Barra de pesquisa */
-.form-control.mr-sm-2 {
-  width: 350px;
-  background-color: #acacac;
-  border-radius: 20px;
-}
+.form-control.mr-sm-2 {width: 350px; background-color: #acacac; border-radius: 20px;}
 
-.form-control.mr-sm-2::placeholder {
-  color: #fff;
-}
+.form-control.mr-sm-2::placeholder {color: #fff;}
 
-.form-control.mr-sm-2:focus {
-  background-color: #acacac;
-  color: #fff;
-}
+.form-control.mr-sm-2:focus {background-color: #acacac; color: #fff;}
 
 /* Botão de pesquisa */
-.navbar-collapse>button {
+.navbar-collapse > button {
   background-color: rgb(172, 39, 98);
   color: #fff;
   border-radius: 20px;
@@ -52,25 +27,15 @@ a.navbar-brand {
   transition-timing-function: linear;
 }
 
-.navbar-collapse>button:hover {
-  background-color: #ed1a1a;
-}
+.navbar-collapse>button:hover {background-color: #ed1a1a;}
 
 /* SLIDER */
 
 /* Imagem do slider */
-.carousel-inner img {
-  width: 100%;
-  height: 100%;
-}
+.carousel-inner img {width: 100%;height: 100%;}
 
 /* Descrição do slider */
-.carousel-caption {
-  position: absolute;
-  top: 10%;
-  transform: translateY(-50%);
-  transform: translateX(-10%);
-}
+.carousel-caption {position: absolute; top: 10%; transform: translateY(-50%); transform: translateX(-10%);}
 
 .carousel-caption h1 {
   font-size: 400%;
@@ -82,10 +47,7 @@ a.navbar-brand {
   margin: 30px;
 }
 
-.carousel-caption h1:hover {
-  transition-duration: 0.5s;
-  transition-timing-function: linear;
-}
+.carousel-caption h1:hover {transition-duration: 0.5s; transition-timing-function: linear;}
 
 .carousel-caption hr.divider {
   height: 1px;
@@ -104,15 +66,10 @@ a.navbar-brand {
   color: #fff;
 }
 
-.carousel-caption h3:hover {
-  transition-duration: 0.5s;
-  transition-timing-function: linear;
-}
+.carousel-caption h3:hover {transition-duration: 0.5s; transition-timing-function: linear;}
 
 /* Controladores do slider */
-.carousel-indicators {
-  cursor: pointer;
-}
+.carousel-indicators {cursor: pointer;}
 
 /* Firefox slider bug fix */
 .carousel-item {
@@ -141,17 +98,10 @@ button.btn.btn-outline-light.btn-lg:hover {
 } */
 
 /* CENTRO DA HOMEPAGE */
-
-#center-page {
-	height: 90%;
-	background-color: #F8F9FA;
-}
+#center-page {height: 90%;background-color: #F8F9FA;}
 
 /* Menu lateral da homepage (toogler) */
-i.ion-navicon-round.toogle-menu {
-	font-size: 2.2em;
-	position: absolute;
-}
+i.ion-navicon-round.toogle-menu {font-size: 2.2em; position: absolute;}
 
 .toogle-menu {
 	padding: 15px 20px 10px 15px;
@@ -196,9 +146,7 @@ i.ion-navicon-round.toogle-menu {
 	transition: all 0.3s ease-in-out;
 }
 
-.ion-close-circled:hover {
-	opacity: 1;
-}
+.ion-close-circled:hover {opacity: 1;}
 
 /* Navegação do menu lateral */
 .menu-navigation {
@@ -210,9 +158,7 @@ i.ion-navicon-round.toogle-menu {
 	flex-direction: column;
 }
 
-.menu-navigation a:hover {
-	text-decoration: none;
-}
+.menu-navigation a:hover {text-decoration: none;}
 
 .navigation-item {
 	display: flex;
@@ -231,56 +177,24 @@ i.ion-navicon-round.toogle-menu {
 	cursor: pointer;
 }
 
-i.ion-ipod, i.ion-headphone {
-	display: flex;
-	margin-right: 10px;
-	color: #fff;
-	font-size: 25px;
-}
+i.ion-ipod, i.ion-headphone {display: flex; margin-right: 10px; color: #fff; font-size: 25px;}
 
 /* Fazer aparecer menu lateral */
-.opacity-one {
-	opacity: 1;
-	transition: all 0.3s ease-in-out;
-}
+.opacity-one {opacity: 1; transition: all 0.3s ease-in-out;}
 
 
 /* Esconder menu lateral */
-.hide-menu {
-	margin-left: -350px;
-}
-
+.hide-menu {margin-left: -350px;}
 
 
 
 /* FOOTER */
-footer {
-	position: absolute;
-	width: 100%;
-  height: 120px;
-  background-color: #b80025;
-}
-
-footer .container-footer {
-  display: flex;
-  justify-content: space-between;
-}
+footer {position: absolute; width: 100%; height: 120px; background-color: #b80025;}
+footer .container-footer {display: flex; justify-content: space-between;}
 
 /* Logótipo do footer */
-footer img {
-  height: 23px;
-  display: flex;
-  justify-content: flex-start;
-}
+footer img {height: 23px; display: flex; justify-content: flex-start;}
 
 /* Copyright */
-footer .copyright {
-  font-size: 17px;
-  display: flex;
-  justify-content: flex-end;
-  color: #fff;
-}
-
-footer p, footer img {
-  margin: 45px;
-}
+footer .copyright {font-size: 17px; display: flex; justify-content: flex-end; color: #fff;}
+footer p, footer img {margin: 45px;}
