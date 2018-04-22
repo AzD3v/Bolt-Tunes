@@ -13,9 +13,7 @@
 	<!-- Bootstrap CDN's -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 
 	<!-- Playfair font-family -->
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
@@ -47,12 +45,6 @@
 	<!-- SLIDER DA HOMEPAGE -->
 	<div id="slides" class="carousel slide" data-ride="carousel">
 
-		<!-- Controladores do slider -->
-		<ul class="carousel-indicators">
-			<li data-target="#slides" data-slide-to="0" class="active"></li>
-			<li data-target="#slides" data-slide-to="1"></li>
-			<li data-target="#slides" data-slide-to="2"></li>
-		</ul>
 		<div class="carousel-inner">
 
 			<!-- Primeiro slider -->
@@ -78,29 +70,59 @@
 				<img src="img/slider/slide3.jpg" alt="Terceira imagem do slider">
 			</div>
 
-
 		</div>
+
+		<!-- Controladores do slider -->
+		<ul class="carousel-indicators">
+			<li data-target="#slides" data-slide-to="0" class="active"></li>
+			<li data-target="#slides" data-slide-to="1"></li>
+			<li data-target="#slides" data-slide-to="2"></li>
+		</ul>
+
  </div>
+ <!-- FIM DO SLIDER DA HOMEPAGE -->
+
+ <!-- CENTRO DA HOMEPAGE -->
+
+<div id="center-page">
+
+	 <!-- Menu lateral da homepage -->
+	 <i class="ion-navicon-round toogle-menu"></i>
+
+	 <div class="sidebar-menu">
+		 <i class="ion-close-circled"></i>
+			<h3 class="text-center boxed-item">Escolhe o teu ritmo!</h3>
+
+			<ul class="menu-navigation">
+				<a href="#"><li class="navigation-item"><i class="ion-ipod"></i>Playlists</li></a>
+				<a href="#"><li class="navigation-item"><i class="ion-headphone"></i>Lista de favoritos</li></a>
+			</ul>
+
+	 </div>
+	 <!-- Fim do menu lateral da homepage -->
+
+</div>
 
 
-
-
-	<!-- Footer da homepage -->
+	<!-- FOOTER DA HOMEPAGE -->
 	<footer>
 		<div class="container-fluid padding">
 
 				<div class="container-footer">
-				<!-- Logótipo do footer -->
-				<img src="img/footer_logo.png" alt="Logótipo do footer">
+					<!-- Logótipo do footer -->
+					<img src="img/footer_logo.png" alt="Logótipo do footer">
 
-				<!-- Copyright -->
-				<p class="copyright">&#169; 2018 BoltTunes</p>
+					<!-- Copyright -->
+					<p class="copyright">&#169; 2018 BoltTunes</p>
 				</div>
-
 
 			</div>
 		</div>
 	</footer>
+	<!-- FIM DO FOOTER DA HOMEPAGE -->
 
 </body>
+
+<!-- Ficheiros JavaScript -->
+<script src="js/homepage.js"></script>
 </html>
