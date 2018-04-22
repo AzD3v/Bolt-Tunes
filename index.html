@@ -10,8 +10,12 @@
 	<!-- Folhas de estilo -->
 	<link rel="stylesheet" href="css/homepage.css" type="text/css">
 
-	<!-- Bootstrap CDN -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<!-- Bootstrap CDN's -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 
 	<!-- Playfair font-family -->
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
@@ -41,12 +45,20 @@
 	<!-- FIM DA NAVBAR -->
 
 	<!-- SLIDER DA HOMEPAGE -->
-	<div id="slides" class="carousel-slide" data-ride="carousel">
+	<div id="slides" class="carousel slide" data-ride="carousel">
+
+		<!-- Controladores do slider -->
+		<ul class="carousel-indicators">
+			<li data-target="#slides" data-slide-to="0" class="active"></li>
+			<li data-target="#slides" data-slide-to="1"></li>
+			<li data-target="#slides" data-slide-to="2"></li>
+		</ul>
 		<div class="carousel-inner">
+
+			<!-- Primeiro slider -->
 			<div class="carousel-item active">
 
-				<!-- Primeiro slider -->
-				<img src="img/slider/slide-1.jpg" alt="Primeira imagem do slider">
+				<img src="img/slider/slide1.jpg" alt="Primeira imagem do slider">
 
 				<!-- Descrição do slider -->
 				<div class="carousel-caption">
@@ -58,20 +70,15 @@
 
 			<!-- Segundo slider -->
 			<div class="carousel-item">
-				<img src="img/slider/slide-2.jpg" alt="Segunda imagem do slider">
+				<img src="img/slider/slide2.jpg" alt="Segunda imagem do slider">
 			</div>
 
 			<!-- Terceiro slider -->
 			<div class="carousel-item">
-				<img src="img/slider/slide-3.jpg" alt="Terceira imagem do slider">
+				<img src="img/slider/slide3.jpg" alt="Terceira imagem do slider">
 			</div>
 
-			<!-- Controladores do slider -->
-			<ul class="carousel-indicators">
-				<li data-target="#slides" data-slide-to="0" class="active"></li>
-				<li data-target="#slides" data-slide-to="1"></li>
-				<li data-target="#slides" data-slide-to="2"></li>
-			</ul>
+
 		</div>
  </div>
 
