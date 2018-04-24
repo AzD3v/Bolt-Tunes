@@ -30,15 +30,17 @@
 	<!-- NAVBAR -->
 	<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
 		<div class="container-fluid">
-			<a href="" class="navbar-brand"><img src="img/logo.png" alt="Logótipo da página"></a>
-		</div>
+			<div class="logo">
+				<a href="" class="navbar-brand"><img src="img/logo.png" alt="Logótipo da página"></a>
+			</div>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-				<span class="navbar-toggler-icon"></span>
+				<span class="ion-android-menu"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 					<input class="form-control mr-sm-2" type="search" placeholder="Faça a sua pesquisa personalizada..." aria-label="Search">
     			<button class="btn my-2 my-sm-0" type="submit">Pesquisar</button>
 			</div>
+		</div>
 	</nav>
 	<!-- FIM DA NAVBAR -->
 
@@ -83,9 +85,9 @@
  <!-- FIM DO SLIDER DA HOMEPAGE -->
 
  <!-- CENTRO DA HOMEPAGE -->
+ <div id="center-page">
 
-<div id="center-page">
-
+	 <div id="menu-lateral">
 	 <!-- Menu lateral da homepage -->
 	 <i class="ion-navicon-round toogle-menu"></i>
 
@@ -94,12 +96,70 @@
 			<h3 class="text-center boxed-item">Escolhe o teu ritmo!</h3>
 
 			<ul class="menu-navigation">
-				<a href="#"><li class="navigation-item"><i class="ion-ipod"></i>Playlists</li></a>
+				<a href="#"><li class="navigation-item"><div class="opcao-ativa"></div><i class="ion-ipod"></i>Playlists</li></a>
 				<a href="#"><li class="navigation-item"><i class="ion-headphone"></i>Lista de favoritos</li></a>
 			</ul>
-
+		</div>
 	 </div>
 	 <!-- Fim do menu lateral da homepage -->
+
+	 <!-- Área de ação da homepage -->
+	 <div id="area-acao" class="col-sm-8">
+		<div class="acao">
+		 	<h3 class="display-5">O que pretendes fazer a seguir?</h3>
+			<div class="acao-atual-container">
+			<span><div class="acao-atual"></div></span><h5 class="display-5 title-acao">Playlists</h5>
+			</div>
+
+			<!-- Opção #1 -->
+			<div class="opcao-principal">
+				<i class="ion-plus-round"></i>
+				<h5 class="display-5 opcao-acoes">Adicionar playlist</h5>
+			</div>
+
+				<!-- Opção #2 -->
+				<div class="opcoes-acao">
+					<div class="row">
+						<i class="ion-music-note"></i>
+						<h5 class="opcao-acoes">Best of The Week</h5>
+							<div class="info-opcao">
+								<p>3 músicas adicionadas</p>
+							</div>
+						</div>
+					<button class="btn botao-opcao">Ouvir playlist</button>
+			</div>
+
+			<!-- Opção #3 -->
+			<div class="opcoes-acao">
+				<div class="row">
+					<i class="ion-music-note"></i>
+					<h5 class="opcao-acoes">80's Music</h5>
+						<div class="info-opcao">
+							<p>5 músicas adicionadas</p>
+						</div>
+					</div>
+				<div class="botoes-opcao">
+					<button class="btn botao-opcao">Ouvir playlist</button>
+				</div>
+		</div>
+
+		<!-- Opção #4 -->
+		<div class="opcoes-acao">
+			<div class="row">
+				<i class="ion-music-note"></i>
+				<h5 class="opcao-acoes">My music</h5>
+					<div class="info-opcao">
+						<p>10 músicas adicionadas</p>
+					</div>
+				</div>
+			<button class="btn botao-opcao">Ouvir playlist</button>
+	</div>
+
+
+		</div>
+	</div>
+	<!-- Fim da área de ação da homepage -->
+
 
 </div>
 
