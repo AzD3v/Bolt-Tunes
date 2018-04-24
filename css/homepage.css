@@ -5,11 +5,14 @@ html, body {height: 100%; width: 100%; font-family: 'Playfair', sans-serif; colo
 
 /* NAVBAR */
 .navbar {height: 150px;padding: .8rem;}
+.container-fluid {display: flex; justify-content: space-between;}
 
 /* Logótipo da navbar */
-.navbar img {height: 80px;}
+.navbar img {height: 80px; display: flex; justify-content: flex-start;}
 a.navbar-brand {margin: 30px;}
 
+/* Opções do menu da navbar */
+.navbar-collapse {display: flex; justify-content: flex-end;}
 /* Barra de pesquisa */
 .form-control.mr-sm-2 {width: 350px; background-color: #acacac; border-radius: 20px;}
 
@@ -27,7 +30,23 @@ a.navbar-brand {margin: 30px;}
   transition-timing-function: linear;
 }
 
-.navbar-collapse>button:hover {background-color: #ed1a1a;}
+.navbar-collapse > button:hover {
+	background-color: #ed1a1a;
+}
+
+/* Botão que ativa o dropdown em ecrãs mais pequenos */
+button.navbar-toggler {
+	font-size: 25px;
+	background-color: #772D7C;
+	transition-duration: 0.5s; transition-timing-function: linear;
+	color: #fff;
+}
+
+.ion-android-menu {color: #fff;}
+
+button.navbar-toggler:hover {
+	background-color: #ed1a1a;
+}
 
 /* SLIDER */
 
@@ -98,19 +117,19 @@ button.btn.btn-outline-light.btn-lg:hover {
 } */
 
 /* CENTRO DA HOMEPAGE */
-#center-page {height: 90%;background-color: #F8F9FA;}
+#center-page {height: 90%;background-color: #F8F9FA; display: flex;}
 
 /* Menu lateral da homepage (toogler) */
 i.ion-navicon-round.toogle-menu {font-size: 2.2em; position: absolute;}
 
 .toogle-menu {
-	padding: 15px 20px 10px 15px;
-	margin-top: 20px;
+	padding: 15px;
 	color: #fff;
 	cursor: pointer;
 	background-color: #BABBBB;
-	z-index: 100000;
 	opacity: 0;
+	display: flex;
+	justify-content: flex-start;
 }
 
 .sidebar-menu {
@@ -177,16 +196,103 @@ i.ion-navicon-round.toogle-menu {font-size: 2.2em; position: absolute;}
 	cursor: pointer;
 }
 
-i.ion-ipod, i.ion-headphone {display: flex; margin-right: 10px; color: #fff; font-size: 25px;}
+.opcao-ativa {
+	background-color: #E0002D;
+	width: 10px;
+	height: 39px;
+	margin-right: 10px;
+	margin-bottom: -15px;
+}
+
+i.ion-ipod, i.ion-headphone {display: flex; margin-right: 10px; color: #fff; font-size: 27px;}
 
 /* Fazer aparecer menu lateral */
 .opacity-one {opacity: 1; transition: all 0.3s ease-in-out;}
 
-
 /* Esconder menu lateral */
 .hide-menu {margin-left: -350px;}
 
+/* ÁREA DE AÇÃO DA HOMEPAGE */
+#area-acao {display: flex; justify-content: start; margin-left: 48px;}
+.acao {display: flex; flex-direction: column;}
 
+/* Título da área de ação */
+#area-acao h3 {margin-top: 35px; color: #3D164F;}
+
+/* Título da ação efetuada no momento */
+#area-acao h5 {margin: 12px 0 0 10px; color: #3D164F; font-size: 22px;}
+
+/* Ação efetuada no momento */
+.acao-atual-container {
+	display: flex;
+	flex-direction: row;
+	border-bottom: 1px solid #3D164F;
+}
+
+.acao-atual {
+	background-color: #E0002D;
+	width: 10px;
+	height: 35px;
+	margin: 8px 5px 0 0;
+}
+
+/* Ação principal */
+.opcao-principal {
+	display: flex;
+	flex-direction: row;
+	margin-top: 10px;
+	border-bottom: 1px solid #3D164F;
+}
+
+/* Oções secundárias */
+.opcoes-acao {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 10px;
+	border-bottom: 1px solid #3D164F;
+}
+
+.ion-plus-round {
+	font-size: 45px;
+	color: #3D164F;
+	display: flex;
+	justify-content: flex-start;
+}
+
+.ion-music-note {
+	font-size: 40px;
+	margin-left: 15px;
+	color: #fff;
+	background-color: #B80025;
+	padding: 10px;
+	display: flex;
+	justify-content: flex-start;
+}
+
+.info-opcao {
+	display: flex;
+	margin: 12px 0 0 10px;
+	color: #3D164F;
+	font-size: 15px;
+}
+
+/* Botão que permite ouvir a playlist */
+button.btn.botao-opcao {
+	color: #fff;
+	height: 35px;
+	padding: 10px;
+	background-color: #B80025;
+	text-transform: uppercase;
+	margin: 5px 0 5px 100px;
+	border-radius: 15px;
+	line-height: 15px;
+	transition-duration: 0.5s;
+  transition-timing-function: linear;
+}
+
+button.btn.botao-opcao:hover {
+	background-color: #762D7D;
+}
 
 /* FOOTER */
 footer {position: absolute; width: 100%; height: 120px; background-color: #b80025;}
@@ -198,3 +304,10 @@ footer img {height: 23px; display: flex; justify-content: flex-start;}
 /* Copyright */
 footer .copyright {font-size: 17px; display: flex; justify-content: flex-end; color: #fff;}
 footer p, footer img {margin: 45px;}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 300px) {
+    a.navbar-brand {
+			width: 100px;
+		}
+}
