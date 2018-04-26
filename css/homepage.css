@@ -2,10 +2,22 @@
 html, body {height: 100%; width: 100%; font-family: 'Playfair', sans-serif; color: #222; margin: 0; padding: 0; text-decoration: none;}
 
 /* HOMEPAGE */
+h7 {font-size: 12px;}
+
+h8 {font-size: 20px;}
 
 /* NAVBAR */
 .navbar {height: 150px;padding: .8rem;}
-.container-fluid {display: flex; justify-content: space-between;}
+.container-nav {display: flex; justify-content: space-between; align-items: center; width: 90%;;
+    height: 100%;}
+.navbar.navbar-expand-md.navbar-light.bg-light.sticky-top {position: fixed;width: 100%;height: 110px; justify-content: center; padding-top: 20px;}
+
+.row-music img {height: 60px; display: flex;flex-direction: row;margin-right: 10px;}
+
+.plus {height: 60px; display: flex;flex-direction: row;margin-right: 5px;}
+
+.opcoes-acao row-music {margin-right: 0;margin-left: 0;}
+
 
 /* Logótipo da navbar */
 .navbar img {height: 80px; display: flex; justify-content: flex-start;}
@@ -54,7 +66,18 @@ button.navbar-toggler:hover {
 .carousel-inner img {width: 100%;height: 100%;}
 
 /* Descrição do slider */
-.carousel-caption {position: absolute; top: 10%; transform: translateY(-50%); transform: translateX(-10%);}
+.carousel-caption {    position: absolute;
+    right: 31%;
+    bottom: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* left: 15%; */
+    z-index: 10;
+    /* padding-top: 20px; */
+    /* padding-bottom: 20px; */
+    color: #fff; 
+    transform: translateX(-10%);}
 
 .carousel-caption h1 {
   font-size: 400%;
@@ -63,7 +86,9 @@ button.navbar-toggler:hover {
   display: flex;
   justify-content: flex-start;
   color: #fff;
-  margin: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: left;
 }
 
 .carousel-caption h1:hover {transition-duration: 0.5s; transition-timing-function: linear;}
@@ -74,6 +99,7 @@ button.navbar-toggler:hover {
   background-image: linear-gradient(to right, #e3e3e3, #fff, #e3e3e3);
   border: 1px solid #fff;
   margin: 3px;
+  width: 290px;
 }
 
 .carousel-caption h3 {
@@ -81,8 +107,10 @@ button.navbar-toggler:hover {
   font-weight: 500;
   padding-bottom: 1rem;
   font-weight: bold;
-  margin: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   color: #fff;
+  text-align: left;
 }
 
 .carousel-caption h3:hover {transition-duration: 0.5s; transition-timing-function: linear;}
@@ -93,7 +121,7 @@ button.navbar-toggler:hover {
 /* Firefox slider bug fix */
 .carousel-item {
   transition: -webkit-transform 0.5s ease;
-  tranisiton: transform: 0.5 ease;
+  transition: transform: 0.5 ease;
   transition: transform 0.5 ease, -webkit-transform 0.5s ease;
   -webkist-backface-visibility: visible;
   backface-visibility: visible;
@@ -117,7 +145,8 @@ button.btn.btn-outline-light.btn-lg:hover {
 } */
 
 /* CENTRO DA HOMEPAGE */
-#center-page {height: 90%;background-color: #F8F9FA; display: flex;}
+#center-page {height: 100%;background-color: #F8F9FA; display: flex;}
+
 
 /* Menu lateral da homepage (toogler) */
 i.ion-navicon-round.toogle-menu {font-size: 2.2em; position: absolute;}
@@ -133,7 +162,7 @@ i.ion-navicon-round.toogle-menu {font-size: 2.2em; position: absolute;}
 }
 
 .sidebar-menu {
-	width: 350px;
+	width: 500px; /*linha 242 .hide-menu  */
 	margin-left: 0;
 	overflow: hidden;
 	height: 100vh;
@@ -143,8 +172,12 @@ i.ion-navicon-round.toogle-menu {font-size: 2.2em; position: absolute;}
 	transition: all 0.3s ease-in-out;
 }
 
+.sub-sidebar-menu {
+    width: 89%;
+    padding-left: 115px;
+}
+
 .sidebar-menu h3 {
-	margin: 25px;
 	padding: 10px 10px;
 	font-weight: 350;
 	color: #fff;
@@ -152,6 +185,7 @@ i.ion-navicon-round.toogle-menu {font-size: 2.2em; position: absolute;}
 	font-size: 25px;
 	border: 2px solid #fff;
 	box-sizing: border-box;
+    margin-top: 20px;
 }
 
 .ion-close-circled {
@@ -169,10 +203,7 @@ i.ion-navicon-round.toogle-menu {font-size: 2.2em; position: absolute;}
 
 /* Navegação do menu lateral */
 .menu-navigation {
-	margin: 20px 0;
-	display: block;
-	width: 250px;
-	margin-right: 15px;
+	padding: 0;
 	display: flex;
 	flex-direction: column;
 }
@@ -194,14 +225,13 @@ i.ion-navicon-round.toogle-menu {font-size: 2.2em; position: absolute;}
 	color: #fff;
 	transition: all 0.3s ease-in-out;
 	cursor: pointer;
+    align-items: center;
 }
-
 .opcao-ativa {
-	background-color: #E0002D;
-	width: 10px;
-	height: 39px;
-	margin-right: 10px;
-	margin-bottom: -15px;
+    background-color: #E0002D;
+    width: 10px;
+    height: 39px;
+    margin-right: 10px;
 }
 
 i.ion-ipod, i.ion-headphone {display: flex; margin-right: 10px; color: #fff; font-size: 27px;}
@@ -210,11 +240,12 @@ i.ion-ipod, i.ion-headphone {display: flex; margin-right: 10px; color: #fff; fon
 .opacity-one {opacity: 1; transition: all 0.3s ease-in-out;}
 
 /* Esconder menu lateral */
-.hide-menu {margin-left: -350px;}
+.hide-menu {margin-left: -500px;}
 
 /* ÁREA DE AÇÃO DA HOMEPAGE */
-#area-acao {display: flex; justify-content: start; margin-left: 48px;}
-.acao {display: flex; flex-direction: column;}
+#area-acao {display: flex; justify-content: start; margin-left: 48px; width: 100%;}
+#sub-area-acao {width: 90%;}
+.acao {display: flex; flex-direction: column; width: 100%;}
 
 /* Título da área de ação */
 #area-acao h3 {margin-top: 35px; color: #3D164F;}
@@ -224,32 +255,46 @@ i.ion-ipod, i.ion-headphone {display: flex; margin-right: 10px; color: #fff; fon
 
 /* Ação efetuada no momento */
 .acao-atual-container {
-	display: flex;
-	flex-direction: row;
-	border-bottom: 1px solid #3D164F;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #3D164F;
+    padding-bottom: 10px;
+    padding-top: 20px;
 }
-
 .acao-atual {
-	background-color: #E0002D;
-	width: 10px;
-	height: 35px;
-	margin: 8px 5px 0 0;
+    background-color: #E0002D;
+    width: 10px;
+    height: 35px;
+    align-items: center;
+    margin-right: 10px;
 }
 
 /* Ação principal */
 .opcao-principal {
-	display: flex;
-	flex-direction: row;
-	margin-top: 10px;
-	border-bottom: 1px solid #3D164F;
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    border-bottom: 1px solid #3D164F;
+    padding-bottom: 10px;
+    align-items: center;
 }
 
 /* Oções secundárias */
 .opcoes-acao {
 	display: flex;
-	justify-content: space-between;
-	margin-top: 10px;
-	border-bottom: 1px solid #3D164F;
+    justify-content: space-between;
+    margin-top: 10px;
+    border-bottom: 1px solid #3D164F;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.opcoes-acao-left {
+	display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    width: 40%;
 }
 
 .ion-plus-round {
@@ -271,7 +316,7 @@ i.ion-ipod, i.ion-headphone {display: flex; margin-right: 10px; color: #fff; fon
 
 .info-opcao {
 	display: flex;
-	margin: 12px 0 0 10px;
+	margin: 0 0 0 10px;
 	color: #3D164F;
 	font-size: 15px;
 }
