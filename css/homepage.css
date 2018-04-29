@@ -3,8 +3,6 @@ html, body {height: 100%; width: 100%; font-family: 'Playfair', sans-serif; colo
 
 /* HOMEPAGE */
 h7 {font-size: 12px;}
-<<<<<<< HEAD
-
 h8 {font-size: 20px;}
 
 /* NAVBAR */
@@ -18,8 +16,6 @@ h8 {font-size: 20px;}
 .plus {height: 60px; display: flex;flex-direction: row;margin-right: 5px;}
 
 .opcoes-acao row-music {margin-right: 0;margin-left: 0;}
-
-=======
 
 h8 {font-size: 20px;}
 
@@ -48,14 +44,13 @@ h9 {
 
 .opcoes-acao row-music {margin-right: 0;margin-left: 0;}
 
->>>>>>> dev-carina
-
 /* Logótipo da navbar */
 .navbar img {height: 80px; display: flex; justify-content: flex-start;}
 a.navbar-brand {margin: 30px;}
 
 /* Opções do menu da navbar */
 .navbar-collapse {display: flex; justify-content: flex-end;}
+
 /* Barra de pesquisa */
 .form-control.mr-sm-2 {width: 350px; background-color: #acacac; border-radius: 20px;}
 
@@ -176,12 +171,8 @@ button.btn.btn-outline-light.btn-lg:hover {
 } */
 
 /* CENTRO DA HOMEPAGE */
-<<<<<<< HEAD
-#center-page {height: 100%;background-color: #F8F9FA; display: flex;}
-=======
-#center-page {height: 100%;background-color: #F8F9FA; display: flex;width: auto;}
->>>>>>> dev-carina
 
+#center-page {height: 100%;background-color: #F8F9FA; display: flex;width: auto;}
 
 /* Menu lateral da homepage (toogler) */
 i.ion-navicon-round.toogle-menu {font-size: 2.2em; position: absolute;}
@@ -269,11 +260,8 @@ i.ion-navicon-round.toogle-menu {font-size: 2.2em; position: absolute;}
     margin-right: 10px;
 }
 
-<<<<<<< HEAD
-=======
 #menu-lateral {display: flex;width: 30%;}
 
->>>>>>> dev-carina
 i.ion-ipod, i.ion-headphone {display: flex; margin-right: 10px; color: #fff; font-size: 27px;}
 
 /* Fazer aparecer menu lateral */
@@ -283,13 +271,8 @@ i.ion-ipod, i.ion-headphone {display: flex; margin-right: 10px; color: #fff; fon
 .hide-menu {margin-left: -500px;}
 
 /* ÁREA DE AÇÃO DA HOMEPAGE */
-<<<<<<< HEAD
-#area-acao {display: flex; justify-content: start; margin-left: 48px; width: 100%;}
-#sub-area-acao {width: 90%;}
-=======
 #area-acao {display: flex; justify-content: start; padding-left: 48px; width: auto;}
 #sub-area-acao {width: auto;}
->>>>>>> dev-carina
 .acao {display: flex; flex-direction: column; width: 100%;}
 
 /* Título da área de ação */
@@ -339,16 +322,9 @@ i.ion-ipod, i.ion-headphone {display: flex; margin-right: 10px; color: #fff; fon
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
-<<<<<<< HEAD
-    width: 40%;
-}
-
-=======
     width: 48%;
 }
 
-
->>>>>>> dev-carina
 .ion-plus-round {
 	font-size: 45px;
 	color: #3D164F;
@@ -384,7 +360,7 @@ button.btn.botao-opcao {
 	border-radius: 15px;
 	line-height: 15px;
 	transition-duration: 0.5s;
-  transition-timing-function: linear;
+  	transition-timing-function: linear;
 }
 
 button.btn.botao-opcao:hover {
