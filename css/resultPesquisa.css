@@ -1,0 +1,32 @@
+#margin {display: flex;height: 110px;}
+
+
+
+#center-page {
+    height: 100%;
+    background-color: #F8F9FA;
+    display: flex;
+    width: auto;
+    justify-content: center;
+}
+
+.acao {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    margin-top: 120px;
+}
+
+.opcoes-acao-left {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    width: 42%;
+}
+/*
+#resposta {
+    border-bottom: 1px solid #3D164F;
+    padding-bottom: 10px;
+    padding-top: 20px;
+}*/
