@@ -1,4 +1,5 @@
 /* HOMEPAGE JAVASCRIPT */
+
 $(document).ready(function(){
 
 		$(".ion-close-circled").click(function(){
