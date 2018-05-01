@@ -21,10 +21,11 @@ $(document).ready(function(){
 					$(this).removeClass("active-option");
 				}
 		);
-
-
+		
 		$(".navigation-item").click(function(){
 				$(this).addClass("active-option");
 		});
+
+		
 
 });
