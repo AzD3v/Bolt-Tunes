@@ -238,18 +238,14 @@ i.ion-navicon-round.toogle-menu {font-size: 2.2em; position: absolute;}
 	color: #fff;
 	transition: all 0.3s ease-in-out;
 	cursor: pointer;
-    align-items: center;
+  align-items: center;
 }
-.opcao-ativa {
-    background-color: #E0002D;
-    width: 10px;
-    height: 39px;
-    margin-right: 10px;
-}
+
+.navigation-item:hover {border-left: 5px solid #E0002D;}
 
 #menu-lateral {display: flex;width: 30%;}
 
-i.ion-ipod, i.ion-headphone {display: flex; margin-right: 10px; color: #fff; font-size: 27px;}
+i.ion-ipod, i.ion-headphone {display: flex; margin-right: 10px; color: #fff; font-size: 27px; margin-left: 5px;}
 
 /* Fazer aparecer menu lateral */
 .opacity-one {opacity: 1; transition: all 0.3s ease-in-out;}
@@ -275,13 +271,6 @@ i.ion-ipod, i.ion-headphone {display: flex; margin-right: 10px; color: #fff; fon
     border-bottom: 1px solid #3D164F;
     padding-bottom: 10px;
     padding-top: 20px;
-}
-.acao-atual {
-    background-color: #E0002D;
-    width: 10px;
-    height: 35px;
-    align-items: center;
-    margin-right: 10px;
 }
 
 /* Ação principal */
