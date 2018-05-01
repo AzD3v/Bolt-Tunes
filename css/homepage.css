@@ -241,9 +241,7 @@ i.ion-navicon-round.toogle-menu {font-size: 2.2em; position: absolute;}
   align-items: center;
 }
 
-.active-option {
-	border-left: 5px solid #B80025;
-}
+.active-option {border-left: 5px solid #B80025;}
 
 #menu-lateral {display: flex; width: 30%;}
 
@@ -256,6 +254,7 @@ i.ion-ipod, i.ion-headphone {display: flex; margin-right: 10px; color: #fff; fon
 .hide-menu {margin-left: -500px;}
 
 /* ÁREA DE AÇÃO DA HOMEPAGE */
+.title-acao {font-size: 25px; color: #E51B42; text-transform: uppercase;}
 #area-acao {display: flex; justify-content: start; padding-left: 48px; width: auto;}
 #sub-area-acao {width: auto;}
 .acao {display: flex; flex-direction: column; width: 100%;}

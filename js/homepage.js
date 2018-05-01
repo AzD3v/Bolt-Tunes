@@ -1,6 +1,5 @@
 /* HOMEPAGE JAVASCRIPT */
 
-
 $(document).ready(function(){
 
 		/* Toogler do menu lateral */
@@ -23,6 +22,9 @@ $(document).ready(function(){
 				}
 		);
 
-	
-});
 
+		$(".navigation-item").click(function(){
+				$(this).addClass("active-option");
+		});
+
+});
