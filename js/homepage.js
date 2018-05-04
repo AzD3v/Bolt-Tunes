@@ -2,6 +2,14 @@
 
 $(document).ready(function(){
 
+		$("#navbarResponsive").hide();
+
+		/* "Toogler" do conteúdo inicial do website */
+		$(".pesquisa").click(function(){
+			$("#homepage-principal").hide();
+			$(".pesquisa").hide();
+		});
+
 		/* Toogler do menu lateral */
 		$(".ion-close-circled").click(function(){
 					$(".sidebar-menu").addClass("hide-menu");
@@ -21,11 +29,20 @@ $(document).ready(function(){
 					$(this).removeClass("active-option");
 				}
 		);
-		
+
 		$(".navigation-item").click(function(){
 				$(this).addClass("active-option");
 		});
 
-		
+		/* Efeito fadeIn e fadeOut do footer */
+		$(document).scroll(function() {
+				var y = $(this).scrollTop();
+				if(y > 500) {
+						$('footer').fadeIn();
+				} else {
+						$('footer').fadeOut();
+				}
+		});
+
 
 });
