@@ -21,11 +21,18 @@ $(document).ready(function(){
 					$(this).removeClass("active-option");
 				}
 		);
-		
+
 		$(".navigation-item").click(function(){
 				$(this).addClass("active-option");
 		});
 
-		
+		$(document).scroll(function() {
+				var y = $(this).scrollTop();
+				if(y > 500) {
+						$('footer').fadeIn();
+				} else {
+						$('footer').fadeOut();
+				}
+		});
 
 });
