@@ -241,11 +241,11 @@ i.ion-navicon-round.toogle-menu {font-size: 2.2em; position: absolute;}
   align-items: center;
 }
 
-.navigation-item:hover {border-left: 5px solid #E0002D;}
+.active-option {border-left: 5px solid #B80025;}
 
-#menu-lateral {display: flex;width: 30%;}
+#menu-lateral {display: flex; width: 30%;}
 
-i.ion-ipod, i.ion-headphone {display: flex; margin-right: 10px; color: #fff; font-size: 27px; margin-left: 5px;}
+i.ion-ipod, i.ion-headphone {display: flex; margin-right: 10px; color: #fff; font-size: 27px; margin-left: 10px;}
 
 /* Fazer aparecer menu lateral */
 .opacity-one {opacity: 1; transition: all 0.3s ease-in-out;}
@@ -254,6 +254,7 @@ i.ion-ipod, i.ion-headphone {display: flex; margin-right: 10px; color: #fff; fon
 .hide-menu {margin-left: -500px;}
 
 /* ÁREA DE AÇÃO DA HOMEPAGE */
+.title-acao {font-size: 25px; color: #E51B42; text-transform: uppercase;}
 #area-acao {display: flex; justify-content: start; padding-left: 48px; width: auto;}
 #sub-area-acao {width: auto;}
 .acao {display: flex; flex-direction: column; width: 100%;}
