@@ -264,6 +264,14 @@ i.ion-ipod, i.ion-headphone {display: flex; margin-right: 10px; color: #fff; fon
 /* Título da ação efetuada no momento */
 #area-acao h5 {margin: 12px 0 0 10px; color: #3D164F; font-size: 22px;}
 
+.acao-atual {
+    background-color: #E0002D;
+    width: 10px;
+    height: 35px;
+    align-items: center;
+    margin-right: 10px;
+}
+
 /* Ação efetuada no momento */
 .acao-atual-container {
     display: flex;
@@ -362,4 +370,59 @@ footer p, footer img {margin: 45px;}
     a.navbar-brand {
 			width: 100px;
 		}
+}
+ 
+.pesquisa {
+    color: #fff;
+    height: 45px;
+    padding: 23px;
+    background-color: #B80025;
+    margin: 5px 0 5px 100px;
+    border-radius: 25px;
+    line-height: 0px;
+    font-size: 20px;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+}
+
+.pesquisa:hover {
+	background-color: #762D7D;
+}
+
+p, p:hover {
+  color: #fff;
+  text-decoration-color: none;
+}
+
+
+iframe {
+    display: flex;
+    height: 120px;
+    width: 190px;
+}
+
+.teste{
+    border-bottom: 1px solid #3D164F;
+    padding-bottom: 10px;
+    padding-top: 20px;
+}
+#container_resposta {
+    display: flex;
+    flex-direction: row;
+}
+
+#resposta {
+    display: flex;
+    flex-direction: column;
+}
+
+#resposta_nome {
+    display: flex;
+    flex-direction: column;
+}
+
+.nome {
+    height: 160px;
+    display: flex;
+    align-items: center;
 }
