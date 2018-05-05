@@ -3,11 +3,14 @@
 $(document).ready(function(){
 
 		$("#navbarResponsive").hide();
+		$("#resultados-pesquisa").hide();
 
 		/* "Toogler" do conteúdo inicial do website */
-		$(".pesquisa").click(function(){
-			$("#homepage-principal").hide();
+		$(".pesquisa-personalizada").click(function(){
+			$("#homepage-principal").fadeOut();
 			$(".pesquisa").hide();
+			$("#navbarResponsive").fadeIn();
+			$("#resultados-pesquisa").fadeIn();
 		});
 
 		/* Toogler do menu lateral */
