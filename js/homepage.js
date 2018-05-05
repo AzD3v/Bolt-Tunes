@@ -6,14 +6,12 @@ $(document).ready(function(){
 		$("#resultados-pesquisa").hide();
 
 		/* "Toogler" do conteúdo inicial do website */
-		if($("#search:not(:empty)")) {
 		$(".pesquisa-personalizada").click(function(){
 			$("#homepage-principal").fadeOut();
 			$(".pesquisa").hide();
 			$("#navbarResponsive").fadeIn();
 			$("#resultados-pesquisa").fadeIn();
 		});
-	}
 
 		/* Toogler do menu lateral */
 		$(".ion-close-circled").click(function(){

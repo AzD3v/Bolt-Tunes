@@ -168,7 +168,7 @@ button.navbar-toggler:hover {
 /* Firefox slider bug fix */
 .carousel-item {
   transition: -webkit-transform 0.5s ease;
-  transition: transform: 0.5 ease;
+  transition: transform 0.5 ease;
   transition: transform 0.5 ease, -webkit-transform 0.5s ease;
   -webkist-backface-visibility: visible;
   backface-visibility: visible;
@@ -192,7 +192,7 @@ button.btn.btn-outline-light.btn-lg:hover {
 } */
 
 /* CENTRO DA HOMEPAGE */
-#center-page {height: 100%;background-color: #F8F9FA; display: flex;width: auto;}
+.center-page {height: 100%;background-color: #F8F9FA; display: flex;width: auto;}
 
 
 /* Menu lateral da homepage (toogler) */
@@ -277,7 +277,7 @@ i.ion-navicon-round.toogle-menu {font-size: 2.2em; position: absolute;}
 
 .active-option {border-left: 5px solid #B80025;}
 
-#menu-lateral {display: flex; width: 30%;}
+.menu-lateral {display: flex; width: 30%;}
 
 i.ion-ipod, i.ion-headphone {display: flex; margin-right: 10px; color: #fff; font-size: 27px; margin-left: 10px;}
 
@@ -289,15 +289,15 @@ i.ion-ipod, i.ion-headphone {display: flex; margin-right: 10px; color: #fff; fon
 
 /* ÁREA DE AÇÃO DA HOMEPAGE */
 .title-acao {font-size: 25px; color: #E51B42; text-transform: uppercase;}
-#area-acao {display: flex; justify-content: start; padding-left: 48px; width: auto;}
-#sub-area-acao {width: auto;}
+.area-acao {display: flex; justify-content: start; padding-left: 48px; width: auto;}
+.sub-area-acao {width: auto;}
 .acao {display: flex; flex-direction: column; width: 100%;}
 
 /* Título da área de ação */
-#area-acao h3 {margin-top: 35px; color: #3D164F;}
+.area-acao h3 {margin-top: 35px; color: #3D164F;}
 
 /* Título da ação efetuada no momento */
-#area-acao h5 {margin: 12px 0 0 10px; color: #3D164F; font-size: 22px;}
+.area-acao h5 {margin: 12px 0 0 10px; color: #3D164F; font-size: 22px;}
 
 .acao-atual {
     background-color: #E0002D;
