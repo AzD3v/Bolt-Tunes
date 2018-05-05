@@ -1,17 +1,23 @@
 /* GERAL */
-html, body {height: 100%; width: 100%; font-family: 'Playfair', sans-serif; color: #222; margin: 0; padding: 0; text-decoration: none;}
+html, body {
+	height: 100%;
+	width: 100%;
+	font-family: 'Playfair', sans-serif;
+	color: #222;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
 
 /* HOMEPAGE */
 h7 {font-size: 12px;}
 
 h8 {font-size: 20px;}
 
-h9 {
-   color: white;
-}
+h9 {color: white;}
 
 .caixa {
-     background-color: #6F2D81;
+    background-color: #6F2D81;
     margin: 20px;
     border-radius: 25px;
     padding: 7px;
@@ -21,29 +27,56 @@ h9 {
 
 /* NAVBAR */
 .navbar {height: 150px;padding: .8rem;}
-.container-nav {display: flex; justify-content: space-between; align-items: center; width: 90%;;
-    height: 100%;}
-.navbar.navbar-expand-md.navbar-light.bg-light.sticky-top {position: fixed;width: 100%;height: 110px; justify-content: center; padding-top: 20px;}
 
-.row-music img {height: 60px; display: flex;flex-direction: row;margin-right: 10px;}
+.container-nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 90%;
+	height: 100%;
+}
 
-.plus {height: 60px; display: flex;flex-direction: row;margin-right: 5px;}
+.navbar.navbar-expand-md.navbar-light.bg-light.sticky-top {
+	position: fixed;
+	width: 100%;
+	height: 110px;
+	justify-content: center;
+	padding-top: 20px;
+}
+
+.row-music img {
+	height: 60px;
+	display: flex;
+	flex-direction: row;
+	margin-right: 10px;
+}
+
+.plus {
+	height: 60px;
+	display: flex;
+	flex-direction: row;
+	margin-right: 5px;
+}
 
 .opcoes-acao row-music {margin-right: 0;margin-left: 0;}
 
-
 /* Logótipo da navbar */
-.navbar img {height: 80px; display: flex; justify-content: flex-start;}
+.navbar img {
+	height: 80px;
+	display: flex;
+	justify-content: flex-start;
+}
+
 a.navbar-brand {margin: 30px;}
 
 /* Opções do menu da navbar */
 .navbar-collapse {display: flex; justify-content: flex-end;}
+
 /* Barra de pesquisa */
 .form-control.mr-sm-2 {width: 350px; background-color: #acacac; border-radius: 20px;}
-
 .form-control.mr-sm-2::placeholder {color: #fff;}
-
 .form-control.mr-sm-2:focus {background-color: #acacac; color: #fff;}
+input#search.form-control.mr-sm-2 {color: #fff;}
 
 /* Botão de pesquisa */
 .navbar-collapse > button {
@@ -63,7 +96,8 @@ a.navbar-brand {margin: 30px;}
 button.navbar-toggler {
 	font-size: 25px;
 	background-color: #772D7C;
-	transition-duration: 0.5s; transition-timing-function: linear;
+	transition-duration: 0.5s;
+	transition-timing-function: linear;
 	color: #fff;
 }
 
@@ -89,7 +123,7 @@ button.navbar-toggler:hover {
     z-index: 10;
     /* padding-top: 20px; */
     /* padding-bottom: 20px; */
-    color: #fff; 
+    color: #fff;
     transform: translateX(-10%);}
 
 .carousel-caption h1 {
@@ -265,6 +299,14 @@ i.ion-ipod, i.ion-headphone {display: flex; margin-right: 10px; color: #fff; fon
 /* Título da ação efetuada no momento */
 #area-acao h5 {margin: 12px 0 0 10px; color: #3D164F; font-size: 22px;}
 
+.acao-atual {
+    background-color: #E0002D;
+    width: 10px;
+    height: 35px;
+    align-items: center;
+    margin-right: 10px;
+}
+
 /* Ação efetuada no momento */
 .acao-atual-container {
     display: flex;
@@ -346,7 +388,7 @@ button.btn.botao-opcao:hover {
 }
 
 /* FOOTER */
-footer {position: absolute; width: 100%; height: 120px; background-color: #b80025;}
+footer {bottom: 0; position: fixed; width: 100%; height: 120px; background-color: #b80025;}
 footer .container-footer {display: flex; justify-content: space-between;}
 
 /* Logótipo do footer */
@@ -363,4 +405,64 @@ footer p, footer img {margin: 45px;}
     a.navbar-brand {
 			width: 100px;
 		}
+}
+
+.pesquisa {
+    color: #fff;
+    height: 45px;
+    padding: 23px;
+    background-color: #B80025;
+    margin: 5px 0 5px 100px;
+    border-radius: 25px;
+    line-height: 0px;
+    font-size: 20px;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+		cursor: pointer;
+}
+
+.pesquisa:hover {
+	background-color: #762D7D;
+}
+
+div#navbar-responsive.collapse.navbar-collapse.pesquisa-personalizada {
+	display: none !important;
+}
+
+p, p:hover {
+  color: #fff;
+  text-decoration-color: none;
+}
+
+
+iframe {
+    display: flex;
+    height: 120px;
+    width: 190px;
+}
+
+.teste{
+    border-bottom: 1px solid #3D164F;
+    padding-bottom: 10px;
+    padding-top: 20px;
+}
+#container_resposta {
+    display: flex;
+    flex-direction: row;
+}
+
+#resposta {
+    display: flex;
+    flex-direction: column;
+}
+
+#resposta_nome {
+    display: flex;
+    flex-direction: column;
+}
+
+.nome {
+    height: 160px;
+    display: flex;
+    align-items: center;
 }
