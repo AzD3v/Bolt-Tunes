@@ -465,3 +465,7 @@ iframe {
     display: flex;
     align-items: center;
 }
+
+#seta {
+    width:120px;
+}

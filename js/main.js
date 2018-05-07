@@ -30,13 +30,8 @@ $(function(){
     h8.innerHTML$ = "Resultado da Pesquisa";
     div.appendChild(h8);
 
-    //criacao da div "container_row)
-   // let videobase = document.createElement('div');
-  //  videobase.id = "sub_resposta";
-   // resposta.appendChild(videobase);
-
+    
     //fazer o pedido HTTP GET ao servico Youtube
-
    $.get(url,function(response,status){
      if (status=='success') {
        for (let resultado of response.items) {
@@ -45,17 +40,10 @@ $(function(){
 
         let nome = $("<div class='nome'></div>").text(resultado.snippet.title);
 
-
-
-
-           video.click(function(){
-            window.open("https://www.youtube.com/embed/"+resultado.id.videoId);
+           
+           video.click(function(){         window.open("https://www.youtube.com/embed/"+resultado.id.videoId);
              console.log(resultado);
            });
-
-        //nome video
-
-
 
            $("#resposta").append("<br>").append(video);
            $("#resposta_nome").append("<br>").append(nome);
