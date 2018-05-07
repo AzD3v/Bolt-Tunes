@@ -11,7 +11,7 @@ $(function(){
    let query =$('#search');
 
     //construir o URL com o valor da caixa de input
-   let url ="https://www.googleapis.com/youtube/v3/search?q="+query.val()+ "&part=snippet&key="+youtubeAPIKey;
+   let url ="https://www.googleapis.com/youtube/v3/search?q="+query.val()+ "&maxResults=50&part=snippet&key="+youtubeAPIKey;
 
     //funcao para codificar os espacos e caracteres especiais entre palavras pesquisadas
    url=encodeURI(url);

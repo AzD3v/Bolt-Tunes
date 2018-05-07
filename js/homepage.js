@@ -1,6 +1,6 @@
-/* ******************* */ 
-/* HOMEPAGE JAVASCRIPT */ 
-/* ******************* */ 
+/* ******************* */
+/* HOMEPAGE JAVASCRIPT */
+/* ******************* */
 
 $(document).ready(function(){
 
@@ -57,13 +57,13 @@ $(document).ready(function(){
 		});
 
 		/* Efeito fadeIn e fadeOut do footer */
-		$(document).scroll(function() {
+		/*$(document).scroll(function() {
 				var y = $(this).scrollTop();
 				if(y > 520) {
 						$('footer').fadeIn();
 				} else {
 						$('footer').fadeOut();
 				}
-		});
+		});*/
 
 });
