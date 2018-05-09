@@ -17,18 +17,7 @@ $(function(){
    url=encodeURI(url);
 
 
-    //criação da div "resultado pesquisa"
-    var resposta = document.getElementById("resposta");
-    var div = document.createElement('div');
-    //class do container pai
-    div.className = "acao-atual-container";
-    resposta.appendChild(div);
-
-    //criação do <h8>
-    var h8 = document.createElement('h8');
-    h8.className = "display-5 title-acao";
-    h8.innerHTML$ = "Resultado da Pesquisa";
-    div.appendChild(h8);
+   
 
     
     //fazer o pedido HTTP GET ao servico Youtube
@@ -36,17 +25,16 @@ $(function(){
      if (status=='success') {
        for (let resultado of response.items) {
 
-        let video = $("<iframe></iframe><div style='border-bottom: 1px solid #3D164F;margin-top: 20px;'></div>").attr('src',"https://www.youtube.com/embed/"+resultado.id.videoId);
+        let video = $("<div class='wrapper'><div class='resposta'><iframe src='https://www.youtube.com/embed/"+resultado.id.videoId+"'></iframe></div><div class='resposta_nome'>"+resultado.snippet.title+"</div><div class='container_button'><div id='sub_container_button'><button class='btn botao-opcao'>Adicionar faixa</button></div></div></div>");
 
-        let nome = $("<div class='nome'></div>").text(resultado.snippet.title);
-
-           
+       // let nome = $("<div class='nome'></div>").text(resultado.snippet.title);
+      
            video.click(function(){         window.open("https://www.youtube.com/embed/"+resultado.id.videoId);
              console.log(resultado);
            });
-
-           $("#resposta").append("<br>").append(video);
-           $("#resposta_nome").append("<br>").append(nome);
+           
+           $("#respostas").append("<br>").append(video);
+          // $("#resposta_nome").append("<br>").append(nome);
        }
      }
      //console.log('status, response');
