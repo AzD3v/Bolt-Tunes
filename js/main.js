@@ -5,6 +5,11 @@ $(function(){
 
   // O que sucede ao clicar no botão de pesquisa
   $("#search-button").click(function(){
+    
+    // Impedir que ocorra uma pesquisa com um campo de texto vazio
+    if($("#search").val() === '') {
+      location.reload();
+    } else {
 
     // Leitura do valor da caixa de texto da pesquisa 
    let query =$('#search');
@@ -34,5 +39,6 @@ $(function(){
      }
      //console.log('status, response');
    });
+  }
  });
 });
