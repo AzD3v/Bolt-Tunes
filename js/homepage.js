@@ -56,7 +56,7 @@ $(document).ready(function(){
 				$(this).addClass("active-option");
 		});
 
-		// 
+		// Limpeza da caixa de texto após clique no botão de pesquisa
 		$("#search-button").click(function(){
 			$("#search").val('');
 		});
