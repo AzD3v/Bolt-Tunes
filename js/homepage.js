@@ -56,6 +56,11 @@ $(document).ready(function(){
 				$(this).addClass("active-option");
 		});
 
+		// 
+		$("#search-button").click(function(){
+			$("#search").val('');
+		});
+
 		/* Efeito fadeIn e fadeOut do footer */
 		/*$(document).scroll(function() {
 				var y = $(this).scrollTop();
