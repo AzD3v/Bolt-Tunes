@@ -1,26 +1,21 @@
 $(function(){
 
-  //alinea 3
-
+  // Chave API do YouTube
   const youtubeAPIKey ="AIzaSyAvt_YeiVfbMrGKdNFaMuMo760ViQemm0k";
 
-  //ao clicar no botao:
-  $("button").click(function(){
+  // O que sucede ao clicar no botão de pesquisa
+  $("#search-button").click(function(){
 
-    //ler o valor da caixa de input
+    // Leitura do valor da caixa de texto da pesquisa 
    let query =$('#search');
 
-    //construir o URL com o valor da caixa de input
+    // Construção do URL com o valor da caixa de texto da pesquisa
    let url ="https://www.googleapis.com/youtube/v3/search?q="+query.val()+ "&maxResults=50&part=snippet&key="+youtubeAPIKey;
 
-    //funcao para codificar os espacos e caracteres especiais entre palavras pesquisadas
+    // Função que codifica os espaços e caracteres especiais entre as várias palavras pesquisadas
    url=encodeURI(url);
-
-
-   
-
     
-    //fazer o pedido HTTP GET ao servico Youtube
+    // Pedido HTTP GET ao serviço YouTube
    $.get(url,function(response,status){
      if (status=='success') {
        for (let resultado of response.items) {
