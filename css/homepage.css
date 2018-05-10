@@ -340,9 +340,8 @@ i.ion-ipod, i.ion-headphone {display: flex; margin-right: 10px; color: #fff; fon
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
-    width: 48%;
+    width: 55%;
 }
-
 
 .ion-plus-round {
 	font-size: 45px;
@@ -379,7 +378,7 @@ button.btn.botao-opcao {
 	border-radius: 15px;
 	line-height: 15px;
 	transition-duration: 0.5s;
-  transition-timing-function: linear;
+    transition-timing-function: linear;
 }
 
 button.btn.botao-opcao:hover {
