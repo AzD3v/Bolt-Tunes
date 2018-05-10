@@ -57,9 +57,9 @@ $(document).ready(function(){
 		});
 
 		// Limpeza da caixa de texto após clique no botão de pesquisa
-		$("#search-button").click(function(){
-			$("#search").val('');
-		});
+		// $("#search-button").click(function(){
+		// 	$("#search").val('');
+		// });
 
 		/* Efeito fadeIn e fadeOut do footer */
 		/*$(document).scroll(function() {
