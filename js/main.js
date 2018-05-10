@@ -1,4 +1,6 @@
-$(function(){
+$(document).ready(function(){
+
+  $(function(){
 
   // Chave API do YouTube
   const youtubeAPIKey ="AIzaSyAvt_YeiVfbMrGKdNFaMuMo760ViQemm0k";
@@ -8,20 +10,20 @@ $(function(){
     
     // Impedir que ocorra uma pesquisa com um campo de texto vazio
     if($("#search").val() === '') {
-      location.reload();
-    } else {
-
+        location.reload();
+    } else if($("#search").val() !== '') {
+      
     // Leitura do valor da caixa de texto da pesquisa 
-   let query =$('#search');
+    let query =$('#search');
 
     // Construção do URL com o valor da caixa de texto da pesquisa
-   let url ="https://www.googleapis.com/youtube/v3/search?q="+query.val()+ "&maxResults=50&part=snippet&key="+youtubeAPIKey;
+    let url ="https://www.googleapis.com/youtube/v3/search?q="+query.val()+ "&maxResults=50&part=snippet&key="+youtubeAPIKey;
 
     // Função que codifica os espaços e caracteres especiais entre as várias palavras pesquisadas
-   url=encodeURI(url);
+    url=encodeURI(url);
     
     // Pedido HTTP GET ao serviço YouTube
-   $.get(url,function(response,status){
+    $.get(url,function(response,status){
      if (status=='success') {
        for (let resultado of response.items) {
 
@@ -38,7 +40,9 @@ $(function(){
        }
      }
      //console.log('status, response');
-   });
+    });
   }
+  
  });
+});
 });
