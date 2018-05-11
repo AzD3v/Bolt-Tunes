@@ -9,11 +9,16 @@ $(document).ready(function(){
 		$("#resultados-pesquisa").hide();
 		$("#musicas-favoritas").hide();
 
+		// Demonstrar opção predefinida selecionada (Lista das playlists)
+		$(".lista-playlists").addClass('active-option');
+
 		// "Toogler" da lista de playlists do utilizador (homepage)
 		$(".lista-playlists").click(function(){
 			$("#musicas-favoritas").fadeOut();
 			$("#resultados-pesquisa").fadeOut();
 			$("#homepage-principal").fadeIn();
+			$(".lista-playlists").addClass('active-option');
+			$(".lista-favoritos").removeClass('active-option');		
 		});
 
 		// "Toogler" dos resultados de pesquisa que o utilizador efetuar
@@ -30,6 +35,8 @@ $(document).ready(function(){
 			$("#homepage-principal").fadeOut();
 			$("#resultados-pesquisa").fadeOut();
 			$("#musicas-favoritas").fadeIn();
+			$(".lista-favoritos").addClass('active-option');	
+			$(".lista-playlists").removeClass('active-option');		
 		});
 
 		// "Toogler" do menu lateral
@@ -52,9 +59,10 @@ $(document).ready(function(){
 				}
 		);
 
-		$(".navigation-item").click(function(){
-				$(this).addClass("active-option");
-		});
+		// Limpeza da caixa de texto após clique no botão de pesquisa
+		// $("#search-button").click(function(){
+		// 	$("#search").val('');
+		// });
 
 		/* Efeito fadeIn e fadeOut do footer */
 		/*$(document).scroll(function() {
