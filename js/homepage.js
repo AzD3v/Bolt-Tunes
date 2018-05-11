@@ -28,6 +28,8 @@ $(document).ready(function(){
 			$("#musicas-favoritas").hide();
 			$("#navbarResponsive").fadeIn();
 			$("#resultados-pesquisa").fadeIn();
+			$(".lista-playlists").removeClass('active-option');	
+			$(".lista-favoritos").removeClass('active-option');
 		});
 
 		// "Toogler" da secção de músicas favoritas do utilizador
