@@ -31,7 +31,8 @@ $(document).ready(function(){
 
        // let nome = $("<div class='nome'></div>").text(resultado.snippet.title);
       
-           video.click(function(){         window.open("https://www.youtube.com/embed/"+resultado.id.videoId);
+           video.click(function(){         
+             window.open("https://www.youtube.com/embed/"+resultado.id.videoId);
              console.log(resultado);
            });
            
