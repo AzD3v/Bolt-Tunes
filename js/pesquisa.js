@@ -8,6 +8,9 @@ $(document).ready(function(){
   // Chave API do YouTube
   const youtubeAPIKey ="AIzaSyAvt_YeiVfbMrGKdNFaMuMo760ViQemm0k";
   
+  // Leitura do valor da caixa de texto da pesquisa   
+  let query = $('#search');
+  
   // O que sucede ao clicar no botão de pesquisa
   $("#search-button").click(function(){
     
@@ -16,9 +19,6 @@ $(document).ready(function(){
         location.reload();
     } else if($("#search").val() !== '') {
       
-    // Leitura do valor da caixa de texto da pesquisa 
-    let query = $('#search');
-
     // Construção do URL com o valor da caixa de texto da pesquisa
     let url = "https://www.googleapis.com/youtube/v3/search?q="
       + query.val() 
@@ -28,19 +28,8 @@ $(document).ready(function(){
       + "&part=snippet"
       + "&key=" + youtubeAPIKey;
 
-      // Variável que irá conter os próximos 10 resultados da pesquisa 
-      let next10 = "https://www.googleapis.com/youtube/v3/search?q="
-      + query.val() 
-      + "&maxResults=10"
-      + "&type=video" 
-      + "&order=viewCount"
-      + "&pageToken=CAoQAA"
-      + "&part=snippet"
-      + "&key=" + youtubeAPIKey; 
-
     // Função que codifica os espaços e caracteres especiais entre as várias palavras pesquisadas
-    url=encodeURI(url);
-    next10=encodeURI(next10); 
+    url = encodeURI(url);
     
     // Pedido HTTP GET ao serviço YouTube
     $.get(url, function(response, status){
@@ -59,16 +48,28 @@ $(document).ready(function(){
            $("#respostas").append("<br>").append(video);
            
           // $("#resposta_nome").append("<br>").append(nome);
-       }
-     }
-
+        }
+      }      
      //console.log('status, response');
     });
-    
+  };
+
+  $(url, function(response, status) {
+      var nextPageToken = response.nextPageToken;
+  });
     
     $("#botao-mais").click(function(){
       
-      $.get(next10, function(response, status){
+      var next10 = "https://www.googleapis.com/youtube/v3/search?q="
+    + query.val() 
+    + "&maxResults=10"
+    + "&type=video" 
+    + "&order=viewCount"
+    + "&pageToken=" + nextPageToken   
+    + "&part=snippet"
+    + "&key=" + youtubeAPIKey;
+      
+    $.get(next10, function(response, status){
         if (status == 'success') {
           for (let resultado of response.items) {
    
@@ -86,16 +87,11 @@ $(document).ready(function(){
              // $("#resposta_nome").append("<br>").append(nome);
           }
         }
-   
         //console.log('status, response');
-       });
-      
-      
+            
+      });    
     });
   }
-});
-
-
-  });
+  )});
 
 });
