@@ -36,7 +36,7 @@
 	height: 0; 
 	border-left: 15px solid transparent;
 	border-right: 15px solid transparent;
-	border-top: 15px solid #787A7A;
+	border-top: 15px solid #B80025;
   animation-name: rotate-small-down;
   animation-duration: 4s;
   animation-iteration-count: infinite;
@@ -47,7 +47,7 @@
 	height: 0; 
 	border-left: 20px solid transparent;
 	border-right: 20px solid transparent;
-	border-top: 20px solid #FF8000;
+	border-top: 20px solid #BABABB;
   animation-name: rotate-medium-down;
   animation-duration: 5s;
   animation-iteration-count: infinite;
@@ -59,7 +59,7 @@
 	height: 0; 
 	border-left: 25px solid transparent;
 	border-right: 25px solid transparent;
-	border-top: 25px solid #000000;
+	border-top: 25px solid #6F2D8F;
   animation-name: rotate-big-down;
   animation-duration: 6s;
   animation-iteration-count: infinite;
