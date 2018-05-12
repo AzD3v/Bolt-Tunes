@@ -287,7 +287,7 @@ i.ion-ipod, i.ion-headphone {display: flex; margin-right: 10px; color: #fff; fon
 .hide-menu {margin-left: -500px;}
 
 /* ÁREA DE AÇÃO DA HOMEPAGE */
-.title-acao {font-size: 25px; color: black; text-transform: uppercase;}
+.title-acao {font-size: 25px; color: #762D7D; font-weight: 600; text-transform: uppercase;}
 .area-acao {display: flex; justify-content: start; padding:40px; width: 100%;height: 100%;}
 .sub-area-acao {width: auto;}
 .acao {display: flex; flex-direction: column; width: 100%;}
@@ -367,8 +367,8 @@ i.ion-ipod, i.ion-headphone {display: flex; margin-right: 10px; color: #fff; fon
 	font-size: 15px;
 }
 
-/* Botão que permite ouvir a playlist */
-button.btn.botao-opcao {
+/* Botão que permite ouvir a playlist/adicionar aos favoritos/adicionar à playlist */
+button.btn.botao-opcao1 {
 	color: #fff;
 	height: 35px;
 	padding: 10px;
@@ -381,8 +381,25 @@ button.btn.botao-opcao {
     transition-timing-function: linear;
 }
 
-button.btn.botao-opcao:hover {
+button.btn.botao-opcao1:hover {
 	background-color: #762D7D;
+}
+
+button.btn.botao-opcao2 {
+	color: #fff;
+	height: 35px;
+	padding: 10px;
+	background-color: #762D7D;
+	text-transform: uppercase;
+	margin: 5px 0 5px 100px;
+	border-radius: 15px;
+	line-height: 15px;
+	transition-duration: 0.5s;
+    transition-timing-function: linear;
+}
+
+button.btn.botao-opcao2:hover {
+	background-color: #B80025;
 }
 
 /* FOOTER */
