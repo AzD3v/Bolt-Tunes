@@ -1,4 +1,7 @@
-/* BOTÃO "VER MAIS" NOS RESULTADOS DO PEDIDO À API DO YOUTUBE */ 
+/* BOTÃO "VER MAIS" NOS RESULTADOS DO PEDIDO À API DO YOUTUBE */
+
+#botao-mais {cursor: pointer;}
+
 .text-down {
   text-align: center;
   font-weight: 600;

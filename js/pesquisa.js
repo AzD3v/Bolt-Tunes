@@ -28,21 +28,23 @@ $(document).ready(function(){
       + "&part=snippet"
       + "&key=" + youtubeAPIKey;
 
-      // Query que irá conter os próximos 10 resultados da pesquisa 
+      // Variável que irá conter os próximos 10 resultados da pesquisa 
       let next10 = "https://www.googleapis.com/youtube/v3/search?q="
       + query.val() 
       + "&maxResults=10"
       + "&type=video" 
       + "&order=viewCount"
+      + "&pageToken=CAoQAA"
       + "&part=snippet"
       + "&key=" + youtubeAPIKey; 
 
     // Função que codifica os espaços e caracteres especiais entre as várias palavras pesquisadas
     url=encodeURI(url);
+    next10=encodeURI(next10); 
     
     // Pedido HTTP GET ao serviço YouTube
-    $.get(url, function(response,status){
-     if (status=='success') {
+    $.get(url, function(response, status){
+     if (status == 'success') {
        for (let resultado of response.items) {
 
         let video = $("<div class='wrapper'><div class='resposta'><iframe src='https://www.youtube.com/embed/"+resultado.id.videoId+"'></iframe></div><div class='resposta_nome'>"+resultado.snippet.title+"</div><div class='container_button'><div id='sub_container_button'><button class='btn botao-opcao1'>Adicionar faixa</button><button class='btn botao-opcao2'>Saber mais +</button></div></div></div>");
@@ -62,9 +64,37 @@ $(document).ready(function(){
 
      //console.log('status, response');
     });
+    
+    
+    $("#botao-mais").click(function(){
+      
+      $.get(next10, function(response, status){
+        if (status == 'success') {
+          for (let resultado of response.items) {
+   
+           let video = $("<div class='wrapper'><div class='resposta'><iframe src='https://www.youtube.com/embed/"+resultado.id.videoId+"'></iframe></div><div class='resposta_nome'>"+resultado.snippet.title+"</div><div class='container_button'><div id='sub_container_button'><button class='btn botao-opcao1'>Adicionar faixa</button><button class='btn botao-opcao2'>Saber mais +</button></div></div></div>");
+   
+          // let nome = $("<div class='nome'></div>").text(resultado.snippet.title);
+         
+              video.click(function(){         
+                window.open("https://www.youtube.com/embed/"+resultado.id.videoId);
+                console.log(resultado);
+              });
+              
+              $("#respostas").append("<br>").append(video);
+              
+             // $("#resposta_nome").append("<br>").append(nome);
+          }
+        }
+   
+        //console.log('status, response');
+       });
+      
+      
+    });
   }
-  
-  });
+});
+
 
   });
 

@@ -315,6 +315,11 @@ i.ion-ipod, i.ion-headphone {display: flex; margin-right: 10px; color: #fff; fon
     padding-top: 20px;
 }
 
+.acao-subtitulo {
+	padding-bottom: 10px;
+	border-bottom: 1px solid #3D164F;
+}
+
 /* Ação principal */
 .opcao-principal {
     display: flex;
