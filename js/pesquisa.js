@@ -1,10 +1,13 @@
 $(document).ready(function(){
 
-  $(function(){
+  // Funcionalidade de pesquisa utilizando a tecla "Enter"
+
+  // Funcionalidade de pesquisa utilizando o clique do rato 
+  $(function() {
 
   // Chave API do YouTube
   const youtubeAPIKey ="AIzaSyAvt_YeiVfbMrGKdNFaMuMo760ViQemm0k";
-
+  
   // O que sucede ao clicar no botão de pesquisa
   $("#search-button").click(function(){
     
@@ -52,13 +55,17 @@ $(document).ready(function(){
            });
            
            $("#respostas").append("<br>").append(video);
+           
           // $("#resposta_nome").append("<br>").append(nome);
        }
      }
+
      //console.log('status, response');
     });
   }
   
- });
-});
+  });
+
+  });
+
 });
