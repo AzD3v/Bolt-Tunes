@@ -17,13 +17,22 @@ $(document).ready(function(){
     let query = $('#search');
 
     // Construção do URL com o valor da caixa de texto da pesquisa
-    let url ="https://www.googleapis.com/youtube/v3/search?q="
+    let url = "https://www.googleapis.com/youtube/v3/search?q="
       + query.val() 
       + "&maxResults=10"
       + "&type=video" 
       + "&order=viewCount"
       + "&part=snippet"
       + "&key=" + youtubeAPIKey;
+
+      // Query que irá conter os próximos 10 resultados da pesquisa 
+      let next10 = "https://www.googleapis.com/youtube/v3/search?q="
+      + query.val() 
+      + "&maxResults=10"
+      + "&type=video" 
+      + "&order=viewCount"
+      + "&part=snippet"
+      + "&key=" + youtubeAPIKey; 
 
     // Função que codifica os espaços e caracteres especiais entre as várias palavras pesquisadas
     url=encodeURI(url);
