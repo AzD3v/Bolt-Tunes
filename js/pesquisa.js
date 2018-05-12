@@ -1,10 +1,13 @@
 $(document).ready(function(){
 
-  $(function(){
+  // Funcionalidade de pesquisa utilizando a tecla "Enter"
+
+  // Funcionalidade de pesquisa utilizando o clique do rato 
+  $(function() {
 
   // Chave API do YouTube
   const youtubeAPIKey ="AIzaSyAvt_YeiVfbMrGKdNFaMuMo760ViQemm0k";
-
+  
   // O que sucede ao clicar no botão de pesquisa
   $("#search-button").click(function(){
     
@@ -17,13 +20,22 @@ $(document).ready(function(){
     let query = $('#search');
 
     // Construção do URL com o valor da caixa de texto da pesquisa
-    let url ="https://www.googleapis.com/youtube/v3/search?q="
+    let url = "https://www.googleapis.com/youtube/v3/search?q="
       + query.val() 
       + "&maxResults=10"
       + "&type=video" 
       + "&order=viewCount"
       + "&part=snippet"
       + "&key=" + youtubeAPIKey;
+
+      // Query que irá conter os próximos 10 resultados da pesquisa 
+      let next10 = "https://www.googleapis.com/youtube/v3/search?q="
+      + query.val() 
+      + "&maxResults=10"
+      + "&type=video" 
+      + "&order=viewCount"
+      + "&part=snippet"
+      + "&key=" + youtubeAPIKey; 
 
     // Função que codifica os espaços e caracteres especiais entre as várias palavras pesquisadas
     url=encodeURI(url);
@@ -43,13 +55,17 @@ $(document).ready(function(){
            });
            
            $("#respostas").append("<br>").append(video);
+           
           // $("#resposta_nome").append("<br>").append(nome);
        }
      }
+
      //console.log('status, response');
     });
   }
   
- });
-});
+  });
+
+  });
+
 });
