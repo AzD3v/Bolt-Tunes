@@ -373,6 +373,25 @@ i.ion-ipod, i.ion-headphone {display: flex; margin-right: 10px; color: #fff; fon
 	font-size: 15px;
 }
 
+/* Botão que permite ouvir a faixa selecionada */
+button.btn.botao-opcao0 {
+	color: #fff;
+	height: 35px;
+	padding: 10px;
+	background-color: #ACACAC;
+	text-transform: uppercase;
+	margin: 5px 0 5px 100px;
+	border-radius: 15px;
+	line-height: 15px;
+	transition-duration: 0.5s;
+  transition-timing-function: linear;
+}
+
+button.btn.botao-opcao0:hover {
+	background-color: rgb(95, 94, 94);
+}
+
+
 /* Botão que permite ouvir a playlist/adicionar aos favoritos/adicionar à playlist */
 button.btn.botao-opcao1 {
 	color: #fff;
@@ -384,13 +403,14 @@ button.btn.botao-opcao1 {
 	border-radius: 15px;
 	line-height: 15px;
 	transition-duration: 0.5s;
-    transition-timing-function: linear;
+  transition-timing-function: linear;
 }
 
 button.btn.botao-opcao1:hover {
 	background-color: #762D7D;
 }
 
+/* Botão que permite saber mais acerca da música/álbum/artista */
 button.btn.botao-opcao2 {
 	color: #fff;
 	height: 35px;
@@ -401,7 +421,7 @@ button.btn.botao-opcao2 {
 	border-radius: 15px;
 	line-height: 15px;
 	transition-duration: 0.5s;
-    transition-timing-function: linear;
+  transition-timing-function: linear;
 }
 
 button.btn.botao-opcao2:hover {
