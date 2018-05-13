@@ -37,13 +37,25 @@ $(document).ready(function(){
        for (let resultado of response.items) {
 
         let video = $("<div class='wrapper'><div class='resposta'><iframe src='https://www.youtube.com/embed/"+resultado.id.videoId+"'></iframe></div><div class='resposta_nome'>"+resultado.snippet.title+"</div><div class='container_button'><div id='sub_container_button'><button class='btn botao-opcao1'>Adicionar faixa</button><button class='btn botao-opcao2'>Saber mais +</button></div></div></div>");
+        
+        // Funcionalidade que permite adicionar a faixa pretendida aos favoritos
+        $(".botao-opcao1").click(function() {                          //$("#repostas").fadeOut();
+        //$("#homepage-principal").fadeOut();
+        $("#resultados-pesquisa").fadeOut();
+        $("#musicas-favoritas").fadeIn();
+        $(".lista-favoritos").addClass('active-option');	
+        $(".lista-playlists").removeClass('active-option');		
+        $("#search").val('Faça a sua pesquisa personalizada...');
+        $(".resposta_favoritos").append("<br>").append(video);
+        
+      }); 
 
        // let nome = $("<div class='nome'></div>").text(resultado.snippet.title);
       
-           video.click(function(){         
+           /* video.click(function(){         
              window.open("https://www.youtube.com/embed/"+resultado.id.videoId);
              console.log(resultado);
-           });
+           }); */
            
            $("#respostas").append("<br>").append(video);
            
