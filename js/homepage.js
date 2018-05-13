@@ -8,6 +8,7 @@ $(document).ready(function(){
 		$("#navbarResponsive").hide();
 		$("#resultados-pesquisa").hide();
 		$("#musicas-favoritas").hide();
+		$("#info-musical").hide();
 
 		// Demonstrar opção predefinida selecionada (Lista das playlists)
 		$(".lista-playlists").addClass('active-option');
@@ -40,7 +41,7 @@ $(document).ready(function(){
 			$(".lista-favoritos").addClass('active-option');	
 			$(".lista-playlists").removeClass('active-option');		
 		});
-
+		
 		// "Toogler" do menu lateral
 		$(".ion-close-circled").click(function(){
 					$(".sidebar-menu").addClass("hide-menu");
