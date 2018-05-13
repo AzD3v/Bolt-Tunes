@@ -48,7 +48,7 @@ $(document).ready(function(){
         let video = $("<div class='wrapper'><div class='resposta'><iframe src='https://www.youtube.com/embed/"+resultado.id.videoId+"'></iframe></div><div class='resposta_nome'>"+resultado.snippet.title+"</div><div class='container_button'><div id='sub_container_button'><button class='btn botao-opcao0'>Ouvir faixa</button><button class='btn botao-opcao1'>Adicionar faixa</button><button class='btn botao-opcao2'>Saber mais +</button></div></div></div>");
 
         //este 'video2' refere-se à página da lista de favoritos (botoes diferentes do 'video')   
-        let video2 = $("<div class='wrapper'><div class='resposta'><iframe src='https://www.youtube.com/embed/"+resultado.id.videoId+"'></iframe></div><div class='resposta_nome'>"+resultado.snippet.title+"</div><div class='container_button'><div id='sub_container_button'><button class='btn botao-opcao0'>Ouvir faixa</button><button class='btn botao-opcao1'>Adicionar playlist</button><button class='btn botao-opcao2'>Saber mais +</button></div></div></div>");
+        let video2 = $("<div class='wrapper'><div class='resposta'><iframe src='https://www.youtube.com/embed/"+resultado.id.videoId+"'></iframe></div><div class='resposta_nome'>"+resultado.snippet.title+"</div><div class='container_button'><div id='sub_container_button'><button class='btn botao-opcao0'>Ouvir faixa</button><button class='btn botao-opcao3'>Adicionar playlist</button><button class='btn botao-opcao2'>Saber mais +</button></div></div></div>");
            
         $("#respostas").append("<br>").append(video);
                     
@@ -124,20 +124,6 @@ $(document).ready(function(){
           
           
           
-          
-          
-          
-          
-          
-          
-          
-
-
-
-
-
-
-
 
 
             
@@ -156,6 +142,54 @@ $(document).ready(function(){
        }
      }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     /* ÁREA DE TRABALHO DO BOTÃO 3 (CARINA) */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
      //console.log('status, response');
     
     });
