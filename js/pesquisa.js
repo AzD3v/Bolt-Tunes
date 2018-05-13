@@ -46,34 +46,38 @@ $(document).ready(function(){
        for (let resultado of response.items) {
 
         let video = $("<div class='wrapper'><div class='resposta'><iframe src='https://www.youtube.com/embed/"+resultado.id.videoId+"'></iframe></div><div class='resposta_nome'>"+resultado.snippet.title+"</div><div class='container_button'><div id='sub_container_button'><button class='btn botao-opcao0'>Ouvir faixa</button><button class='btn botao-opcao1'>Adicionar faixa</button><button class='btn botao-opcao2'>Saber mais +</button></div></div></div>");
+
+        //este 'video2' refere-se à página da lista de favoritos (botoes diferentes do 'video')   
+        let video2 = $("<div class='wrapper'><div class='resposta'><iframe src='https://www.youtube.com/embed/"+resultado.id.videoId+"'></iframe></div><div class='resposta_nome'>"+resultado.snippet.title+"</div><div class='container_button'><div id='sub_container_button'><button class='btn botao-opcao0'>Ouvir faixa</button><button class='btn botao-opcao1'>Adicionar playlist</button><button class='btn botao-opcao2'>Saber mais +</button></div></div></div>");
            
-          $("#respostas").append("<br>").append(video);
-          
+        $("#respostas").append("<br>").append(video);
+                    
           // Botão que permite ouvir a faixa selecionada 
           $(".botao-opcao0").click(function(){ 
-          // $(".carousel-inner").fadeOut();
-          // $("#ouvir_faixa").fadeIn();
-          //$("#ouvir_faixa").append("https://www.youtube.com/embed/"+resultado.id.videoId);
-          // console.log(resultado);
-          window.open("https://www.youtube.com/embed/"+resultado.id.videoId);
-          console.log(resultado);
-          });
+            // $(".carousel-inner").fadeOut();
+            // $("#ouvir_faixa").fadeIn(); //$("#ouvir_faixa").append("https://www.youtube.com/embed/"+resultado.id.videoId);
+            // console.log(resultado);     
+            window.open("https://www.youtube.com/embed/"+resultado.id.videoId);
+            console.log(resultado);
+        });
            
-          // Botão que adicionará a faixa escolhida aos favoritos
-          $(".botao-opcao1").click(function(){                          
-          //$("#repostas").fadeOut();
-          //$("#homepage-principal").fadeOut();
-          $("#resultados-pesquisa").fadeOut();
-          $("#musicas-favoritas").fadeIn();
-          $(".container_button").fadeOut();
-          $(".lista-favoritos").addClass('active-option');	
-          $(".lista-playlists").removeClass('active-option');		
-
-         // resp = document.getElementsByClassName ("wrapper")[0];
- 
-            $(".resposta_favoritos").append("<br>").append(video);
-             console.log(getElementsByClasseName("wrapper", 1));
-           });   
+          // Botão que adicionará a faixa escolhida aos favoritos:
+          $(".botao-opcao1").click(function(){                       
+            
+            $("#resultados-pesquisa").fadeOut();
+            $("#musicas-favoritas").fadeIn();
+            
+            //oculta os botoes do result pesquisa para dar lugar aos da lista de favoritos:
+            // $(".container_button").fadeOut(); 
+            //mostra os novos botoes:
+            // $(".container_button2").fadeIn(); 
+            
+            $(".lista-favoritos").addClass('active-option');	
+            $(".lista-playlists").removeClass('active-option');	//mostra o resultado selecionado:	 
+            $(".resposta_favoritos").append("<br>").append(video2);
+              console.log(getElementsByClasseName("wrapper", 1));
+            
+            }); 
 
           // Botão que permitirá saber mais informações acerca da faixa, álbum e artista 
           $(".botao-opcao2").click(function(){
