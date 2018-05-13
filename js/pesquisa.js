@@ -11,6 +11,15 @@ $(document).ready(function(){
   // Leitura do valor da caixa de texto da pesquisa   
   let query = $('#search');
   
+  // Possibilitar a pesquisa utilizando a tecla "Enter" como trigger
+  $("#search").on('keydown', function(e){
+      var key = e.which;
+      if(key == 13) {
+        $("#search-button").click();
+        return false;
+      }
+  });
+
   // O que sucede ao clicar no botão de pesquisa
   $("#search-button").click(function(){
     
@@ -36,33 +45,153 @@ $(document).ready(function(){
      if (status == 'success') {
        for (let resultado of response.items) {
 
-        let video = $("<div class='wrapper'><div class='resposta'><iframe src='https://www.youtube.com/embed/"+resultado.id.videoId+"'></iframe></div><div class='resposta_nome'>"+resultado.snippet.title+"</div><div class='container_button'><div id='sub_container_button'><button class='btn botao-opcao1'>Adicionar faixa</button><button class='btn botao-opcao2'>Saber mais +</button></div></div></div>");
-        
-        // Funcionalidade que permite adicionar a faixa pretendida aos favoritos
-        $(".botao-opcao1").click(function() {                          //$("#repostas").fadeOut();
-        //$("#homepage-principal").fadeOut();
-        $("#resultados-pesquisa").fadeOut();
-        $("#musicas-favoritas").fadeIn();
-        $(".lista-favoritos").addClass('active-option');	
-        $(".lista-playlists").removeClass('active-option');		
-        $("#search").val('Faça a sua pesquisa personalizada...');
-        $(".resposta_favoritos").append("<br>").append(video);
-        
-      }); 
+        let video = $("<div class='wrapper'><div class='resposta'><iframe src='https://www.youtube.com/embed/"+resultado.id.videoId+"'></iframe></div><div class='resposta_nome'>"+resultado.snippet.title+"</div><div class='container_button'><div id='sub_container_button'><button class='btn botao-opcao0'>Ouvir faixa</button><button class='btn botao-opcao1'>Adicionar faixa</button><button class='btn botao-opcao2'>Saber mais +</button></div></div></div>");
 
-       // let nome = $("<div class='nome'></div>").text(resultado.snippet.title);
-      
-           /* video.click(function(){         
-             window.open("https://www.youtube.com/embed/"+resultado.id.videoId);
-             console.log(resultado);
-           }); */
+        //este 'video2' refere-se à página da lista de favoritos (botoes diferentes do 'video')   
+        let video2 = $("<div class='wrapper'><div class='resposta'><iframe src='https://www.youtube.com/embed/"+resultado.id.videoId+"'></iframe></div><div class='resposta_nome'>"+resultado.snippet.title+"</div><div class='container_button'><div id='sub_container_button'><button class='btn botao-opcao0'>Ouvir faixa</button><button class='btn botao-opcao3'>Adicionar playlist</button><button class='btn botao-opcao2'>Saber mais +</button></div></div></div>");
            
-           $("#respostas").append("<br>").append(video);
+        $("#respostas").append("<br>").append(video);
+                    
+          // Botão que permite ouvir a faixa selecionada 
+          $(".botao-opcao0").click(function(){ 
+            // $(".carousel-inner").fadeOut();
+            // $("#ouvir_faixa").fadeIn(); //$("#ouvir_faixa").append("https://www.youtube.com/embed/"+resultado.id.videoId);
+            // console.log(resultado);     
+            window.open("https://www.youtube.com/embed/"+resultado.id.videoId);
+            console.log(resultado);
+        });
            
-          // $("#resposta_nome").append("<br>").append(nome);
-        }
-      }      
+          // Botão que adicionará a faixa escolhida aos favoritos:
+          $(".botao-opcao1").click(function(){                       
+            
+            $("#resultados-pesquisa").fadeOut();
+            $("#musicas-favoritas").fadeIn();
+            
+            //oculta os botoes do result pesquisa para dar lugar aos da lista de favoritos:
+            // $(".container_button").fadeOut(); 
+            //mostra os novos botoes:
+            // $(".container_button2").fadeIn(); 
+            
+            $(".lista-favoritos").addClass('active-option');	
+            $(".lista-playlists").removeClass('active-option');	//mostra o resultado selecionado:	 
+            $(".resposta_favoritos").append("<br>").append(video2);
+              console.log(getElementsByClasseName("wrapper", 1));
+            
+            }); 
+
+            /* ÁREA DE TRABALHO DO CARINA */  
+
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+
+
+            
+          
+            /* ÁREA DE TRABALHO DO PAULO */          
+            
+            // Botão que permitirá saber mais informações acerca da faixa, álbum e artista 
+          $(".botao-opcao2").click(function(){
+
+              $("#resultados-pesquisa").fadeOut();
+              $("#info-musical").fadeIn();
+              $(".container_button").fadeOut();
+
+          });
+        
+       }
+     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     /* ÁREA DE TRABALHO DO BOTÃO 3 (CARINA) */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
      //console.log('status, response');
+    
     });
   };
 
@@ -102,8 +231,11 @@ $(document).ready(function(){
         //console.log('status, response');
             
       });    
+    
     });
+  
   }
-  )});
+  
+)});
 
 });

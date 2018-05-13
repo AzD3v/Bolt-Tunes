@@ -8,6 +8,7 @@ $(document).ready(function(){
 		$("#navbarResponsive").hide();
 		$("#resultados-pesquisa").hide();
 		$("#musicas-favoritas").hide();
+		$("#info-musical").hide();
 
 		// Demonstrar opção predefinida selecionada (Lista das playlists)
 		$(".lista-playlists").addClass('active-option');
@@ -19,7 +20,6 @@ $(document).ready(function(){
 			$("#homepage-principal").fadeIn();
 			$(".lista-playlists").addClass('active-option');
 			$(".lista-favoritos").removeClass('active-option');	
-			$("#search").val('Faça a sua pesquisa personalizada...');	
 		});
 
 		// "Toogler" dos resultados de pesquisa que o utilizador efetuar
@@ -40,9 +40,8 @@ $(document).ready(function(){
 			$("#musicas-favoritas").fadeIn();
 			$(".lista-favoritos").addClass('active-option');	
 			$(".lista-playlists").removeClass('active-option');		
-			$("#search").val('Faça a sua pesquisa personalizada...');
 		});
-
+		
 		// "Toogler" do menu lateral
 		$(".ion-close-circled").click(function(){
 					$(".sidebar-menu").addClass("hide-menu");
@@ -63,11 +62,16 @@ $(document).ready(function(){
 				}
 		);
 
-		// Limpeza da caixa de texto após clique no botão de pesquisa
-		// $("#search-button").click(function(){
-		// 	$("#search").val('');
-		// });
+		/* Limpeza da caixa de texto de pesquisa após clique no logótipo do catálogo */ 
+		$(".navbar-brand").click(function(){	
+				$("#search").val('');
+		});
 
+		/* Limpeza da caixa de texto de pesquisa após clique no botão de adicionar faixa */
+		(".botao-opcao").click(function(){
+				$("#search").val('');
+		});
+		
 		/* Efeito fadeIn e fadeOut do footer */
 		/*$(document).scroll(function() {
 				var y = $(this).scrollTop();
