@@ -428,6 +428,24 @@ button.btn.botao-opcao2:hover {
 	background-color: #AF4B91;
 }
 
+/* Botão que permite ouvir a playlist/adicionar aos favoritos/adicionar à playlist */
+button.btn.botao-opcao3 {
+	color: #fff;
+	height: 35px;
+	padding: 10px;
+	background-color: #B80025;
+	text-transform: uppercase;
+	margin: 5px 0 5px 100px;
+	border-radius: 15px;
+	line-height: 15px;
+	transition-duration: 0.5s;
+  transition-timing-function: linear;
+}
+
+button.btn.botao-opcao3:hover {
+	background-color: rgb(255, 3, 3);
+}
+
 /* FOOTER */
 footer {width: 100%; height: 120px; background-color: #b80025;}
 footer .container-footer {display: flex; justify-content: space-between;}
