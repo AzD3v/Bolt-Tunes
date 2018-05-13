@@ -66,11 +66,12 @@ $(document).ready(function(){
             
             $("#resultados-pesquisa").fadeOut();
             $("#musicas-favoritas").fadeIn();
-            $(".opcoes-acao").fadeOut();
+            
             //oculta os botoes do result pesquisa para dar lugar aos da lista de favoritos:
             // $(".container_button").fadeOut(); 
             //mostra os novos botoes:
-            // $(".container_button2").fadeIn();  
+            // $(".container_button2").fadeIn(); 
+            
             $(".lista-favoritos").addClass('active-option');	
             $(".lista-playlists").removeClass('active-option');	//mostra o resultado selecionado:	 
             $(".resposta_favoritos").append("<br>").append(video2);
@@ -78,7 +79,7 @@ $(document).ready(function(){
             
             }); 
 
-            /* ÁREA DE TRABALHO CARINA linhas 82-130 inclusive */  
+            /* ÁREA DE TRABALHO DO CARINA */  
 
           
           
@@ -127,7 +128,6 @@ $(document).ready(function(){
 
             
           
-           
             /* ÁREA DE TRABALHO DO PAULO */          
             
             // Botão que permitirá saber mais informações acerca da faixa, álbum e artista 
