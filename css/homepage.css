@@ -407,7 +407,7 @@ button.btn.botao-opcao1 {
 }
 
 button.btn.botao-opcao1:hover {
-	background-color: #762D7D;
+	background-color: rgb(255, 3, 3);
 }
 
 /* Botão que permite saber mais acerca da música/álbum/artista */
@@ -425,7 +425,7 @@ button.btn.botao-opcao2 {
 }
 
 button.btn.botao-opcao2:hover {
-	background-color: #B80025;
+	background-color: #AF4B91;
 }
 
 /* FOOTER */
