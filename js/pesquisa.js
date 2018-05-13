@@ -79,7 +79,72 @@ $(document).ready(function(){
             
             }); 
 
-          // Botão que permitirá saber mais informações acerca da faixa, álbum e artista 
+            /* ÁREA DE TRABALHO DO CARINA */  
+
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+
+
+
+
+
+
+
+
+
+            
+          
+            /* ÁREA DE TRABALHO DO PAULO */          
+            
+            // Botão que permitirá saber mais informações acerca da faixa, álbum e artista 
           $(".botao-opcao2").click(function(){
 
               $("#resultados-pesquisa").fadeOut();
