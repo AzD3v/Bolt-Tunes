@@ -61,6 +61,11 @@ $(document).ready(function(){
 				}
 		);
 
+		/* Limpeza da caixa de texto após clique no logótipo do catálogo */ 
+		$(".navbar-brand").click(function(){	
+				$("#search").val('');
+		});
+
 		// Limpeza da caixa de texto após clique no botão de pesquisa
 		// $("#search-button").click(function(){
 		// 	$("#search").val('');

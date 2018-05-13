@@ -11,6 +11,12 @@ $(document).ready(function(){
   // Leitura do valor da caixa de texto da pesquisa   
   let query = $('#search');
   
+  $("search").on('keydown', function(e){
+      if(e.keyCode == 13) {
+          console.log("teste");
+      }
+
+  });
   // O que sucede ao clicar no botão de pesquisa
   $("#search-button").click(function(){
     
