@@ -11,12 +11,15 @@ $(document).ready(function(){
   // Leitura do valor da caixa de texto da pesquisa   
   let query = $('#search');
   
-  $("search").on('keydown', function(e){
-      if(e.keyCode == 13) {
-          console.log("teste");
+  // Possibilitar a pesquisa utilizando a tecla "Enter" como trigger
+  $("#search").on('keydown', function(e){
+      var key = e.which;
+      if(key == 13) {
+        $("#search-button").click();
+        return false;
       }
-
   });
+
   // O que sucede ao clicar no botão de pesquisa
   $("#search-button").click(function(){
     
@@ -108,8 +111,11 @@ $(document).ready(function(){
         //console.log('status, response');
             
       });    
+    
     });
+  
   }
-  )});
+  
+)});
 
 });
