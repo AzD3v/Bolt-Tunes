@@ -19,7 +19,6 @@ $(document).ready(function(){
 			$("#homepage-principal").fadeIn();
 			$(".lista-playlists").addClass('active-option');
 			$(".lista-favoritos").removeClass('active-option');	
-			$("#search").val('Faça a sua pesquisa personalizada...');	
 		});
 
 		// "Toogler" dos resultados de pesquisa que o utilizador efetuar
@@ -40,7 +39,6 @@ $(document).ready(function(){
 			$("#musicas-favoritas").fadeIn();
 			$(".lista-favoritos").addClass('active-option');	
 			$(".lista-playlists").removeClass('active-option');		
-			$("#search").val('Faça a sua pesquisa personalizada...');
 		});
 
 		// "Toogler" do menu lateral
