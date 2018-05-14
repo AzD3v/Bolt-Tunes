@@ -181,10 +181,10 @@ $(document).ready(function(){
 
                 }
 
-
                 $(".resposta_info").append("<br>").append(tableElem);
                   console.log(getElementsByClasseName("wrapper", 1));
-            });
+            
+                });
 
 
           });
