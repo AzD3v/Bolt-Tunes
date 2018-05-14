@@ -79,6 +79,11 @@ a.navbar-brand {margin: 30px;}
 .form-control.mr-sm-2:focus {background-color: #acacac; color: #fff;}
 input#search.form-control.mr-sm-2 {color: #fff;}
 
+.form-control.mr-sm-3 {width: 40%; background-color: #acacac; border-radius: 20px;}
+.form-control.mr-sm-3::placeholder {color: #fff;}
+.form-control.mr-sm-3:focus {background-color: #acacac; color: #fff;}
+input#search.form-control.mr-sm-2 {color: #fff;}
+
 /* Botão de pesquisa */
 .navbar-collapse > button {
   background-color: rgb(172, 39, 98);
@@ -329,6 +334,7 @@ i.ion-ipod, i.ion-headphone {display: flex; margin-right: 10px; color: #fff; fon
     border-bottom: 1px solid #3D164F;
     padding-bottom: 10px;
     align-items: center;
+    justify-content: space-between;
 }
 
 /* Oções secundárias */
@@ -347,6 +353,21 @@ i.ion-ipod, i.ion-headphone {display: flex; margin-right: 10px; color: #fff; fon
     flex-direction: row;
     align-items: center;
     width: 55%;
+}
+
+.opcoes-acao-left2 {
+	display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    width: 35%;
+}
+
+.formplaylist {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    justify-content: flex-end;
 }
 
 .ion-plus-round {
@@ -377,6 +398,7 @@ i.ion-ipod, i.ion-headphone {display: flex; margin-right: 10px; color: #fff; fon
 button.btn.botao-opcao0 {
 	color: #fff;
 	height: 35px;
+    width: 180px;
 	padding: 10px;
 	background-color: #ACACAC;
 	text-transform: uppercase;
@@ -396,6 +418,7 @@ button.btn.botao-opcao0:hover {
 button.btn.botao-opcao1 {
 	color: #fff;
 	height: 35px;
+    width: 180px;
 	padding: 10px;
 	background-color: #B80025;
 	text-transform: uppercase;
@@ -414,6 +437,7 @@ button.btn.botao-opcao1:hover {
 button.btn.botao-opcao2 {
 	color: #fff;
 	height: 35px;
+    width: 180px;
 	padding: 10px;
 	background-color: #762D7D;
 	text-transform: uppercase;
@@ -432,6 +456,7 @@ button.btn.botao-opcao2:hover {
 button.btn.botao-opcao3 {
 	color: #fff;
 	height: 35px;
+    width: 180px;
 	padding: 10px;
 	background-color: #B80025;
 	text-transform: uppercase;
@@ -445,6 +470,25 @@ button.btn.botao-opcao3 {
 button.btn.botao-opcao3:hover {
 	background-color: rgb(255, 3, 3);
 }
+
+button.btn.botao-playlist {
+	color: #fff;
+	height: 35px;
+    width: 180px;
+	padding: 10px;
+	background-color: #762D7D;
+	text-transform: uppercase;
+	margin: 5px 0 5px 100px;
+	border-radius: 15px;
+	line-height: 15px;
+	transition-duration: 0.5s;
+  transition-timing-function: linear;
+}
+
+button.btn.botao-playlist:hover {
+	background-color: #AF4B91;
+}
+
 
 /* FOOTER */
 footer {width: 100%; height: 120px; background-color: #b80025;}
