@@ -54,7 +54,39 @@ $(document).ready(function(){
            
         $("#respostas").append("<br>").append(video);
                     
-          // Botão que permite ouvir a faixa selecionada 
+          
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        // Botão que permite ouvir a faixa selecionada 
           $(".botao-opcao0").click(function(){ 
             // $(".carousel-inner").fadeOut();
             // $("#ouvir_faixa").fadeIn(); //$("#ouvir_faixa").append("https://www.youtube.com/embed/"+resultado.id.videoId);
@@ -63,7 +95,39 @@ $(document).ready(function(){
             console.log(resultado);
         });
            
-          // Botão que adicionará a faixa escolhida aos favoritos:
+          
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        // Botão que adicionará a faixa escolhida aos favoritos:
           $(".botao-opcao1").click(function(){                       
             
             $("#resultados-pesquisa").fadeOut();
@@ -81,7 +145,33 @@ $(document).ready(function(){
             
             });
             
-            // Botão que permitirá saber mais informações acerca da faixa, álbum e artista 
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          // Botão que permitirá saber mais informações acerca da faixa, álbum e artista 
           $(".botao-opcao2").click(function(){
 
               $("#resultados-pesquisa").fadeOut();
