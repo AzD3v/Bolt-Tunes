@@ -236,7 +236,21 @@ $(document).ready(function(){
      //console.log('status, response');
     
     });
+
+    // Fazer com que os 10 novos resultados apareceram com o scroll do rato 
+    $(window).scroll(function () {
+      var hT = $('footer').offset().top,
+          hH = $('footer').outerHeight(),
+          wH = $(window).height(),
+          wS = $(this).scrollTop();
+      if (wS > (hT + hH - wH)) {
+        $("#botao-mais").click();
+        return false;
+      }
+    });
+
     var nextPageToken;
+
     $("#botao-mais").click(function(){
       
       var next10 = "https://www.googleapis.com/youtube/v3/search?q="
@@ -253,9 +267,12 @@ $(document).ready(function(){
         if (status == 'success') {
           for (let resultado of response.items) {
             
-           let video = $("<div class='wrapper'><div class='resposta'><iframe src='https://www.youtube.com/embed/"+resultado.id.videoId+"'></iframe></div><div class='resposta_nome'>"+resultado.snippet.title+"</div><div class='container_button'><div id='sub_container_button'><button class='btn botao-opcao1'>Adicionar faixa</button><button class='btn botao-opcao2'>Saber mais +</button></div></div></div>");
+           let video = $("<div class='wrapper'><div class='resposta'><iframe src='https://www.youtube.com/embed/"+resultado.id.videoId+"'></iframe></div><div class='resposta_nome'>"+resultado.snippet.title+"</div><div class='container_button'><div id='sub_container_button'><button class='btn botao-opcao0'>Ouvir faixa</button><button class='btn botao-opcao1'>Adicionar faixa</button><button class='btn botao-opcao2'>Saber mais +</button></div></div></div>");
+
+        //este 'video2' refere-se à página da lista de favoritos (botoes diferentes do 'video')   
+        let video2 = $("<div class='wrapper'><div class='resposta'><iframe src='https://www.youtube.com/embed/"+resultado.id.videoId+"'></iframe></div><div class='resposta_nome'>"+resultado.snippet.title+"</div><div class='container_button'><div id='sub_container_button'><button class='btn botao-opcao0'>Ouvir faixa</button><button class='btn botao-opcao3'>Adicionar playlist</button><button class='btn botao-opcao2'>Saber mais +</button></div></div></div>");
            
-           // let nome = $("<div class='nome'></div>").text(resultado.snippet.title);
+        $("#respostas").append("<br>").append(video);
          
            video.click(function(){         
              window.open("https://www.youtube.com/embed/"+resultado.id.videoId);
