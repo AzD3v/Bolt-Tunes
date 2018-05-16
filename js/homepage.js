@@ -19,7 +19,8 @@ $(document).ready(function(){
 			$("#resultados-pesquisa").fadeOut();
 			$("#homepage-principal").fadeIn();
 			$(".lista-playlists").addClass('active-option');
-			$(".lista-favoritos").removeClass('active-option');	
+			$(".lista-favoritos").removeClass('active-option');
+			$("#info-musical").hide();	
 		});
 
 		// "Toogler" dos resultados de pesquisa que o utilizador efetuar
@@ -39,7 +40,8 @@ $(document).ready(function(){
 			$("#resultados-pesquisa").fadeOut();
 			$("#musicas-favoritas").fadeIn();
 			$(".lista-favoritos").addClass('active-option');	
-			$(".lista-playlists").removeClass('active-option');		
+			$(".lista-playlists").removeClass('active-option');	
+			$("#info-musical").hide();		
 		});
 		
 		// "Toogler" do menu lateral
