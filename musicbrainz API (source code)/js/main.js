@@ -10,7 +10,7 @@ $(document).ready(function() {
       let url = 'http://musicbrainz.org/ws/2/artist/?query=artist:' + artist + '&fmt=json';
       url = encodeURI(url);
 
-			// Fazer um pedido http get ao serviço MusicBrainz
+			// Fazer um pedido HTTP GET ao serviço MusicBrainz
       $.get(url,function(response, status) {
 
 					// Implementar tabela com o header
