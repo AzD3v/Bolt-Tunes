@@ -29,7 +29,7 @@ $(document).ready(function(){
     } else if($("#search").val() !== '') {
       
     // Construção do URL com o valor da caixa de texto da pesquisa
-    let url = "https://www.googleapis.com/youtube/v3/search?q="
+    var url = "https://www.googleapis.com/youtube/v3/search?q="
       + query.val() 
       + "&maxResults=10"
       + "&type=video" 
@@ -53,39 +53,7 @@ $(document).ready(function(){
         let video2 = $("<div class='wrapper'><div class='resposta'><iframe src='https://www.youtube.com/embed/"+resultado.id.videoId+"'></iframe></div><div class='resposta_nome'>"+resultado.snippet.title+"</div><div class='container_button'><div id='sub_container_button'><button class='btn botao-opcao0'>Ouvir faixa</button><button class='btn botao-opcao3'>Adicionar playlist</button><button class='btn botao-opcao2'>Saber mais +</button></div></div></div>");
            
         $("#respostas").append("<br>").append(video);
-                    
-          
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+         
         // Botão que permite ouvir a faixa selecionada 
           $(".botao-opcao0").click(function(){ 
             // $(".carousel-inner").fadeOut();
@@ -95,38 +63,6 @@ $(document).ready(function(){
             console.log(resultado);
         });
            
-          
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         // Botão que adicionará a faixa escolhida aos favoritos:
           $(".botao-opcao1").click(function(){                       
             
@@ -145,32 +81,6 @@ $(document).ready(function(){
             
             });
             
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
           // Botão que permitirá saber mais informações acerca da faixa, álbum e artista 
           $(".botao-opcao2").click(function(){
 
