@@ -118,70 +118,50 @@
 		<!-- Área de ação -->
 	  <div class="area-acao">
 
-			<div class="acao">
-			 	<h3 class="display-5">O que pretendes ouvir a seguir?</h3>
-				<div class="acao-atual-container">
-				<span><div class="acao-atual"></div></span><h8 class="display-5 title-acao">Playlists</h8>
-			</div>
+		<div class="acao">
+			<h3 class="display-5">O que pretendes ouvir a seguir?</h3>
+			<div class="acao-atual-container">
+			<span><div class="acao-atual"></div></span><h8 class="display-5 title-acao">Playlists</h8>
+		</div>
  
-				<!-- Opção #1 -->
-				<div class="opcao-principal">
-                        <div class="plus"><img class="plus" src="img/icon_plus.png"></div>
-                        <h8 class="display-5 opcao-acoes">Adicionar playlist</h8>
-    
-                        <form action="" class="formplaylist" method="post">
-                           <input class="form-control mr-sm-3" placeholder="Adicionar Playlist" type="text" name="name"><br>
-                          <button class="btn botao-playlist" type="submit" id="addplaylist">Adicionar</button>
-                        </form>
-				</div>
+		<!-- Área de adição de uma playlist -->
+		<div class="opcao-principal">
+				<div class="plus"><img class="plus" src="img/icon_plus.png"></div>
+				<h8 class="display-5 opcao-acoes">Adicionar playlist</h8>
+				
+				<!-- "Form" de adição de uma playlist -->
+				<input class="form-control mr-sm-3" id="input_playlist" placeholder="Adicionar Playlist" type="text" name="name">
+				<br>
+				<button class="btn botao-playlist" type="submit" id="addplaylist">Adicionar</button>
+		</div>
 
-					<!-- Opção #2 -->
-					<div class="opcoes-acao">
-					 <div class="opcoes-acao-left">
-						<div class="row-music">
-							<img src="img/icon_01.png"></div>
-							<h8 class="opcao-acoes">Best of The Week</h8>
-								<div class="info-opcao">
-									<h7>3 músicas adicionadas</h7>
-								</div>
-					 </div>
-					 <div class="opcoes-acao-right">
-						<button class="btn botao-opcao1">Ouvir playlist</button>
-				     </div>
-				    </div>
-
-				  <!-- Opção #3 -->
-				  <div class="opcoes-acao">
-					 <div class="opcoes-acao-left">
-						<div class="row-music">
-							<img src="img/icon_01.png"></div>
-							<h8 class="opcao-acoes">Best of The Week</h8>
-								<div class="info-opcao">
-									<h7>3 músicas adicionadas</h7>
-								</div>
-					 </div>
-					 <div class="opcoes-acao-right">
-						<button class="btn botao-opcao1">Ouvir playlist</button>
-				     </div>
-				    </div>
-
-			       <!-- Opção #4 -->
-			       <div class="opcoes-acao">
-					 <div class="opcoes-acao-left">
-						<div class="row-music">
-							<img src="img/icon_01.png"></div>
-							<h8 class="opcao-acoes">Best of The Week</h8>
-								<div class="info-opcao">
-									<h7>3 músicas adicionadas</h7>
-								</div>
-					 </div>
-					 <div class="opcoes-acao-right">
-						<button class="btn botao-opcao1">Ouvir playlist</button>
-				     </div>
-				    </div>
-
+		<!-- Opção #2 -->
+		<div class="resp_playlist">
+			<!-- <div class="opcoes-acao">
+				<div class="opcoes-acao-left">
+					<div class="row-music">
+						<img src="img/icon_01.png"></div>
+						<h8 class="name_playlist">Best of The Week</h8>
+							<div class="info-opcao">
+								<h7>3 músicas adicionadas</h7>
 					</div>
-					<!-- Fim da área de ação -->
+					</div>
+					<div class="opcoes-acao-right">
+					<button class="btn botao-opcao4">Ouvir playlist</button>
+			</div>
+		</div>-->
+		</div>
+					
+		<!-- este form está definido na variável selectForm -->
+		<form id='dropdown-adicionar'>
+			<select id='selectDropdown'>
+				<option selected disabled>Adicionar playlist</option>
+				<option>01</option>
+			</select>
+		</form>
+
+			</div>
+			<!-- Fim da área de ação -->
 
 			</div>
 		</div>
@@ -267,7 +247,7 @@
 				<div class="medium-arrow-down"></div>
 				<div class="big-arrow-down"></div>
 			</div>
-      <!--  Fim da resposta à busca dos vídeos no YouTube -->
+      		<!--  Fim da resposta à busca dos vídeos no YouTube -->
 
 		</div>
 
@@ -369,7 +349,7 @@
 							</div>
 						 </div>
 
-			    Opção #4
+			    <!-- Opção #4 -->
 			    <div class="opcoes-acao">
 					 <div class="opcoes-acao-left">
 						<div class="row-music">
@@ -381,7 +361,7 @@
 					  </div>
 						<div class="opcoes-acao-right">
 							<button class="btn botao-opcao1">Ouvir música</button>
-				  </div>
+				  		</div>
 				</div>
 			</div>
 			<!-- Fim da área de ação -->
