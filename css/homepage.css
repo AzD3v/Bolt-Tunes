@@ -480,7 +480,6 @@ button.btn.botao-playlist {
 	padding: 10px;
 	background-color: #762D7D;
 	text-transform: uppercase;
-	margin: 5px 0 5px 100px;
 	border-radius: 5px;
 	line-height: 15px;
 	transition-duration: 0.5s;
@@ -669,9 +668,19 @@ thead {
 }
 
 .playlistContainer {
-        width: 100%;
+    width: 70%;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
 }
 
+.left_container {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+}
+
+#input_playlist{
+    width: 60%;
+}
