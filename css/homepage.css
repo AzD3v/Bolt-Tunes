@@ -335,7 +335,8 @@ i.ion-ipod, i.ion-headphone {display: flex; margin-right: 10px; color: #fff; fon
     border-bottom: 1px solid #3D164F;
     padding-bottom: 10px;
     align-items: center;
-    justify-content: space-between;
+    width: 100%;
+    
 }
 
 /* Oções secundárias */
@@ -665,5 +666,12 @@ thead {
 .selectDiv {
     display: flex;
     flex-direction: row;
+}
+
+.playlistContainer {
+        width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 }
 
