@@ -84,7 +84,20 @@ $(document).ready(function(){
 	// Criação das playlists
 	var playlists = [];
 
-	$(".botao-playlist").click(function () {
+	// Possibilitar a adição de uma playlist utilizando a tecla "Enter" como trigger
+	$("#input_playlist").on('keydown', function (e) {
+		var key = e.which;
+		if (key == 13) {
+			$(".botao-playlist").click();
+			return false;
+		}
+	});
+
+	$(".botao-playlist").click(function() {
+		if ($("#input_playlist").val() === '') {
+			location.reload();
+		} else if ($("#input_playlist").val() !== '') {
+
 		// console.log("teste");
 		//buscar div de resposta
 		var div = document.getElementsByClassName("resp_playlist");
@@ -139,6 +152,8 @@ $(document).ready(function(){
              //var sel = document.getElementById('selectDropdown');  
              //console.log( sel.value );
 		}
+
+		$("#input_playlist").val('');
        
 
 		/* function guardar(){
@@ -151,7 +166,7 @@ $(document).ready(function(){
 				   console.log(playlist);//escrever os atributos dentro do <td>
 			  }
 		} */
-	});
+	}});
  });   
   
                              
