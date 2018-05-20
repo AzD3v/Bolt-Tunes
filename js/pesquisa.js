@@ -39,6 +39,9 @@ $(document).ready(function(){
 
     // Função que codifica os espaços e caracteres especiais entre as várias palavras pesquisadas
     url = encodeURI(url);
+
+      // Limpeza da caixa de texto após a pesquisa ser efetuada  
+      
      
     // Pedido HTTP GET ao serviço YouTube
     $.get(url, function(response, status){
@@ -172,7 +175,9 @@ $(document).ready(function(){
      }
 
      //console.log('status, response');
-    
+
+      $("#search").val('');
+
     });
 
     // Fazer com que os 10 novos resultados apareceram com o scroll do rato 
