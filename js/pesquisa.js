@@ -57,21 +57,21 @@ $(document).ready(function(){
         
       for (let resultado of response.items) {
            i++;
-           
+            
        /*  let video = $("<div class='wrapper'><div class='resposta'><iframe src='https://www.youtube.com/embed/"+resultado.id.videoId+"'></iframe></div><div class='resposta_nome'>"+resultado.snippet.title+"</div><div class='container_button'><div id='sub_container_button'><button class='btn botao-opcao0'>Ouvir faixa</button><button class='btn botao-opcao1' id='"+i+"'>Adicionar faixa</button><button class='btn botao-opcao2'>Saber mais +</button></div></div></div>");
            
         if (document.getElementsByClassName('resp_playlist') != ''){
                  let form =  $("<form id='dropdown-adicionar'>"+ selectForm +"</form>");
                  $("#sub_container_button").append(form);
          } */
-         let video = $("<div class='wrapper'><div class='resposta'><iframe src='https://www.youtube.com/embed/"+resultado.id.videoId+"'></iframe></div><div class='resposta_nome'>"+resultado.snippet.title+"</div><div class='container_button'><div id='sub_container_button'><button class='btn botao-opcao0'>Ouvir faixa</button><button class='btn botao-opcao1' id='"+i+"'>Adicionar faixa</button><form id='dropdown-adicionar'>"+ selectForm +"</form><button class='btn botao-opcao2'>Saber mais +</button></div></div></div>");    
+         let video = $("<div class='wrapper'><div class='resposta'><iframe src='https://www.youtube.com/embed/"+resultado.id.videoId+"'></iframe></div><div class='resposta_nome'>"+resultado.snippet.title+"</div><div class='container_button'><div id='sub_container_button'><button class='btn botao-opcao0'>Ouvir faixa</button><button class='btn botao-opcao1' id='"+i+"'>Adicionar favoritos</button><form id='dropdown-adicionar'>"+ selectForm +"</form><button class='btn botao-opcao2'>Saber mais +</button></div></div></div>");    
           
            
         if (document.getElementsByClassName('resp_playlist') == ''){
-          let video = $("<div class='wrapper'><div class='resposta'><iframe src='https://www.youtube.com/embed/"+resultado.id.videoId+"'></iframe></div><div class='resposta_nome'>"+resultado.snippet.title+"</div><div class='container_button'><div id='sub_container_button'><button class='btn botao-opcao0'>Ouvir faixa</button><button class='btn botao-opcao1' id='"+i+"'>Adicionar faixa</button><button class='btn botao-opcao2'>Saber mais +</button></div></div></div>");
+          let video = $("<div class='wrapper'><div class='resposta'><iframe src='https://www.youtube.com/embed/"+resultado.id.videoId+"'></iframe></div><div class='resposta_nome'>"+resultado.snippet.title+"</div><div class='container_button'><div id='sub_container_button'><button class='btn botao-opcao0'>Ouvir faixa</button><button class='btn botao-opcao1' id='"+i+"'>Adicionar favoritos</button><button class='btn botao-opcao2'>Saber mais +</button></div></div></div>");
         } else {
             
-          let video = $("<div class='wrapper'><div class='resposta'><iframe src='https://www.youtube.com/embed/"+resultado.id.videoId+"'></iframe></div><div class='resposta_nome'>"+resultado.snippet.title+"</div><div class='container_button'><div id='sub_container_button'><button class='btn botao-opcao0'>Ouvir faixa</button><button class='btn botao-opcao1' id='"+i+"'>Adicionar faixa</button><form id='dropdown-adicionar'>"+ selectForm +"</form><button class='btn botao-opcao2'>Saber mais +</button></div></div></div>"); 
+          let video = $("<div class='wrapper'><div class='resposta'><iframe src='https://www.youtube.com/embed/"+resultado.id.videoId+"'></iframe></div><div class='resposta_nome'>"+resultado.snippet.title+"</div><div class='container_button'><div id='sub_container_button'><button class='btn botao-opcao0'>Ouvir faixa</button><button class='btn botao-opcao1' id='"+i+"'>Adicionar favoritos</button><form id='dropdown-adicionar'>"+ selectForm +"</form><button class='btn botao-opcao2'>Saber mais +</button></div></div></div>"); 
     
         //o selectForm mostra a variável do form dropdown
           
@@ -210,7 +210,7 @@ $(document).ready(function(){
         if (status == 'success') {
           for (let resultado of response.items) {
             
-           let video = $("<div class='wrapper'><div class='resposta'><iframe src='https://www.youtube.com/embed/"+resultado.id.videoId+"'></iframe></div><div class='resposta_nome'>"+resultado.snippet.title+"</div><div class='container_button'><div id='sub_container_button'><button class='btn botao-opcao0'>Ouvir faixa</button><button class='btn botao-opcao1'>Adicionar faixa</button><button class='btn botao-opcao2'>Saber mais +</button></div></div></div>");
+           let video = $("<div class='wrapper'><div class='resposta'><iframe src='https://www.youtube.com/embed/"+resultado.id.videoId+"'></iframe></div><div class='resposta_nome'>"+resultado.snippet.title+"</div><div class='container_button'><div id='sub_container_button'><button class='btn botao-opcao0'>Ouvir faixa</button><button class='btn botao-opcao1'>Adicionar favoritos</button><button class='btn botao-opcao2'>Saber mais +</button></div></div></div>");
 
         //este 'video2' refere-se à página da lista de favoritos (botoes diferentes do 'video')   
         let video2 = $("<div class='wrapper'><div class='resposta'><iframe src='https://www.youtube.com/embed/"+resultado.id.videoId+"'></iframe></div><div class='resposta_nome'>"+resultado.snippet.title+"</div><div class='container_button'><div id='sub_container_button'><button class='btn botao-opcao0'>Ouvir faixa</button><button class='btn botao-opcao3'>Adicionar playlist</button><button class='btn botao-opcao2'>Saber mais +</button></div></div></div>");
