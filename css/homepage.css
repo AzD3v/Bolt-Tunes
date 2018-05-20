@@ -12,7 +12,7 @@ html, body {
 /* HOMEPAGE */
 h7 {font-size: 12px;}
 
-h8 {font-size: 20px;}
+h8 {font-size: 20px; margin-left: 10px;}
 
 h9 {color: white;}
 
@@ -351,7 +351,6 @@ i.ion-ipod, i.ion-headphone {display: flex; margin-right: 10px; color: #fff; fon
 
 .opcoes-acao-left {
 	display: flex;
-    justify-content: space-between;
     flex-direction: row;
     align-items: center;
     width: 55%;
