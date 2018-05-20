@@ -40,8 +40,9 @@ $(document).ready(function(){
     // Função que codifica os espaços e caracteres especiais entre as várias palavras pesquisadas
     url = encodeURI(url);
 
-      // Limpeza da caixa de texto após a pesquisa ser efetuada  
       
+     selectForm = $("#dropdown-adicionar").html(); 
+    
      
     // Pedido HTTP GET ao serviço YouTube
     $.get(url, function(response, status){
@@ -50,6 +51,7 @@ $(document).ready(function(){
       console.log(nextPageToken); 
       
       var i = 0;
+      var j = 0;
          if($("#respostas .wrapper")){
              
             $("#respostas").empty();
@@ -57,35 +59,17 @@ $(document).ready(function(){
         
       for (let resultado of response.items) {
            i++;
-            
-       /*  let video = $("<div class='wrapper'><div class='resposta'><iframe src='https://www.youtube.com/embed/"+resultado.id.videoId+"'></iframe></div><div class='resposta_nome'>"+resultado.snippet.title+"</div><div class='container_button'><div id='sub_container_button'><button class='btn botao-opcao0'>Ouvir faixa</button><button class='btn botao-opcao1' id='"+i+"'>Adicionar faixa</button><button class='btn botao-opcao2'>Saber mais +</button></div></div></div>");
-           
-        if (document.getElementsByClassName('resp_playlist') != ''){
-                 let form =  $("<form id='dropdown-adicionar'>"+ selectForm +"</form>");
-                 $("#sub_container_button").append(form);
-         } */
-         let video = $("<div class='wrapper'><div class='resposta'><iframe src='https://www.youtube.com/embed/"+resultado.id.videoId+"'></iframe></div><div class='resposta_nome'>"+resultado.snippet.title+"</div><div class='container_button'><div id='sub_container_button'><button class='btn botao-opcao0'>Ouvir faixa</button><button class='btn botao-opcao1' id='"+i+"'>Adicionar favoritos</button><form id='dropdown-adicionar'>"+ selectForm +"</form><button class='btn botao-opcao2'>Saber mais +</button></div></div></div>");    
+           j--
           
-           
-        if (document.getElementsByClassName('resp_playlist') == ''){
-          let video = $("<div class='wrapper'><div class='resposta'><iframe src='https://www.youtube.com/embed/"+resultado.id.videoId+"'></iframe></div><div class='resposta_nome'>"+resultado.snippet.title+"</div><div class='container_button'><div id='sub_container_button'><button class='btn botao-opcao0'>Ouvir faixa</button><button class='btn botao-opcao1' id='"+i+"'>Adicionar favoritos</button><button class='btn botao-opcao2'>Saber mais +</button></div></div></div>");
-        } else {
-            
-          let video = $("<div class='wrapper'><div class='resposta'><iframe src='https://www.youtube.com/embed/"+resultado.id.videoId+"'></iframe></div><div class='resposta_nome'>"+resultado.snippet.title+"</div><div class='container_button'><div id='sub_container_button'><button class='btn botao-opcao0'>Ouvir faixa</button><button class='btn botao-opcao1' id='"+i+"'>Adicionar favoritos</button><form id='dropdown-adicionar'>"+ selectForm +"</form><button class='btn botao-opcao2'>Saber mais +</button></div></div></div>"); 
+        let video = $("<div class='wrapper'><div class='resposta'><iframe src='https://www.youtube.com/embed/"+resultado.id.videoId+"'></iframe></div><div class='resposta_nome'>"+resultado.snippet.title+"</div><div class='container_button'><div id='sub_container_button'><button class='btn botao-opcao0'>Ouvir faixa</button><button class='btn botao-opcao1' id='"+i+"'>Adicionar favoritos</button><button class='btn botao-addplaylist' id='"+j+"'>Adicionar playlist</button><button class='btn botao-opcao2'>Saber mais +</button></div></div></div>"); 
+          
+          //let video = $("<div class='wrapper'><div class='resposta'><iframe src='https://www.youtube.com/embed/"+resultado.id.videoId+"'></iframe></div><div class='resposta_nome'>"+resultado.snippet.title+"</div><div class='container_button'><div id='sub_container_button'><button class='btn botao-opcao0'>Ouvir faixa</button><button class='btn botao-opcao1' id='"+i+"'>Adicionar favoritos</button><form id='dropdown-adicionar'>"+ selectForm +"</form><button class='btn botao-opcao2'>Saber mais +</button></div></div></div>"); 
+    
     
         //o selectForm mostra a variável do form dropdown
           
           $("#respostas").append("<br>").append(video);
-          
-           // var selectDrop = ($('#selectDropdown option:selected').html());
-            
-            
-            $("#sneaky-select").change(function ()
-                {
-                   $("#sneaky-select option:selected").click(function () { alert('world') });
-                }); 
-            
-        }
+
          
         // Botão que permite ouvir a faixa selecionada 
           $(".botao-opcao0").click(function(){ 
@@ -96,21 +80,30 @@ $(document).ready(function(){
             console.log(resultado);
         });
            
-         // Botão opcaoo 1 que adicionará a faixa escolhida aos favoritos:
+         // .botao-opcao1 que adicionará a faixa escolhida aos favoritos 
           $("#"+i).click(function(){ 
             $("#resultados-pesquisa").fadeOut();
             $("#musicas-favoritas").fadeIn();
             $(".lista-favoritos").addClass('active-option');	
-            $(".lista-playlists").removeClass('active-option');	//mostra o resultado selecionado:	 
+            $(".lista-playlists").removeClass('active-option');	//mostra o resultado selecionado: 
             $(".resposta_favoritos").append("<br>").append(video);
-            $(".botao-opcao1").fadeOut(); 
-         //   $("#dropdown-adicionar").show();
-        //    var dropdown = document.getElementById("dropdown-adicionar");
-         //   dropdown.style = "display:show;";
-            //console.log(getElementsByClasseName("wrapper", 1));
-              //console.log(video);
+            $(".botao-opcao1").fadeOut();
           });
-            
+     
+           //.botao-addplaylist que adicionará a faixa escolhida aos favoritos:  
+          $("#"+j).click(function(){ 
+            $("#musicas-favoritas").fadeOut();
+			$("#resultados-pesquisa").fadeOut();
+			$("#homepage-principal").fadeIn();
+			$(".lista-playlists").addClass('active-option');
+			$(".lista-favoritos").removeClass('active-option');
+			$("#info-musical").hide();
+             $(".opcao-principal2").show();
+            $(".resp_faixa_playlist").append("<br>").append(video);
+            $("#sub_container_button").hide(); 
+           
+          }); 
+    
           // Botão que permitirá saber mais informações acerca da faixa, álbum e artista 
           $(".botao-opcao2").click(function(){
 
@@ -162,15 +155,12 @@ $(document).ready(function(){
                     tbodyElem.append(tr);
 
                 }
-
                 $(".resposta_info").append("<br>").append(tableElem);
                   //console.log(getElementsByClasseName("wrapper", 1));
-            
                 });
-
-
           });
-  
+          
+       
         }
      }
 
@@ -204,16 +194,15 @@ $(document).ready(function(){
     + "&pageToken=" + nextPageToken   
     + "&part=snippet"
     + "&key=" + youtubeAPIKey;
+
       
     $.get(next10, function(response, status){
       nextPageToken = response.nextPageToken;
         if (status == 'success') {
           for (let resultado of response.items) {
-            
-           let video = $("<div class='wrapper'><div class='resposta'><iframe src='https://www.youtube.com/embed/"+resultado.id.videoId+"'></iframe></div><div class='resposta_nome'>"+resultado.snippet.title+"</div><div class='container_button'><div id='sub_container_button'><button class='btn botao-opcao0'>Ouvir faixa</button><button class='btn botao-opcao1'>Adicionar favoritos</button><button class='btn botao-opcao2'>Saber mais +</button></div></div></div>");
-
-        //este 'video2' refere-se à página da lista de favoritos (botoes diferentes do 'video')   
-        let video2 = $("<div class='wrapper'><div class='resposta'><iframe src='https://www.youtube.com/embed/"+resultado.id.videoId+"'></iframe></div><div class='resposta_nome'>"+resultado.snippet.title+"</div><div class='container_button'><div id='sub_container_button'><button class='btn botao-opcao0'>Ouvir faixa</button><button class='btn botao-opcao3'>Adicionar playlist</button><button class='btn botao-opcao2'>Saber mais +</button></div></div></div>");
+             i++; 
+              
+          let video = $("<div class='wrapper'><div class='resposta'><iframe src='https://www.youtube.com/embed/"+resultado.id.videoId+"'></iframe></div><div class='resposta_nome'>"+resultado.snippet.title+"</div><div class='container_button'><div id='sub_container_button'><button class='btn botao-opcao0'>Ouvir faixa</button><button class='btn botao-opcao1' id='"+i+"'>Adicionar favoritos</button><form id='dropdown-adicionar'>"+ selectForm +"</form><button class='btn botao-opcao2'>Saber mais +</button></div></div></div>"); 
            
         $("#respostas").append("<br>").append(video);
          

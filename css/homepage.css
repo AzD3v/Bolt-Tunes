@@ -296,6 +296,7 @@ i.ion-ipod, i.ion-headphone {display: flex; margin-right: 10px; color: #fff; fon
 /* ÁREA DE AÇÃO DA HOMEPAGE */
 .title-acao {font-size: 25px; color: #762D7D; font-weight: 600; text-transform: uppercase;}
 .area-acao {display: flex; justify-content: start; padding:40px; width: 100%;height: 100%;}
+.area-acao_playlistsFav {display: flex; justify-content: start; padding:40px; width: 100%;height: 100%;}
 .sub-area-acao {width: auto;}
 .acao {display: flex; flex-direction: column; width: 100%;}
 
@@ -335,8 +336,24 @@ i.ion-ipod, i.ion-headphone {display: flex; margin-right: 10px; color: #fff; fon
     border-bottom: 1px solid #3D164F;
     padding-bottom: 10px;
     align-items: center;
+    width: 100%; 
+}
+
+.opcao-principal2 {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    border-bottom: 1px solid #3D164F;
+    padding-bottom: 10px;
+    align-items: center;
+    width: 100%; 
+   /* display: none;*/
+}
+
+#dropdown-adicionar{
+    display: flex;
     width: 100%;
-    
 }
 
 /* Oções secundárias */
@@ -489,6 +506,24 @@ button.btn.botao-playlist:hover {
 	background-color: #AF4B91;
 }
 
+button.btn.botao-addplaylist {
+color: #fff;
+	height: 35px;
+    width: 180px;
+	padding: 10px;
+	background-color: #762D7D;
+	text-transform: uppercase;
+	margin: 5px 0 5px 100px;
+	border-radius: 5px;
+	line-height: 15px;
+	transition-duration: 0.5s;
+  transition-timing-function: linear;
+}
+
+button.btn.botao-addplaylist:hover {
+	background-color: #AF4B91;
+}
+
 button.btn.botao-opcao4 {
 	color: #fff;
 	height: 35px;
@@ -505,6 +540,23 @@ button.btn.botao-opcao4 {
 
 button.btn.botao-opcao4:hover {
 	background-color: rgb(255, 3, 3);
+}
+
+button.btn.botao-guardar {
+	color: #fff;
+	height: 35px;
+    width: 180px;
+	padding: 10px;
+	background-color: #ACACAC;
+	text-transform: uppercase;
+	border-radius: 5px;
+	line-height: 15px;
+	transition-duration: 0.5s;
+  transition-timing-function: linear;
+}
+
+button.btn.botao-guardar:hover {
+	background-color: rgb(95, 94, 94);
 }
 
 /* FOOTER */
@@ -610,11 +662,10 @@ iframe {
 #selectDropdown {   
     color: #fff;
     height: 35px;
-    width: 180px;
+    width: 90%;
     padding: 10px;
-    background-color: #B80025;
+    background-color: grey;
     text-transform: uppercase;
-    margin: 5px 0 5px 100px;
     border-radius: 15px;
     line-height: 15px;
     transition-duration: 0.5s;
@@ -667,7 +718,7 @@ thead {
 }
 
 .playlistContainer {
-    width: 70%;
+    width:70%;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -680,6 +731,25 @@ thead {
     width: 30%;
 }
 
+.left_container2 {
+   align-items: center;
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+}
+
+.resp_faixa_playlist{
+
+}
+
+#dropdown-adicionar{
+    width: 100%;
+}
+
 #input_playlist{
     width: 60%;
+}
+
+.area-acao_playlistsFav{
+    display: none;
 }

@@ -13,7 +13,8 @@ $(document).ready(function(){
 		$("#resultados-pesquisa").hide();
 		$("#musicas-favoritas").hide();
 		$("#info-musical").hide();
-		$("#dropdown-adicionar").hide();
+    $(".opcao-principal2").hide();
+		//$("#dropdown-adicionar").hide();
 
 		// Demonstrar opção predefinida selecionada (Lista das playlists)
 		$(".lista-playlists").addClass('active-option');
@@ -26,8 +27,11 @@ $(document).ready(function(){
 			$(".lista-playlists").addClass('active-option');
 			$(".lista-favoritos").removeClass('active-option');
 			$("#info-musical").hide();	
+            $(".resp_playlist").fadeIn();
+        
+         
 		});
-    
+  
         // select do resultado de pesquisa
         $('#catalogo').on('change', function() {
             let selection = $(this).find(":selected").val();
@@ -63,9 +67,20 @@ $(document).ready(function(){
                 //<p id="demo"></p>
                 //document.getElementById("demo").innerHTML = "You selected: " + x;
         });
-
-		
-
+    
+        //select das playlists adicionadas
+        if (document.getElementById('respostas') != ''){
+            $('#selectDropdown').on('change', function() {
+                let selection = $(this).find(":selected").val();
+                    //$('.pesquisa-personalizada').removeAttr('id');
+                   // $('.pesquisa-personalizada').attr('id', 'search-' + selection);
+                    //$('#search').attr('placeholder', 'Faça a sua pesquisa por ' + selection);
+                    //seleciona o value escolhido
+                    var s = document.getElementById("selectDropdown").value;
+                    alert("You selected: " + s); 
+            });
+        }
+    
 		// "Toogler" da secção de músicas favoritas do utilizador
 		$(".lista-favoritos").click(function() {
 			$("#homepage-principal").fadeOut();
@@ -159,7 +174,7 @@ $(document).ready(function(){
 		subdivright.appendChild(botao);
 		//buscar valor do input para inserir h8 (#name_playlist)
 		h8.textContent = document.getElementById('input_playlist').value;
-
+ 
 		h8Dropdown = document.getElementById('input_playlist').value;
 		playlists.push(h8Dropdown);
 
@@ -171,29 +186,26 @@ $(document).ready(function(){
 			var option = document.createElement("option");
 			option.value = playlists[i];
 			option.innerHTML = playlists[i];
-            option.className = "value";
+           // option.className = "value";
 			select.appendChild(option);
 			//insere o html form dropdown numa variável
-			selectForm = $("#dropdown-adicionar").html();
+			//selectForm = $("#dropdown-adicionar").html();
 			//alert(playlists[i]);
-    
-             //var sel = document.getElementById('selectDropdown');  
-             //console.log( sel.value );
 		}
-
+            
+        selectForm = $("#dropdown-adicionar").html();
 		$("#input_playlist").val('');
        
-
-		/* function guardar(){
-		  let playlist = {};
-
-		  playlist.nome = document.getElementById('input_playlist').value;
-
-			   for(let chave in playlist){
-				 h8.innerHTML = playlist[chave]; 
-				   console.log(playlist);//escrever os atributos dentro do <td>
-			  }
-		} */
+        $(".botao-opcao4").click(function(){ 
+            //alert("teste");
+            $(".area-acao").hide(); 
+            $(".area-acao_playlistsFav").show();
+            divPlaylist = document.getElementsByClassName("opcoes-acao");
+            $(".opcoes-acao-resposta").append("<br>").append(divPlaylist);
+           });
+            
+        
+		
 	}});
  });   
   
