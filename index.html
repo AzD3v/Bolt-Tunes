@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+ 
 	<!-- Folhas de estilo -->
 	<link rel="stylesheet" href="css/homepage.css" type="text/css">
 	<link rel="stylesheet" href="css/search.css" type="text/css">
@@ -38,10 +38,22 @@
 				<span class="ion-android-menu"></span>
 			</button>
 
+						  
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <div class="selectDiv">
+							<select name="catalogo" id="catalogo">
+							    <option selected disabled>Pesquisar por:</option>
+								<option value="Artista">Artista</option>
+								<option value="Album">Álbum</option>
+								<option value="Musica">Música</option>
+								<option value="Genero">Género</option>
+                           </select>
 					<div class="collapse navbar-collapse" id="navbarResponsive">
 							<input class="form-control mr-sm-2" id="search" type="search" placeholder="Faça a sua pesquisa personalizada..." aria-label="Search">
 		    			<button class="btn my-2 my-sm-0 pesquisa-personalizada" type="submit" id="search-button">Pesquisar</button>
 					</div>
+                   </div>
+                </div>    
 
 		</div>
 	</nav>

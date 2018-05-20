@@ -1,7 +1,7 @@
 /* ******************* */
 /* HOMEPAGE JAVASCRIPT */
 /* ******************* */
-
+ 
 // Colocar o "selectForm" vazio inicialmente 
 var selectForm = "";
 
@@ -27,17 +27,44 @@ $(document).ready(function(){
 			$(".lista-favoritos").removeClass('active-option');
 			$("#info-musical").hide();	
 		});
+    
+        // select do resultado de pesquisa
+        $('#catalogo').on('change', function() {
+            let selection = $(this).find(":selected").val();
+                $('.pesquisa-personalizada').removeAttr('id');
+                $('.pesquisa-personalizada').attr('id', 'search-' + selection);
+                $('#search').attr('placeholder', 'Faça a sua pesquisa por ' + selection);
+                //seleciona o value escolhido
+                var x = document.getElementById("catalogo").value;
+                //alert("You selected: " + x); 
+                if(x == "Artista"){
+                    console.log(x);
+                    // "Toogler" dos resultados de pesquisa que o utilizador efetuar
+                    $(".pesquisa-personalizada").click(function(){
+                        $("#homepage-principal").fadeOut();
+                        $(".pesquisa").hide();
+                        $("#musicas-favoritas").hide();
+                        $("#navbarResponsive").fadeIn();
+                        $("#resultados-pesquisa").fadeIn();
+                        $(".lista-playlists").removeClass('active-option');	
+                        $(".lista-favoritos").removeClass('active-option');
+                    });
+                } else {
+                    if(x == "Album"){
+                     alert ("nada a mostrar");
+                    } if(x == "Musica"){
+                     alert ("nada a mostrar");
+                    } if(x == "Genero"){
+                     alert ("nada a mostrar");
+                    }
+                }
+            
+               //document.getElementById("catalogo").value = "musica") 
+                //<p id="demo"></p>
+                //document.getElementById("demo").innerHTML = "You selected: " + x;
+        });
 
-		// "Toogler" dos resultados de pesquisa que o utilizador efetuar
-		$(".pesquisa-personalizada").click(function(){
-			$("#homepage-principal").fadeOut();
-			$(".pesquisa").hide();
-			$("#musicas-favoritas").hide();
-			$("#navbarResponsive").fadeIn();
-			$("#resultados-pesquisa").fadeIn();
-			$(".lista-playlists").removeClass('active-option');	
-			$(".lista-favoritos").removeClass('active-option');
-		});
+		
 
 		// "Toogler" da secção de músicas favoritas do utilizador
 		$(".lista-favoritos").click(function() {
@@ -51,8 +78,9 @@ $(document).ready(function(){
 		
 		// "Toogler" do menu lateral
 		$(".ion-close-circled").click(function(){
+                    $(".area-acao").animate({width:'100%'}, 500);
 					$(".sidebar-menu").addClass("hide-menu");
-					$(".toogle-menu").addClass("opacity-one");
+					$(".toogle-menu").addClass("opacity-one").delay(500).show();
 		});
 
 		$(".toogle-menu").click(function(){
