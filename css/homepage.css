@@ -657,3 +657,26 @@ iframe {
     transition-timing-function: linear;
  /*   display:none; /* oculta a visualizacao no result pesquisa */
 }
+
+#option {
+        border-radius: 15px;
+    color:black;
+}
+
+.container_info {
+    display: flex;
+    justify-content: center;
+}
+
+.resposta_info {
+    width: 85%;
+}
+
+*{
+    font-family: 'PT Sans';
+}
+
+thead {
+    background-color: #3D164F;
+    color: white;
+}

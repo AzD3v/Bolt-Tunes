@@ -5,6 +5,7 @@
 // Colocar o "selectForm" vazio inicialmente 
 var selectForm = "";
 
+
 $(document).ready(function(){
 
 		// Esconder por predefinição as diversas áreas de conteúdo do catálogo
@@ -77,7 +78,9 @@ $(document).ready(function(){
 		$(".botao-opcao").click(function(){
 				$("#search").val('');
 		});
-	
+        
+        
+    
 	// Criação das playlists
 	var playlists = [];
 
@@ -124,15 +127,19 @@ $(document).ready(function(){
 		$("#selectDropdown").empty();
 		$("#selectDropdown").html("<option selected disabled>Adicionar playlist</option>");
 		for (let i = 0; i < playlists.length; i++) {
-
 			var option = document.createElement("option");
 			option.value = playlists[i];
 			option.innerHTML = playlists[i];
+            option.className = "value";
 			select.appendChild(option);
 			//insere o html form dropdown numa variável
 			selectForm = $("#dropdown-adicionar").html();
 			//alert(playlists[i]);
+    
+             //var sel = document.getElementById('selectDropdown');  
+             //console.log( sel.value );
 		}
+       
 
 		/* function guardar(){
 		  let playlist = {};
@@ -145,6 +152,10 @@ $(document).ready(function(){
 			  }
 		} */
 	});
+ });   
+  
+                             
+        
 		
 		/* Efeito fadeIn e fadeOut do footer */
 		/*$(document).scroll(function() {
@@ -156,4 +167,3 @@ $(document).ready(function(){
 				}
 		});*/
 
-});

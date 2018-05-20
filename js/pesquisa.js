@@ -74,7 +74,15 @@ $(document).ready(function(){
           
           $("#respostas").append("<br>").append(video);
           
-       }
+           // var selectDrop = ($('#selectDropdown option:selected').html());
+            
+            
+            $("#sneaky-select").change(function ()
+                {
+                   $("#sneaky-select option:selected").click(function () { alert('world') });
+                }); 
+            
+        }
          
         // Botão que permite ouvir a faixa selecionada 
           $(".botao-opcao0").click(function(){ 
@@ -119,7 +127,8 @@ $(document).ready(function(){
 
                 // Implementar tabela com o header
                 // "Nome", "Score", "Type"
-                let tableElem = $('<table></table>');
+                let tableElem = $('<table class= "table table-striped"></table>');
+ 
                 $('body').append(tableElem);
 
                 let thead = $('<thead></thead>');
@@ -152,7 +161,7 @@ $(document).ready(function(){
                 }
 
                 $(".resposta_info").append("<br>").append(tableElem);
-                  console.log(getElementsByClasseName("wrapper", 1));
+                  //console.log(getElementsByClasseName("wrapper", 1));
             
                 });
 
