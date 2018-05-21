@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+ 
 	<!-- Folhas de estilo -->
 	<link rel="stylesheet" href="css/homepage.css" type="text/css">
 	<link rel="stylesheet" href="css/search.css" type="text/css">
@@ -38,10 +38,22 @@
 				<span class="ion-android-menu"></span>
 			</button>
 
+						  
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <div class="selectDiv">
+				            <select name="catalogo" id="catalogo">
+							    <option selected disabled>Pesquisar por:</option>
+								<option value="Artista">Artista</option>
+								<option value="Album">Álbum</option>
+								<option value="Musica">Música</option>
+								<option value="Genero">Género</option>
+                           </select>
 					<div class="collapse navbar-collapse" id="navbarResponsive">
 							<input class="form-control mr-sm-2" id="search" type="search" placeholder="Faça a sua pesquisa personalizada..." aria-label="Search">
 		    			<button class="btn my-2 my-sm-0 pesquisa-personalizada" type="submit" id="search-button">Pesquisar</button>
 					</div>
+                   </div>
+                </div>    
 
 		</div>
 	</nav>
@@ -126,13 +138,16 @@
  
 		<!-- Área de adição de uma playlist -->
 		<div class="opcao-principal">
+            <div class="left_container">
 				<div class="plus"><img class="plus" src="img/icon_plus.png"></div>
 				<h8 class="display-5 opcao-acoes">Adicionar playlist</h8>
-				
-				<!-- "Form" de adição de uma playlist -->
-				<input class="form-control mr-sm-3" id="input_playlist" placeholder="Adicionar Playlist" type="text" name="name">
-				<br>
-				<button class="btn botao-playlist" type="submit" id="addplaylist">Adicionar</button>
+             </div>
+             <div class="playlistContainer">
+                    <!-- "Form" de adição de uma playlist -->
+                    <input class="form-control mr-sm-3" id="input_playlist" placeholder="Adicionar Playlist" type="text" name="name">
+                    <br>
+                    <button class="btn botao-playlist" type="submit" id="addplaylist">Adicionar</button>
+             </div>
 		</div>
 
 		<!-- Opção #2 -->
@@ -150,19 +165,55 @@
 					<button class="btn botao-opcao4">Ouvir playlist</button>
 			</div>
 		</div>-->
+		</div>	    
+                  
+                
+        <div class="opcao-principal2">
+           <div class="resp_faixa_playlist"> 
+            <!-- recebe a faixa da pesquisa -->
+           </div>   
+           <div class="left_container2">
+				<form id='dropdown-adicionar'>
+                <select id='selectDropdown'>
+                    <option selected disabled class="option">Adicionar playlist</option>
+                  <!--  <option value="criar_playlist">criar playlist</option>-->
+                </select>
+            </form>
+             
+             <div class="playlistContainer">
+                    <button class="btn botao-guardar" type="submit" id="addplaylist">Guardar</button>
+             </div> 
+             </div>            
 		</div>
-					
-		<!-- este form está definido na variável selectForm -->
-		<form id='dropdown-adicionar'>
-			<select id='selectDropdown'>
-				<option selected disabled class="option">Adicionar playlist</option>
-			</select>
-		</form>
+				
+		
 
+			</div>
+			
 			</div>
 			<!-- Fim da área de ação -->
+            
+            <!-- resposta playlists favoritas -->
+            <div class="area-acao_playlistsFav">
+			<div class="acao">
+			 	<h3 class="display-5">Que músicas pretendes adicionais mais?</h3>
+				<div class="acao-atual-container">
+				<span><div class="acao-atual"></div></span><h8 class="display-5 title-acao">As suas músicas favoritas num flash</h8>
+				</div>
 
+				<div class="resposta_playlists_favoritos">
+						<!-- Resposta javascript -->
+             	</div>
+             	
+				  <div class="opcoes-acao-resposta">
+						
+				  </div>
 			</div>
+
+         
+           </div>
+            <!-- fim resposta playlists favoritas -->
+        
 		</div>
 	</div>
 </div>
@@ -316,7 +367,7 @@
 
 				<div class="resposta_favoritos">
 						<!-- Resposta javascript -->
-						</div>
+                </div>
 											
 						<!-- Opção #2 
 						<div class="opcoes-acao">
@@ -333,46 +384,20 @@
 							 </div>
 							</div>-->
 
-				  <!-- Opção #3 -->
-				  <div class="opcoes-acao">
-						<div class="opcoes-acao-left">
-						 <div class="row-music">
-							 <img src="img/icon_01.png"></div>
-							 <h8 class="opcao-acoes">Imagine Dragons - Warriors</h8>
-								 <div class="info-opcao">
-									 <h7>Night Visions</h7>
-								 </div>
-						</div>
-						<div class="opcoes-acao-right">
-						 <button class="btn botao-opcao1">Ouvir música</button>
-							</div>
-						 </div>
-
-			    <!-- Opção #4 -->
-			    <div class="opcoes-acao">
-					 <div class="opcoes-acao-left">
-						<div class="row-music">
-							<img src="img/icon_01.png"></div>
-							<h8 class="opcao-acoes">Rag'n'Bone Man - Human</h8>
-								<div class="info-opcao">
-									<h7>Human</h7>
-								</div>
-					  </div>
-						<div class="opcoes-acao-right">
-							<button class="btn botao-opcao1">Ouvir música</button>
-				  		</div>
-				</div>
+		
 			</div>
 			<!-- Fim da área de ação -->
 
 
-</div>
+            </div>
 </div>
 </div>
 
 <!--- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
 <!-- FINAL SECÇÃO QUE IRÁ CONTER AS MÚSICAS FAVORITAS DO UTILIZADOR  -->
 <!--- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+
+
 
 <!--- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
 
