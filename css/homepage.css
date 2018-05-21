@@ -12,7 +12,7 @@ html, body {
 /* HOMEPAGE */
 h7 {font-size: 12px;}
 
-h8 {font-size: 20px;}
+h8 {font-size: 20px; margin-left: 10px;}
 
 h9 {color: white;}
 
@@ -74,12 +74,12 @@ a.navbar-brand {margin: 30px;}
 .navbar-collapse {display: flex; justify-content: flex-end;}
 
 /* Barra de pesquisa */
-.form-control.mr-sm-2 {width: 350px; background-color: #acacac; border-radius: 20px;}
+.form-control.mr-sm-2 {width: 350px; background-color: #acacac; border-radius: 5px; margin-left: 10px;}
 .form-control.mr-sm-2::placeholder {color: #fff;}
 .form-control.mr-sm-2:focus {background-color: #acacac; color: #fff;}
 input#search.form-control.mr-sm-2 {color: #fff;}
 
-.form-control.mr-sm-3 {width: 40%; background-color: #acacac; border-radius: 20px;}
+.form-control.mr-sm-3 {width: 40%; background-color: #acacac; border-radius: 5px;}
 .form-control.mr-sm-3::placeholder {color: #fff;}
 .form-control.mr-sm-3:focus {background-color: #acacac; color: #fff;}
 input#search.form-control.mr-sm-2 {color: #fff;}
@@ -88,7 +88,8 @@ input#search.form-control.mr-sm-2 {color: #fff;}
 .navbar-collapse > button {
   background-color: rgb(172, 39, 98);
   color: #fff;
-  border-radius: 20px;
+  width: 180px;
+  border-radius: 5px;
   margin-right: 30px;
   transition-duration: 0.5s;
   transition-timing-function: linear;
@@ -219,7 +220,7 @@ i.ion-navicon-round.toogle-menu {font-size: 2.2em; position: absolute;}
 	margin-left: 0;
 	overflow: hidden;
 	height: 100%;
-	background-color: rgba(172, 172, 172, 0.9);
+	background-color: rgba(0, 0, 0, 0.98);
 	opacity: 0.9;
 	transition: all 0.3s ease-in-out;
 }
@@ -295,6 +296,7 @@ i.ion-ipod, i.ion-headphone {display: flex; margin-right: 10px; color: #fff; fon
 /* ÁREA DE AÇÃO DA HOMEPAGE */
 .title-acao {font-size: 25px; color: #762D7D; font-weight: 600; text-transform: uppercase;}
 .area-acao {display: flex; justify-content: start; padding:40px; width: 100%;height: 100%;}
+.area-acao_playlistsFav {display: flex; justify-content: start; padding:40px; width: 100%;height: 100%;}
 .sub-area-acao {width: auto;}
 .acao {display: flex; flex-direction: column; width: 100%;}
 
@@ -334,7 +336,24 @@ i.ion-ipod, i.ion-headphone {display: flex; margin-right: 10px; color: #fff; fon
     border-bottom: 1px solid #3D164F;
     padding-bottom: 10px;
     align-items: center;
+    width: 100%; 
+}
+
+.opcao-principal2 {
     justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    border-bottom: 1px solid #3D164F;
+    padding-bottom: 10px;
+    align-items: center;
+    width: 100%; 
+   /* display: none;*/
+}
+
+#dropdown-adicionar{
+    display: flex;
+    width: 100%;
 }
 
 /* Oções secundárias */
@@ -349,7 +368,6 @@ i.ion-ipod, i.ion-headphone {display: flex; margin-right: 10px; color: #fff; fon
 
 .opcoes-acao-left {
 	display: flex;
-    justify-content: space-between;
     flex-direction: row;
     align-items: center;
     width: 55%;
@@ -403,7 +421,7 @@ button.btn.botao-opcao0 {
 	background-color: #ACACAC;
 	text-transform: uppercase;
 	margin: 5px 0 5px 100px;
-	border-radius: 15px;
+	border-radius: 5px;
 	line-height: 15px;
 	transition-duration: 0.5s;
   transition-timing-function: linear;
@@ -423,7 +441,7 @@ button.btn.botao-opcao1 {
 	background-color: #B80025;
 	text-transform: uppercase;
 	margin: 5px 0 5px 100px;
-	border-radius: 15px;
+	border-radius: 5px;
 	line-height: 15px;
 	transition-duration: 0.5s;
   transition-timing-function: linear;
@@ -442,7 +460,7 @@ button.btn.botao-opcao2 {
 	background-color: #762D7D;
 	text-transform: uppercase;
 	margin: 5px 0 5px 100px;
-	border-radius: 15px;
+	border-radius: 5px;
 	line-height: 15px;
 	transition-duration: 0.5s;
   transition-timing-function: linear;
@@ -461,7 +479,7 @@ button.btn.botao-opcao3 {
 	background-color: #B80025;
 	text-transform: uppercase;
 	margin: 5px 0 5px 100px;
-	border-radius: 15px;
+	border-radius: 5px;
 	line-height: 15px;
 	transition-duration: 0.5s;
   transition-timing-function: linear;
@@ -478,14 +496,31 @@ button.btn.botao-playlist {
 	padding: 10px;
 	background-color: #762D7D;
 	text-transform: uppercase;
-	margin: 5px 0 5px 100px;
-	border-radius: 15px;
+	border-radius: 5px;
 	line-height: 15px;
 	transition-duration: 0.5s;
   transition-timing-function: linear;
 }
 
 button.btn.botao-playlist:hover {
+	background-color: #AF4B91;
+}
+
+button.btn.botao-addplaylist {
+color: #fff;
+	height: 35px;
+    width: 180px;
+	padding: 10px;
+	background-color: #762D7D;
+	text-transform: uppercase;
+	margin: 5px 0 5px 100px;
+	border-radius: 5px;
+	line-height: 15px;
+	transition-duration: 0.5s;
+  transition-timing-function: linear;
+}
+
+button.btn.botao-addplaylist:hover {
 	background-color: #AF4B91;
 }
 
@@ -497,7 +532,7 @@ button.btn.botao-opcao4 {
 	background-color: #B80025;
 	text-transform: uppercase;
 	margin: 5px 0 5px 100px;
-	border-radius: 15px;
+	border-radius: 5px;
 	line-height: 15px;
 	transition-duration: 0.5s;
   transition-timing-function: linear;
@@ -505,6 +540,23 @@ button.btn.botao-opcao4 {
 
 button.btn.botao-opcao4:hover {
 	background-color: rgb(255, 3, 3);
+}
+
+button.btn.botao-guardar {
+	color: #fff;
+	height: 35px;
+    width: 180px;
+	padding: 10px;
+	background-color: #ACACAC;
+	text-transform: uppercase;
+	border-radius: 5px;
+	line-height: 15px;
+	transition-duration: 0.5s;
+  transition-timing-function: linear;
+}
+
+button.btn.botao-guardar:hover {
+	background-color: rgb(95, 94, 94);
 }
 
 /* FOOTER */
@@ -548,6 +600,7 @@ footer p, footer img {margin: 45px;}
 div#navbar-responsive.collapse.navbar-collapse.pesquisa-personalizada {
 	display: none !important;
 }
+
 
 p, p:hover {
   color: #fff;
@@ -604,53 +657,15 @@ iframe {
 	width:120px;
 }
 
-.dropbtn {
-    background-color: #3498DB;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-
-.dropbtn:hover, .dropbtn:focus {
-    background-color: #2980B9;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown a:hover {background-color: #ddd}
-
 .show {display:block;}
 
 #selectDropdown {   
     color: #fff;
     height: 35px;
-    width: 180px;
+    width: 90%;
     padding: 10px;
-    background-color: #B80025;
+    background-color: grey;
     text-transform: uppercase;
-    margin: 5px 0 5px 100px;
     border-radius: 15px;
     line-height: 15px;
     transition-duration: 0.5s;
@@ -679,4 +694,62 @@ iframe {
 thead {
     background-color: #3D164F;
     color: white;
+}
+
+#catalogo {
+    color: #fff;
+    height: 38px;
+    width: 145px;
+    padding: 10px;
+    background-color: #3D164F;
+    border-color: none;
+    border-style: none;
+    text-transform: uppercase;
+    margin: 5px 0 5px 100px;
+    border-radius: 15px;
+    line-height: 15px;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+}
+
+.selectDiv {
+    display: flex;
+    flex-direction: row;
+}
+
+.playlistContainer {
+    width:70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.left_container {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+}
+
+.left_container2 {
+   align-items: center;
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+}
+
+.resp_faixa_playlist{
+
+}
+
+#dropdown-adicionar{
+    width: 100%;
+}
+
+#input_playlist{
+    width: 60%;
+}
+
+.area-acao_playlistsFav{
+    display: none;
 }
