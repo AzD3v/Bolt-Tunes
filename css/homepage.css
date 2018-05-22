@@ -10,6 +10,8 @@ html, body {
 }
 
 /* HOMEPAGE */
+h3 {color:black;}
+
 h7 {font-size: 12px;}
 
 h8 {font-size: 20px; margin-left: 10px;}
@@ -352,8 +354,8 @@ i.ion-ipod, i.ion-headphone {display: flex; margin-right: 10px; color: #fff; fon
 }
 
 #dropdown-adicionar{
-    display: flex;
-    width: 100%;
+   /* display: flex;
+  /*  width: 100%;*/
 }
 
 /* Oções secundárias */
@@ -511,7 +513,7 @@ color: #fff;
 	height: 35px;
     width: 180px;
 	padding: 10px;
-	background-color: #762D7D;
+	background-color: grey;
 	text-transform: uppercase;
 	margin: 5px 0 5px 100px;
 	border-radius: 5px;
@@ -660,16 +662,17 @@ iframe {
 .show {display:block;}
 
 #selectDropdown {   
-    color: #fff;
-    height: 35px;
-    width: 90%;
-    padding: 10px;
-    background-color: grey;
-    text-transform: uppercase;
-    border-radius: 15px;
-    line-height: 15px;
-    transition-duration: 0.5s;
-    transition-timing-function: linear;
+   color: #fff;
+	height: 35px;
+    width: 180px;
+	padding: 10px;
+	background-color: #ACACAC;
+	text-transform: uppercase;
+	margin: 5px 0 5px 100px;
+	border-radius: 5px;
+	line-height: 15px;
+	transition-duration: 0.5s;
+  transition-timing-function: linear;
  /*   display:none; /* oculta a visualizacao no result pesquisa */
 }
 
@@ -752,4 +755,61 @@ thead {
 
 .area-acao_playlistsFav{
     display: none;
+}
+
+
+
+.add_album {
+    height: 40px;
+}
+
+.albuns_container {
+    overflow: hidden;
+    width: auto;
+    max-width: 75%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 170px;
+    border-bottom: 1px solid black;
+}
+
+.albuns_artista {
+    width: auto;
+    min-width: 100%;
+    position: relative;
+    display: flex;
+}
+
+.thumb_album {
+    margin-top: 8px;
+    margin-left: 4px;
+    margin-right: 4px;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+.album_artista {
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    background-image: url(../img/icon_01.png);
+    background-position: center;
+    background-size: 100%;
+}
+
+.record_container {
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.nome_artista{
+    font-size: 25px;
+    text-transform: uppercase;
 }
