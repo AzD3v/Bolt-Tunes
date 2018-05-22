@@ -15,8 +15,7 @@ $(document).ready(function(){
         $("#resultados-pesquisa-musica").hide();
 		$("#musicas-favoritas").hide();
 		$("#info-musical").hide();
-        $(".opcao-principal2").hide();
-		//$("#dropdown-adicionar").hide();
+		$("#dropdown-adicionar").hide();
 
 		// Demonstrar opção predefinida selecionada (Lista das playlists)
 		$(".lista-playlists").addClass('active-option');
@@ -112,12 +111,24 @@ $(document).ready(function(){
                                    i++;
                                    j--
 
-                                let video = $("<div class='wrapper'><div class='resposta'><iframe src='https://www.youtube.com/embed/"+resultado.id.videoId+"'></iframe></div><div class='resposta_nome'>"+resultado.snippet.channelTitle+"</div><div class='container_button'><div id='sub_container_button'><button class='btn botao-opcao0'>Ouvir faixa</button><button class='btn botao-opcao1' id='"+i+"'>Adicionar favoritos</button><button class='btn botao-addplaylist' id='"+j+"'>Adicionar playlist</button><button class='btn botao-opcao2'>Saber mais +</button></div></div></div>"); 
+                            let video = $("<div class='wrapper'><div class='resposta'><iframe src='https://www.youtube.com/embed/"+resultado.id.videoId+"'></iframe></div><div class='resposta_nome'>"+resultado.snippet.title+"</div><div class='container_button'><div id='sub_container_button'><button class='btn botao-opcao0'>Ouvir faixa</button><button class='btn botao-opcao1' id='"+i+"'>Adicionar faixa</button><form id='dropdown-adicionar'>"+ selectForm +"</form><button class='btn botao-opcao2'>Saber mais +</button></div></div></div>");    
+          
+           
+                            if (document.getElementsByClassName('resp_playlist') == ''){
+                              let video = $("<div class='wrapper'><div class='resposta'><iframe src='https://www.youtube.com/embed/"+resultado.id.videoId+"'></iframe></div><div class='resposta_nome'>"+resultado.snippet.title+"</div><div class='container_button'><div id='sub_container_button'><button class='btn botao-opcao0'>Ouvir faixa</button><button class='btn botao-opcao1' id='"+i+"'>Adicionar faixa</button><button class='btn botao-opcao2'>Saber mais +</button></div></div></div>");
+                            } else {
 
-                                //o selectForm mostra a variável do form dropdown
+                              let video = $("<div class='wrapper'><div class='resposta'><iframe src='https://www.youtube.com/embed/"+resultado.id.videoId+"'></iframe></div><div class='resposta_nome'>"+resultado.snippet.title+"</div><div class='container_button'><div id='sub_container_button'><button class='btn botao-opcao0'>Ouvir faixa</button><button class='btn botao-opcao1' id='"+i+"'>Adicionar faixa</button><form id='dropdown-adicionar'>"+ selectForm +"</form><button class='btn botao-opcao2'>Saber mais +</button></div></div></div>"); 
 
-                                  $("#respostas").append("<br>").append(video);
+                            //o selectForm mostra a variável do form dropdown
 
+                              $("#respostas").append("<br>").append(video);
+
+                               // var selectDrop = ($('#selectDropdown option:selected').html());
+
+
+                            }
+                               
 
                                 // Botão que permite ouvir a faixa selecionada 
                                   $(".botao-opcao0").click(function(){ 
@@ -213,7 +224,23 @@ $(document).ready(function(){
 
                                 }
                              }
+ 
+                                   
+                                 if (document.getElementById('respostas') != ''){
+                                    $('.selectDropdown').on('change', function() {
+                                        let selection = $(this).find(":selected").val();
+                                            //$('.pesquisa-personalizada').removeAttr('id');
+                                           // $('.pesquisa-personalizada').attr('id', 'search-' + selection);
+                                            //$('#search').attr('placeholder', 'Faça a sua pesquisa por ' + selection);
+                                            //seleciona o value escolhido
+                                            var s = document.getElementById("selectDropdown").value;
+                                            alert("You selected: " + s); 
+                                    });
+                                }  
 
+                                
+                                
+                                
                              //console.log('status, response');
 
                               $("#search").val('');

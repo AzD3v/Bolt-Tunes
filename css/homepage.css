@@ -354,8 +354,8 @@ i.ion-ipod, i.ion-headphone {display: flex; margin-right: 10px; color: #fff; fon
 }
 
 #dropdown-adicionar{
-    display: flex;
-    width: 100%;
+   /* display: flex;
+  /*  width: 100%;*/
 }
 
 /* Oções secundárias */
@@ -662,16 +662,17 @@ iframe {
 .show {display:block;}
 
 #selectDropdown {   
-    color: #fff;
-    height: 35px;
-    width: 90%;
-    padding: 10px;
-    background-color: grey;
-    text-transform: uppercase;
-    border-radius: 15px;
-    line-height: 15px;
-    transition-duration: 0.5s;
-    transition-timing-function: linear;
+   color: #fff;
+	height: 35px;
+    width: 180px;
+	padding: 10px;
+	background-color: #ACACAC;
+	text-transform: uppercase;
+	margin: 5px 0 5px 100px;
+	border-radius: 5px;
+	line-height: 15px;
+	transition-duration: 0.5s;
+  transition-timing-function: linear;
  /*   display:none; /* oculta a visualizacao no result pesquisa */
 }
 
