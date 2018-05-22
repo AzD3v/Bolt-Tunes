@@ -4,9 +4,10 @@
  
 // Colocar o "selectForm" vazio inicialmente 
 var selectForm = "";
-
+var myPlaylist=[];
 
 $(document).ready(function(){
+    
   
 		// Esconder por predefinição as diversas áreas de conteúdo do catálogo
 		$("#navbarResponsive").hide();
@@ -224,17 +225,19 @@ $(document).ready(function(){
 
                                 }
                              }
+                                
+                                                        
  
                                    
                                  if (document.getElementById('respostas') != ''){
                                     $('.selectDropdown').on('change', function() {
                                         let selection = $(this).find(":selected").val();
-                                            //$('.pesquisa-personalizada').removeAttr('id');
-                                           // $('.pesquisa-personalizada').attr('id', 'search-' + selection);
-                                            //$('#search').attr('placeholder', 'Faça a sua pesquisa por ' + selection);
-                                            //seleciona o value escolhido
-                                            var s = document.getElementById("selectDropdown").value;
-                                            alert("You selected: " + s); 
+                                            var s =$(this).val();
+                                             //alert("You selected: " + s);
+                                            //alert($(".resposta_nome").html());
+                                            myPlaylist[s]=myPlaylist[s] + "&" +$(this).parent().parent().parent().parent().find(".resposta_nome").html();
+                                        
+                                            console.log(myPlaylist[s]);
                                     });
                                 }  
 
@@ -839,6 +842,7 @@ $(document).ready(function(){
 
 		// console.log("teste");
 		//buscar div de resposta
+        
 		var div = document.getElementsByClassName("resp_playlist");
 		//criar div container
 		var container = document.createElement("div");
@@ -870,10 +874,11 @@ $(document).ready(function(){
 		subdivright.appendChild(botao);
 		//buscar valor do input para inserir h8 (#name_playlist)
 		h8.textContent = document.getElementById('input_playlist').value;
- 
+        
 		h8Dropdown = document.getElementById('input_playlist').value;
 		playlists.push(h8Dropdown);
-
+        //alert(h8Dropdown);
+        myPlaylist[h8Dropdown]=Array;
 		//adicionar options ao dropdown myselect
 		var select = document.getElementById('selectDropdown');
 		$("#selectDropdown").empty();
