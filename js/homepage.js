@@ -784,15 +784,8 @@ $(document).ready(function() {
           });
         });
 
-        /////////////////// SELECT GENERO COMECA AQUI ///////////////////////////////////
       }
-      if (selection == "Genero") {
-        console.log(selection);
-        // "Toogler" dos resultados de pesquisa que o utilizador efetuar
-        $(".pesquisa-personalizada").click(function() {
-          window.alert('nada a mostrar');
-        });
-      }
+    
     }
   });
   //select das playlists adicionadas
