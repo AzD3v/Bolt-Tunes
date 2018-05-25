@@ -1037,6 +1037,7 @@ thead {
   background-image: url(../img/icon_01.png);
   background-position: center;
   background-size: 100%;
+  cursor: pointer;
 }
 
 .add_album {

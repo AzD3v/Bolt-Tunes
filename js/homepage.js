@@ -573,7 +573,7 @@ $(document).ready(function() {
         }
       });
 
-      /////////////////// SELECT ALBUM COMECA AQUI ///////////////////////////////////
+      /////////////////// SELECT ARTISTA COMECA AQUI ///////////////////////////////////
     } else {
       if (selection == "Artista") {
         console.log(selection);
@@ -610,7 +610,7 @@ $(document).ready(function() {
               results_artist.append(result_box);
               result_box.append($('<div class="nome_artista"></div>').text(artist.name));
 
-              let url_release = 'http://musicbrainz.org/ws/2/release/?query=arid:' + artist.id + '&limit=2&fmt=json';
+              let url_release = 'http://musicbrainz.org/ws/2/release/?query=arid:' + artist.id + '&limit=6&fmt=json';
               url_release = encodeURI(url_release);
 
               $.get(url_release, function(response_release, status_release) {
