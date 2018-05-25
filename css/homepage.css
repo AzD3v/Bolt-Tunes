@@ -109,7 +109,7 @@ a.navbar-brand {
 .form-control.mr-sm-2 {
   width: 350px;
   background-color: #acacac;
-  border-radius: 5px;
+  border-radius: 15px;
   margin-left: 10px;
 }
 
@@ -129,7 +129,7 @@ input#search.form-control.mr-sm-2 {
 .form-control.mr-sm-3 {
   width: 40%;
   background-color: #acacac;
-  border-radius: 5px;
+  border-radius: 15px;
 }
 
 .form-control.mr-sm-3::placeholder {
@@ -151,7 +151,7 @@ input#search.form-control.mr-sm-2 {
   background-color: rgb(172, 39, 98);
   color: #fff;
   width: 180px;
-  border-radius: 5px;
+  border-radius: 15px;
   margin-right: 30px;
   transition-duration: 0.5s;
   transition-timing-function: linear;
@@ -579,7 +579,7 @@ button.btn.botao-opcao0 {
   background-color: #ACACAC;
   text-transform: uppercase;
   margin: 5px 0 5px 100px;
-  border-radius: 5px;
+  border-radius: 15px;
   line-height: 15px;
   transition-duration: 0.5s;
   transition-timing-function: linear;
@@ -599,7 +599,7 @@ button.btn.botao-opcao1 {
   background-color: #B80025;
   text-transform: uppercase;
   margin: 5px 0 5px 100px;
-  border-radius: 5px;
+  border-radius: 15px;
   line-height: 15px;
   transition-duration: 0.5s;
   transition-timing-function: linear;
@@ -619,7 +619,7 @@ button.btn.botao-opcao2 {
   background-color: #762D7D;
   text-transform: uppercase;
   margin: 5px 0 5px 100px;
-  border-radius: 5px;
+  border-radius: 15px;
   line-height: 15px;
   transition-duration: 0.5s;
   transition-timing-function: linear;
@@ -639,7 +639,7 @@ button.btn.botao-opcao3 {
   background-color: #B80025;
   text-transform: uppercase;
   margin: 5px 0 5px 100px;
-  border-radius: 5px;
+  border-radius: 15px;
   line-height: 15px;
   transition-duration: 0.5s;
   transition-timing-function: linear;
@@ -656,7 +656,7 @@ button.btn.botao-playlist {
   padding: 10px;
   background-color: #762D7D;
   text-transform: uppercase;
-  border-radius: 5px;
+  border-radius: 15px;
   line-height: 15px;
   transition-duration: 0.5s;
   transition-timing-function: linear;
@@ -674,7 +674,7 @@ button.btn.botao-addplaylist {
   background-color: grey;
   text-transform: uppercase;
   margin: 5px 0 5px 100px;
-  border-radius: 5px;
+  border-radius: 15px;
   line-height: 15px;
   transition-duration: 0.5s;
   transition-timing-function: linear;
@@ -692,7 +692,7 @@ button.btn.botao-opcao4 {
   background-color: #B80025;
   text-transform: uppercase;
   margin: 5px 0 5px 100px;
-  border-radius: 5px;
+  border-radius: 15px;
   line-height: 15px;
   transition-duration: 0.5s;
   transition-timing-function: linear;
@@ -709,7 +709,7 @@ button.btn.botao-guardar {
   padding: 10px;
   background-color: #ACACAC;
   text-transform: uppercase;
-  border-radius: 5px;
+  border-radius: 15px;
   line-height: 15px;
   transition-duration: 0.5s;
   transition-timing-function: linear;
@@ -850,11 +850,10 @@ iframe {
   color: #fff;
   height: 35px;
   width: 180px;
-  padding: 10px;
-  background-color: #ACACAC;
+  background-color: #69C3D2;
   text-transform: uppercase;
   margin: 5px 0 5px 100px;
-  border-radius: 5px;
+  border-radius: 15px;
   line-height: 15px;
   transition-duration: 0.5s;
   transition-timing-function: linear;
@@ -891,10 +890,6 @@ iframe {
 
 .resposta_info {
   width: 85%;
-}
-
-* {
-  font-family: 'PT Sans';
 }
 
 thead {
