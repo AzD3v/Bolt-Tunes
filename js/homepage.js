@@ -231,11 +231,16 @@ $(document).ready(function() {
                                             myPlaylistId[s][index]=$(this).parent().parent().parent().parent().find(".resposta").html();
                                            // console.log(myPlaylist[s].length);
                                         
-                                          let alert = $("<div class='alert alert-danger' role='alert'><h4 class='alert-heading'>Adicionado!</h4><p2>Adicionaste '" + myPlaylist[s][index] + "' à playlist '" + s + "'</p2></div>");
+                                          let alert = $("<div class='alert alert-success' role='alert'><h4 class='alert-heading'>Adicionado!</h4><p2>Adicionaste '" + myPlaylist[s][index] + "' à playlist '" + s + "'</p2></div>");
                                         
                                           $('.area-acao').prepend(alert);
-                                        
-                                        
+
+                                          window.setTimeout(function () {
+                                            $(".alert").fadeTo(500, 0).slideUp(500, function () {
+                                              $(this).remove();
+                                            });
+                                          }, 4000);
+                                            
                                           //  alert("Adicionaste '" + myPlaylist[s][index] + "' à playlist '" + s + "'");
                                             console.log(myPlaylist);
                                             console.log(myPlaylistId);
@@ -945,7 +950,7 @@ $(document).ready(function() {
                 //vais buscar o iframe do array myPlaylist
                 for (i=0; i<myPlaylist[this.playlistId].length; i++){
 
-                 let containerThis = $("<div class='wrapper2'><div class='resposta'>"+myPlaylistId[this.playlistId][i]+"</div><div class='resposta_nome'>"+myPlaylist[this.playlistId][i]+"</div><div class='container_button'><div id='sub_container_button'><button class='btn botao-opcao0'>Ouvir faixa</button></div></div></div>");
+                 let containerThis = $("<div class='wrapper2'><div class='resposta'>"+myPlaylistId[this.playlistId][i]+"</div><div class='resposta_nome'>"+myPlaylist[this.playlistId][i]+"</div><div class='container_button'></div></div>");
 
                  $('.opcoes-acao-resposta').append(containerThis);
                  $(".msgDefaultPlaylist").hide(); 
