@@ -1,2 +1,2 @@
 # Bolt-Tunes
-A music catalog project being built with HTML, CSS and JavaScript.
+A music catalog application being built with HTML, CSS and JavaScript (academic project).
