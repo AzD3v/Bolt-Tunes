@@ -1,5 +1,4 @@
-/* GERAL */
-
+/* General */
 html, body {
   height: 100%;
   width: 100%;
@@ -10,28 +9,10 @@ html, body {
   text-decoration: none;
 }
 
+h3 { color: #111; }
+
 /* HOMEPAGE */
 
-p2 {
-    color: black;
-}
-
-h3 {
-  color: black;
-}
-
-h7 {
-  font-size: 12px;
-}
-
-h8 {
-  font-size: 20px;
-  margin-left: 10px;
-}
-
-h9 {
-  color: white;
-}
 
 .caixa {
   background-color: #6F2D81;
@@ -897,7 +878,8 @@ thead {
   color: white;
 }
 
-#catalogo {
+#search-options {
+  font-size: 15px;
   color: #fff;
   height: 38px;
   width: 145px;
@@ -913,7 +895,7 @@ thead {
   transition-timing-function: linear;
 }
 
-.selectDiv {
+.search-select {
   display: flex;
   flex-direction: row;
 }

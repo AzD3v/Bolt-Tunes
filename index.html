@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 
 <head>
 
@@ -8,8 +8,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-	<!-- Folhas de estilo -->
-	<link rel="stylesheet" href="css/homepage.css" type="text/css">
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/main.css" type="text/css">
 	<link rel="stylesheet" href="css/search.css" type="text/css">
 
 	<!-- Bootstrap CDN's -->
@@ -23,50 +23,53 @@
 	<!-- Ionic icons CDN -->
 	<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 
-	<!-- Ícone favicon -->
+	<!-- Favicon icon -->
 	<link rel="icon" href="img/favicon.ico">
 
-	<!-- Título da página -->
+	<!-- Title -->
 	<title>Bolt Tunes | O Teu Som Favorito</title>
 
 </head>
 
 <body>
 
-	<!-- NAVBAR -->
 	<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
 		<div class="container-nav">
+
 			<div class="logo">
-				<a href="index.html" class="navbar-brand"><img src="img/logo.png" alt="Logótipo da página"></a>
-				<!--<a href="#div_da_area"-->
+				<a href="index.html" class="navbar-brand">
+					<img src="img/logo.png" alt="Bolt Tunes logo">
+				</a>
 			</div>
+
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
 				<span class="ion-android-menu"></span>
 			</button>
 
-			<div class="collapse navbar-collapse" id="navbarResponsive">
-				<div class="selectDiv">
+			<div class="collapse navbar-collapse" id="main-nav">
+				<div class="search-select">
 
-					<select name="catalogo" id="catalogo">
-						<option value="Musica">Música</option>
-						<option value="Artista">Artista</option>
-						<option value="Album">Álbum</option>
+					<select name="catalogo" id="search-options">
+						<option value="musica">Música</option>
+						<option value="artista">Artista</option>
+						<option value="album">Álbum</option>
 					</select>
 
-					<div class="collapse navbar-collapse" id="navbarResponsive">
+					<!-- <div class="collapse navbar-collapse" id="navbarResponsive">
 						<input class="form-control mr-sm-2" id="search" type="search" placeholder="Faça a sua pesquisa por Musica" aria-label="Search">
 						<button class="btn my-2 my-sm-0 pesquisa-personalizada" type="submit" id="search-Musica">Pesquisar</button>
+					</div> -->
+					<div class="collapse navbar-collapse">
+						<input class="form-control mr-sm-2" id="search" type="search" placeholder="Que música gostaria de ouvir?" aria-label="Search">
+						<button class="btn my-2 my-sm-0 pesquisa-personalizada" type="submit" id="search-music">Pesquisar</button>
 					</div>
+
 				</div>
 			</div>
 
 		</div>
 	</nav>
-	<!-- FIM DA NAVBAR -->
 
-	<!--- - - - - - - - - - - - - - - - - - - - - - - - - -->
-	<!-- SECÇÃO QUE CONTÉM O CONTEÚDO INICIAL DA HOMEPAGE -->
-	<!--- - - - - - - - - - - - - - - - - - - - - - - - - -->
 	<div id="homepage-principal">
 
 		<!-- SLIDER DA HOMEPAGE -->
@@ -109,7 +112,6 @@
 			</div>
 			<!-- FIM DO SLIDER DA HOMEPAGE -->
 
-			<!-- CENTRO DA PÁGINA -->
 			<div class="center-page">
 
 				<div class="menu-lateral">
@@ -216,6 +218,7 @@
 	<!--- - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
 
 	<!--- - - - - - - - - - - - - - - - - - -  -->
+	
 	<!--- - - - - - - - - - - - - - - - - - - - - -   -->
 	<!-- SECÇÃO QUE CONTÉM OS RESULTADOS DA PESQUISA MUSICA  -->
 	<!--- - - - - - - - - - - - - - - - - - - - - -   -->
