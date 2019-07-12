@@ -4,8 +4,8 @@
 
 // Colocar o "selectForm" vazio inicialmente
 var selectForm = "";
-var myPlaylist=[]=[];
-var myPlaylistId = []=[];
+var myPlaylist = [] = [];
+var myPlaylistId = [] = [];
 
 $(document).ready(function() {
 
@@ -20,23 +20,22 @@ $(document).ready(function() {
   $("#dropdown-adicionar").hide();
 
   // Demonstrar opção predefinida selecionada (Lista das playlists)
-  $(".lista-playlists").addClass('active-option');
+  $(".playlists").addClass('active-option');
 
   // "Toogler" da lista de playlists do utilizador (homepage)
-  $(".lista-playlists").click(function() {
+  $(".playlists").click(function() {
     $("#musicas-favoritas").fadeOut();
     $("#resultados-pesquisa-artista").fadeOut();
     $("#resultados-pesquisa-album").fadeOut();
     $("#resultados-pesquisa-musica").hide();
     $("#resultados-pesquisa-genero").hide();
-    $("#homepage-principal").fadeIn();
-    $(".lista-playlists").addClass('active-option');
-    $(".lista-favoritos").removeClass('active-option');
+    $("#homepage-main").fadeIn();
+    $(".playlists").addClass('active-option');
+    $(".favorite-list").removeClass('active-option');
     $("#info-musical").hide();
     $(".resp_playlist").fadeIn();
     $(".area-acao").show();
     $(".area-acao_playlistsFav").hide();
-
   });
 
   // Por predefinição é o artista o tema a ser pesquisado
@@ -58,8 +57,8 @@ $(document).ready(function() {
       $("#resultados-pesquisa-artista").hide();
       $("#resultados-pesquisa-album").hide();
       $("#resultados-pesquisa-genero").hide();
-      $(".lista-playlists").removeClass('active-option');
-      $(".lista-favoritos").removeClass('active-option');
+      $(".playlists").removeClass('active-option');
+      $(".favorite-list").removeClass('active-option');
 
       // Chave API do YouTube
       const youtubeAPIKey = "AIzaSyAvt_YeiVfbMrGKdNFaMuMo760ViQemm0k";
@@ -134,8 +133,8 @@ $(document).ready(function() {
               $("#" + i).click(function() {
                 $("#resultados-pesquisa-artista").fadeOut();
                 $("#musicas-favoritas").fadeIn();
-                $(".lista-favoritos").addClass('active-option');
-                $(".lista-playlists").removeClass('active-option'); //mostra o resultado selecionado:
+                $(".favorite-list").addClass('active-option');
+                $(".playlists").removeClass('active-option'); //mostra o resultado selecionado:
                 $(".resposta_favoritos").append("<br>").append(video);
                 $(".botao-opcao1").fadeOut();
                 $(".msgDefaultFavoritos").hide();
@@ -149,8 +148,8 @@ $(document).ready(function() {
                 $("#resultados-pesquisa-album").fadeOut();
                 $("#resultados-pesquisa-genero").fadeOut();
                 $("#homepage-principal").fadeIn();
-                $(".lista-playlists").addClass('active-option');
-                $(".lista-favoritos").removeClass('active-option');
+                $(".playlists").addClass('active-option');
+                $(".favorite-list").removeClass('active-option');
                 $("#info-musical").hide();
                 $(".opcao-principal2").show();
                 $(".resp_faixa_playlist").append("<br>").append(video);
@@ -318,7 +317,7 @@ $(document).ready(function() {
   });
 
   // select do resultado de pesquisa
-  $('#catalogo').on('change', function() {
+  $('#search-options').on('change', function() {
     let selection = $(this).find(":selected").val();
     $('.pesquisa-personalizada').removeAttr('id');
     $('.pesquisa-personalizada').attr('id', 'search-' + selection);
@@ -340,8 +339,8 @@ $(document).ready(function() {
         $("#resultados-pesquisa-artista").hide();
         $("#resultados-pesquisa-album").hide();
         $("#resultados-pesquisa-genero").hide();
-        $(".lista-playlists").removeClass('active-option');
-        $(".lista-favoritos").removeClass('active-option');
+        $(".playlists").removeClass('active-option');
+        $(".favorite-list").removeClass('active-option');
 
         // Chave API do YouTube
         const youtubeAPIKey = "AIzaSyAvt_YeiVfbMrGKdNFaMuMo760ViQemm0k";
@@ -416,8 +415,8 @@ $(document).ready(function() {
                 $("#" + i).click(function() {
                   $("#resultados-pesquisa-artista").fadeOut();
                   $("#musicas-favoritas").fadeIn();
-                  $(".lista-favoritos").addClass('active-option');
-                  $(".lista-playlists").removeClass('active-option'); //mostra o resultado selecionado:
+                  $(".favorite-list").addClass('active-option');
+                  $(".playlists").removeClass('active-option'); //mostra o resultado selecionado:
                   $(".resposta_favoritos").append("<br>").append(video);
                   $(".botao-opcao1").fadeOut();
                 });
@@ -429,8 +428,8 @@ $(document).ready(function() {
                   $("#resultados-pesquisa-album").fadeOut();
                   $("#resultados-pesquisa-musica").fadeOut();
                   $("#homepage-principal").fadeIn();
-                  $(".lista-playlists").addClass('active-option');
-                  $(".lista-favoritos").removeClass('active-option');
+                  $(".playlists").addClass('active-option');
+                  $(".favorite-list").removeClass('active-option');
                   $("#info-musical").hide();
                   $(".opcao-principal2").show();
                   $(".resp_faixa_playlist").append("<br>").append(video);
@@ -588,8 +587,8 @@ $(document).ready(function() {
           $("#resultados-pesquisa-artista").fadeIn();
           $("#resultados-pesquisa-album").hide();
           $("#resultados-pesquisa-genero").hide();
-          $(".lista-playlists").removeClass('active-option');
-          $(".lista-favoritos").removeClass('active-option');
+          $(".playlists").removeClass('active-option');
+          $(".favorite-list").removeClass('active-option');
           // Ler o valor da caixa de input
           let artist = $('#search').val();
 
@@ -723,8 +722,8 @@ $(document).ready(function() {
           $("#resultados-pesquisa-artista").hide();
           $("#resultados-pesquisa-album").fadeIn();
           $("#resultados-pesquisa-genero").hide();
-          $(".lista-playlists").removeClass('active-option');
-          $(".lista-favoritos").removeClass('active-option');
+          $(".playlists").removeClass('active-option');
+          $(".favorite-list").removeClass('active-option');
 
           // Ler o valor da caixa de input
           let release = $('#search').val();
@@ -802,12 +801,12 @@ $(document).ready(function() {
   }
 
   // "Toogler" da secção de músicas favoritas do utilizador
-  $(".lista-favoritos").click(function() {
+  $(".favorite-list").click(function() {
     $("#homepage-principal").fadeOut();
     $("#resultados-pesquisa-artista").fadeOut();
     $("#musicas-favoritas").fadeIn();
-    $(".lista-favoritos").addClass('active-option');
-    $(".lista-playlists").removeClass('active-option');
+    $(".favorite-list").addClass('active-option');
+    $(".playlists").removeClass('active-option');
     $("#info-musical").hide();
     $(".area-acao").show();
   });
