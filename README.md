@@ -1,5 +1,5 @@
 # Bolt-Tunes
-A music catalog application built with HTML, CSS and JavaScript (academic project). It uses the MusicBrainz and YouTube API's to retrieve data based on a search query from the user. 
+A music catalog application built with HTML, CSS and JavaScript (academic project). It uses the MusicBrainz and YouTube API's to retrieve data based on a search query from the user (search for music, artist/band information and albums). 
 
 # What Was Learned
  
